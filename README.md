@@ -1,8 +1,8 @@
-#Data Science job interview prepation notes
+# Data Science job interview prepation notes
 
 ## This repo is currently for my personal use of preparing for ds summer intern (2023). Checked out deployed website [here](https://cyanjiner.github.io/ds-job-prep-notes/).
 
-## Instruction on editing files & render book
+## Instruction on editing files & rendering book
 
 ### Edit some key files
 
