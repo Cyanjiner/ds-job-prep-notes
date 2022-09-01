@@ -5,4 +5,4 @@ bookdown::gitbook:
       before: |
         <li><a href="./">DS Interview Prep Notes</a></li>
       after: |
-        <li><a href="https://cyanjiner.github.io/ds-job-prep-notes/" target="blank">Published with bookdown</a></li>
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
