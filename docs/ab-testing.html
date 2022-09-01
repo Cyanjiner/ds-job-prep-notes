@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 A/B Testing | DS Intern/NG Job Application Prep Notes</title>
+  <meta name="description" content="Chapter 3 A/B Testing | DS Intern/NG Job Application Prep Notes" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 A/B Testing | DS Intern/NG Job Application Prep Notes" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 A/B Testing | DS Intern/NG Job Application Prep Notes" />
+  
+  
+  
+
+<meta name="author" content="Jiner Zheng" />
+
+
+<meta name="date" content="2022-09-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="statistics-and-probability.html"/>
+<link rel="next" href="machine-learning-models.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">DS Interview Prep Notes</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html"><i class="fa fa-check"></i><b>2</b> Statistics and Probability</a></li>
+<li class="chapter" data-level="3" data-path="ab-testing.html"><a href="ab-testing.html"><i class="fa fa-check"></i><b>3</b> A/B Testing</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="ab-testing.html"><a href="ab-testing.html#what-is-ab-testing"><i class="fa fa-check"></i><b>3.1</b> What is <code>A/B testing</code>?</a></li>
+<li class="chapter" data-level="3.2" data-path="ab-testing.html"><a href="ab-testing.html#what-you-cant-do-with-ab-testing"><i class="fa fa-check"></i><b>3.2</b> What you can’t do with A/B testing?</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="ab-testing.html"><a href="ab-testing.html#i.-case-1-new-experiences-e.g.-premium-service-that-offers-additional-functionality"><i class="fa fa-check"></i><b>3.2.1</b> I. Case 1: New Experiences (e.g. premium service that offers additional functionality)</a></li>
+<li class="chapter" data-level="3.2.2" data-path="ab-testing.html"><a href="ab-testing.html#ii.-case-2-time-dependentrelated-cases-e.g.-referall"><i class="fa fa-check"></i><b>3.2.2</b> II. Case 2: Time-dependent/related cases (e.g. Referall)</a></li>
+<li class="chapter" data-level="3.2.3" data-path="ab-testing.html"><a href="ab-testing.html#iii.-cases-3-missingcomplete-content-or-services"><i class="fa fa-check"></i><b>3.2.3</b> III. Cases 3: Missing/Complete content or services</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="ab-testing.html"><a href="ab-testing.html#other-techniques"><i class="fa fa-check"></i><b>3.3</b> Other Techniques:</a></li>
+<li class="chapter" data-level="3.4" data-path="ab-testing.html"><a href="ab-testing.html#example-audacity"><i class="fa fa-check"></i><b>3.4</b> Example: Audacity</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="ab-testing.html"><a href="ab-testing.html#defining-the-hypothesis"><i class="fa fa-check"></i><b>3.4.1</b> Defining the hypothesis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="machine-learning-models.html"><a href="machine-learning-models.html"><i class="fa fa-check"></i><b>4</b> Machine Learning Models</a></li>
+<li class="chapter" data-level="5" data-path="product-sense.html"><a href="product-sense.html"><i class="fa fa-check"></i><b>5</b> Product Sense</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">DS Intern/NG Job Application Prep Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ab-testing" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> A/B Testing<a href="ab-testing.html#ab-testing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Experimentation:</p>
+<p>ranging from the underlying infrastructure, to design metrics and dashboards, to running and analyzing experiments to the processing culture needed to facilitate data-driven solutions</p>
+<div id="what-is-ab-testing" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> What is <code>A/B testing</code>?<a href="ab-testing.html#what-is-ab-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A/B testing is a general methodology used online when you wanna test out a new product or a feature. And what you’re doing is you are going to take two sets of users and you will show one set, a control set, your existing product or feature, and then another set, your experiment, the new version.</p>
+<p>Then, you will examine how did these users from two groups respond differently in order to determine which version of your feature is better.</p>
+<ul>
+<li><p>Example:</p>
+<ul>
+<li><p>It can be a novel big change or addition in product or feature like when Amazon initially decided to launch their first personalized product recommendations feature based on A/B testing results that showed a huge increase in revenue by adding this new feature.</p></li>
+<li><p>It can also be a very small or trivial feature such as when Google tested 41 different shades of blue.</p></li>
+</ul></li>
+<li><p><strong>The key thing in A/B testing</strong> is that you have a <code>consistent response</code> from your control and experiment group so that you can actually <code>determine and structure the experiment</code> to determine whether there is <code>a significant behavior change</code> in your experiment group.</p></li>
+<li><p><strong>The goal in A/B testing</strong> is to design an experiment that is gonna be <code>robust</code> and give you <code>repeatable results</code> so that you can actually make a good decision about whether or not to actually launch that product or feature.</p></li>
+<li><p><strong>A/B Testing compared to hypothesis testing in traditional fields of study</strong>: In traditional fields of study such as clinical trials in psychology or medical research, we know a lot of information about participants such as their demographics, and we usually have a relatively small number of participants. However, when testing an <code>online</code> product, we might have millions of users, hundreds or thousands of clicks, etc., and we DO NOT know much about who is taking those actions on the other end.</p></li>
+</ul>
+</div>
+<div id="what-you-cant-do-with-ab-testing" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> What you can’t do with A/B testing?<a href="ab-testing.html#what-you-cant-do-with-ab-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="i.-case-1-new-experiences-e.g.-premium-service-that-offers-additional-functionality" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> I. Case 1: New Experiences (e.g. premium service that offers additional functionality)<a href="ab-testing.html#i.-case-1-new-experiences-e.g.-premium-service-that-offers-additional-functionality" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>(p.s. to access premium, user need to upgrade, create a log-in, and explore new functionality)</p>
+<ul>
+<li>A/B testing isn’t useful when you wanna test out <code>new experiences</code>. Because when you are testing a new experience, you have an existing set of users and they might feel that you have changed their experience and they preferred their old way (and this is <code>change aversion</code>). The other case is that they can be really like this new experience and they test out everything (this is called a <code>novelty effect</code>). What happens in a new experience are two issues:
+<ol style="list-style-type: decimal">
+<li>we are not sure about the baseline for comparison</li>
+<li>we can’t control the exact time we need in order to actually have our users adapt to the new experience. So that we can’t know the plateaued experience so that we can actually make a robust decision.</li>
+</ol></li>
+</ul>
+</div>
+<div id="ii.-case-2-time-dependentrelated-cases-e.g.-referall" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> II. Case 2: Time-dependent/related cases (e.g. Referall)<a href="ab-testing.html#ii.-case-2-time-dependentrelated-cases-e.g.-referall" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>For example, if we have a website that recommends apartment rentals, but people don’t look for apartments that often, what you really want is to grow your business by referrals to other people who like your service. The main issues in this case are:
+<ol style="list-style-type: decimal">
+<li>The scope of an experiment will be really hard to measure whether people <code>actually</code> come back to you from more referrals or from other reasons.</li>
+<li>We can’t estimate the time that people actually spend in making the action of referral happen.</li>
+</ol></li>
+</ul>
+</div>
+<div id="iii.-cases-3-missingcomplete-content-or-services" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> III. Cases 3: Missing/Complete content or services<a href="ab-testing.html#iii.-cases-3-missingcomplete-content-or-services" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>A/B testing can’t really tell us if we are missing something. For example, if we are building a song or a book reviews website, A/B testing can’t tell us if we are missing the entire other book that we should be reviewing but we aren’t reviewing at all.</li>
+</ul>
+</div>
+</div>
+<div id="other-techniques" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Other Techniques:<a href="ab-testing.html#other-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Qualitative research:</strong> A/B testing can give you a lot of broad quantitative data, but other techniques give you very deep and qualitative data that are really complimentary to A/B testing
+<ul>
+<li>User experience research</li>
+<li>Focus groups and surveys</li>
+<li>Human evaluations</li>
+</ul></li>
+<li><strong>Quantitative approach</strong>: We can also analyze the <code>logs</code> of what users did on the website to see if a hypothesis can be developed about what’s <code>causing</code> changes in their behavior. And that’s something where you may want to go forward and actually design and randomize an experiment through a perspective analysis. We can use the two data sources to compliment each other.</li>
+</ul>
+</div>
+<div id="example-audacity" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Example: Audacity<a href="ab-testing.html#example-audacity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure">
+<img src="2022-09-01-02-42-28.png" alt="" />
+<p class="caption">audacity example</p>
+</div>
+<div id="defining-the-hypothesis" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Defining the hypothesis<a href="ab-testing.html#defining-the-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Initial hypothesis: sss</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="statistics-and-probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="machine-learning-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/cyanjiner/ds-job-prep-notes/edit/master/03-AB-Testing.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/cyanjiner/ds-job-prep-notes/blob/master/03-AB-Testing.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

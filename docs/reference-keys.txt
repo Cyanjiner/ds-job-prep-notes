@@ -1,0 +1,13 @@
+introduction
+statistics-and-probability
+ab-testing
+what-is-ab-testing
+what-you-cant-do-with-ab-testing
+i.-case-1-new-experiences-e.g.-premium-service-that-offers-additional-functionality
+ii.-case-2-time-dependentrelated-cases-e.g.-referall
+iii.-cases-3-missingcomplete-content-or-services
+other-techniques
+example-audacity
+defining-the-hypothesis
+machine-learning-models
+product-sense
