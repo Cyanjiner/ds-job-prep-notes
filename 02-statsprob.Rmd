@@ -1,2 +1,57 @@
 # Statistics and Probability
 
+## Designing Studies
+
+`Population:` A collection of individuals or objects that we will be analyzing on their properties.
+
+`Sample:` A representative subset of population chosen to be analyzed (a well-chosen sample contains most of the information about a particular population parameter.
+
+#### Identifying variables type:
+
+-   Numerical vs. Categorical
+
+    -   numerical ---\> continuous or discrete? (based on whether or not they can take on an infinite number of values or only non-negative `whole` numbers, respectively)
+
+    -   categorical ---\> ordinal? (whether or not levels have a natural ordering)
+
+-   Associated (Explanatory) vs. Independent (Response) ---\> show relationships w/ other vars?
+
+-   Confounding variables
+
+#### Classify study type as ovbservational or experimental
+
+-   If `random sampling` has been employed in data collection, the results should be `generalizable` to the target population.
+
+-   If `random assignment` has been employed in study design, the results suggest `causality.`
+
+#### Sampling Techniques
+
+-   Probability Sampling
+
+    -   `Random sampling:` choosing sample randomly without any given logic ---\> each member have equal chance of being selected in the sample.
+
+    -   `Stratified sampling:` First divide population into `homogenous` strata (subjects within each stratum are similar but different across strata), then `randomly` sample from `within each strata.`
+
+    -   `Cluster sampling:` Divide population into `heterogenous` clusters (subjects within clusters are different but `clusters are similar to each other` ---\> `randomly sample a few clusters` ---\> then `randomly sample WITHIN each cluster`
+
+    -   Systematic sampling: randomly select
+
+-   Non-Probability Sampling
+
+    -   Snowball
+
+    -   Quota
+
+    -   Judgement
+
+    -   Convenience
+
+#### Principles of Experimental Design & Purposes
+
+-   Control any possible confounders?
+
+-   Randomize into treatment and control groups
+
+-   Replicate by using a sufficiently large sample or repeating the experiment
+
+-   Block any variables that might influence the response
