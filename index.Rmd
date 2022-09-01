@@ -5,4 +5,45 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Introduction
+# Summary resources for DS learning
+
+## Statistics, Probability, and A/B Testing
+
+-   [Introduction to A/B Testing by Google on Coursera]()
+
+## SQL / R / Python
+
+-   `SQL syntax guide:` [SQL ZOO](https://link.1point3acres.com/?url=https%3A%2F%2Fsqlzoo.net%2F), [W3schools](https://link.1point3acres.com/?url=https%3A%2F%2Fwww.w3schools.com%2Fsql%2F)
+
+-   `SQL classes:` [SQL-MySQL for Data Analytics and Business Intelligence](https://link.1point3acres.com/?url=https%3A%2F%2Fwww.udemy.com%2Fsql-mysql-for-data-analytics-and-business-intelligence%2F) & [Ultimate MySQL Bootcamp](https://link.1point3acres.com/?url=https%3A%2F%2Fwww.udemy.com%2Fthe-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert%2F) / [18 BEST SQL online learning resources](https://link.1point3acres.com/?url=https%3A%2F%2Facademy.vertabelo.com%2Fblog%2F18-best-online-resources-for-learning-sql-and-database-concepts%2F)
+
+-   `SQL Practices:` [Hackerrank](https://link.1point3acres.com/?url=https%3A%2F%2Fwww.hackerrank.com%2Fdomains%2Fsql) (easy), [Summary of SQL in LeetCode](https://link.1point3acres.com/?url=https%3A%2F%2Fbyrony.github.io%2Fsummary-of-sql-questions-on-leetcode.html)
+
+-   MySQL instructions on [Windows function](<https://link.1point3acres.com/?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F8.0%2Fen%2Fwindow-functions-usage.html>) & [Frame Clause](<https://link.1point3acres.com/?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F8.0%2Fen%2Fwindow-functions-frames.html>), [WITH common table expression](https://link.1point3acres.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fsql%2Ft-sql%2Fqueries%2Fwith-common-table-expression-transact-sql%3Fview%3Dsql-server-2017)
+
+-   Udemy Python courses: [Data Analysis with Pandas and Python](<https://link.1point3acres.com/?url=https%3A%2F%2Fwww.udemy.com%2Fdata-analysis-with-pandas%2F>) / [Python for Data Science and Machine Learning Bootcamp](<https://link.1point3acres.com/?url=https%3A%2F%2Fwww.udemy.com%2Fpython-for-data-science-and-machine-learning-bootcamp%2F>)
+
+-   R: [Datacamp](https://link.1point3acres.com/?url=https%3A%2F%2Fwww.datacamp.com%2F)
+
+-   Other resources: [real python](https://link.1point3acres.com/?url=https%3A%2F%2Frealpython.com%2F)
+
+## Machine Learning resources
+
+1.  [Machine Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/machine-learning-introduction)
+
+-   Topics covered:
+    -   **`Supervised Learning:`** multiple linear regression, logistic regression, neural networks, & decision trees)
+    -   **`Unsupervised Learning:`** clustering, dimensionality reduction, recommender systems
+    -   *Some AI & ML innovation:* evaluating and tuning models, taking a data-centric approach to improving performance
+-   Applied Learning Project:
+    -   Build ML models using `Numpy` & `Scikit`
+
+    -   Build & train a neural network with `Tensorflow` to perform multi-class classificaton
+
+    -   Build & use decision trees and tree ensemble methods, including `forest` and `boosted trees`
+
+    -   Build recommender systems with `a collaborative filtering` approach and `a content-based deep learning` method
+
+2.  [15 hours of expert ML videos](https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/).
+3.  [《An Introduction to Statistical Learning》](https://www.statlearning.com/)
+4.  [Machine Learning 101](https://medium.com/machine-learning-101) on [Towards Data Science](https://towardsdatascience.com/) and many other articles
