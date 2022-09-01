@@ -23,9 +23,9 @@ site: bookdown::bookdown_site
 
 -   Udemy Python courses: [Data Analysis with Pandas and Python](<https://link.1point3acres.com/?url=https%3A%2F%2Fwww.udemy.com%2Fdata-analysis-with-pandas%2F>) / [Python for Data Science and Machine Learning Bootcamp](<https://link.1point3acres.com/?url=https%3A%2F%2Fwww.udemy.com%2Fpython-for-data-science-and-machine-learning-bootcamp%2F>)
 
--   R: [Datacamp](https://link.1point3acres.com/?url=https%3A%2F%2Fwww.datacamp.com%2F)
+-   R: [Datacamp](https://link.1point3acres.com/?url=https%3A%2F%2Fwww.datacamp.com%2F) / [The R Gallery --- website for data viz in R](https://r-graph-gallery.com/) / [R Markdown Guide](https://bookdown.org/yihui/rmarkdown/)
 
--   Other resources: [real python](https://link.1point3acres.com/?url=https%3A%2F%2Frealpython.com%2F)
+-   Other resources: [real python](https://link.1point3acres.com/?url=https%3A%2F%2Frealpython.com%2F) / [Python Data Science Cheat Sheet](https://elitedatascience.com/python-cheat-sheet) (Beginner) / [Complete Python DS Cheat Sheet (PDF)](https://www.utc.fr/~jlaforet/Suppl/python-cheatsheets.pdf) / [Collection of RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 
 ## Machine Learning resources
 
