@@ -1,3 +1,9 @@
+#Data Science job interview prepation notes
+
+## This repo is currently for my personal use of preparing for ds summer intern (2023). Checked out deployed website [here](https://cyanjiner.github.io/ds-job-prep-notes/).
+
+## Instruction on editing files & render book
+
 ### Edit some key files
 
 - [ ] 1. In `index.Rmd`, change YOUR TITLE HERE to your title. 
@@ -23,6 +29,4 @@
 - [ ] 4. If it looks good, commit and push all changed files to GitHub. 
 
 (You will need to repeat steps 2 and 4 every time you wish to update the book online.)
-
-
 *This repo was initially generated from a bookdown template available here: https://github.com/jtr13/bookdown-template.*
