@@ -1,16 +1,14 @@
 # A/B Testing
 
-Experimentation:
+Experimentation ranging from the underlying infrastructure, to design metrics and dashboards, to running and analyzing experiments to the processing culture needed to facilitate data-driven solutions
 
-ranging from the underlying infrastructure, to design metrics and dashboards, to running and analyzing experiments to the processing culture needed to facilitate data-driven solutions
-
-## What is `A/B testing`?
+## What is A/B testing?
 
 A/B testing is a general methodology used online when you wanna test out a new product or a feature. And what you're doing is you are going to take two sets of users and you will show one set, a control set, your existing product or feature, and then another set, your experiment, the new version.
 
 Then, you will examine how did these users from two groups respond differently in order to determine which version of your feature is better.
 
--   Example:
+-   **Example:**
 
     -   It can be a novel big change or addition in product or feature like when Amazon initially decided to launch their first personalized product recommendations feature based on A/B testing results that showed a huge increase in revenue by adding this new feature.
 
@@ -24,7 +22,7 @@ Then, you will examine how did these users from two groups respond differently i
 
 ## What you can't do with A/B testing?
 
-### I. Case 1: New Experiences (e.g. premium service that offers additional functionality)
+**`Case 1: New Experiences`** (e.g. premium service that offers additional functionality)
 
 (p.s. to access premium, user need to upgrade, create a log-in, and explore new functionality)
 
@@ -32,28 +30,48 @@ Then, you will examine how did these users from two groups respond differently i
     1.  we are not sure about the baseline for comparison
     2.  we can't control the exact time we need in order to actually have our users adapt to the new experience. So that we can't know the plateaued experience so that we can actually make a robust decision.
 
-### II. Case 2: Time-dependent/related cases (e.g. Referall)
+**`Case 2: Time-dependent/related cases`** (e.g. Referral)
 
 -   For example, if we have a website that recommends apartment rentals, but people don't look for apartments that often, what you really want is to grow your business by referrals to other people who like your service. The main issues in this case are:
     1.  The scope of an experiment will be really hard to measure whether people `actually` come back to you from more referrals or from other reasons.
     2.  We can't estimate the time that people actually spend in making the action of referral happen.
 
-### III. Cases 3: Missing/Complete content or services
+**`Cases 3: Missing/Complete content or services`**
 
 -   A/B testing can't really tell us if we are missing something. For example, if we are building a song or a book reviews website, A/B testing can't tell us if we are missing the entire other book that we should be reviewing but we aren't reviewing at all.
 
-## Other Techniques:
+**`Other Techniques to complement A/B testing:`**
 
--   **Qualitative research:** A/B testing can give you a lot of broad quantitative data, but other techniques give you very deep and qualitative data that are really complimentary to A/B testing
+-   **`Qualitative research:`** A/B testing can give you a lot of broad quantitative data, but other techniques give you very deep and qualitative data that are really complimentary to A/B testing
     -   User experience research
     -   Focus groups and surveys
     -   Human evaluations
--   **Quantitative approach**: We can also analyze the `logs` of what users did on the website to see if a hypothesis can be developed about what's `causing` changes in their behavior. And that's something where you may want to go forward and actually design and randomize an experiment through a perspective analysis. We can use the two data sources to compliment each other.
+-   **`Quantitative approach`**`:` We can also analyze the `logs` of what users did on the website to see if a hypothesis can be developed about what's `causing` changes in their behavior. And that's something where you may want to go forward and actually design and randomize an experiment through a perspective analysis. We can use the two data sources to compliment each other.
 
 ## Example: Audacity
 
-![audacity example](2022-09-01-02-42-28.png)
-
 ### Defining the hypothesis
 
-Initial hypothesis: sss
+-   **`Initial Hypothesis:`** changing the "start now" button from `orange` to `pink` will `increase` how many students explore Audacity's courses.
+
+-   **`Choosing Metrics:`**
+
+    -   `BAD CHOICES:`
+
+        -   Total \# of courses completed ---\> time issue (not should about the actual duration to complete course)
+
+        -   \# of clicks ---\> percentage issue (e.g. 2/12 clicks in control group vs. 1/3 clicks in experiment group: \# of clicks in experiment is $\downarrow$, but its ratio is actually $\uparrow$
+
+    -   `GOOD CHOICES:`
+
+```{=tex}
+\begin{equation}
+\text{CTR (click-through-rate)} = \frac{\text{Number of clicks}}{\text{Number of Page views}}
+\end{equation}
+```
+```{=tex}
+\begin{equation}
+\text{Click-through probability)} = \frac{\text{Unique visitors who click}}{\text{Unique visitors to page}}
+\end{equation}
+```
+-   **`Updated hypothesis:`** Changing the "Start Now" button from orange to pink will increase the `click-through-probability` of the button. (\--\> assume that this will ultimately increase business profits).
