@@ -1,0 +1,145 @@
+# My DS Summer Intern Preparation Guide
+
+KEY Concepts to review:
+
+## Resume related technical content
+
+-   Intern experience 1 - Statistical Consultant (R, Tableau)
+
+    -   data manipulation & visualization methods / packages
+
+    -   multiple regression model
+
+    -   latent class analysis / k-means clustering
+
+    -   chi-square (goodness of fit, contigency)
+
+-   Intern experience 2 - Data Science Intern (R, Python)
+
+    -   how to design key metrics?
+
+    -   ETL pipeline and R ShinyApp dashboard
+
+    -   User-based Collaborative Filtering algorthm
+
+    -   RFM analysis and k-means
+
+    -   classification --\> predict user churn rate
+
+-   Intern experience 3 - Data Science Intern
+
+    -   SQL (pull data), SQL templates
+
+    -   feature engineering
+
+        -   sampling (distribution / weighted sample)
+
+        -   one-hot encoding \| standardization (min-max) \| dummy coding \| missing values imputations (kNN)
+
+        -   log / exp / box-cox
+
+        -   PCA \| LDA
+
+    -   ETL pipeline --\> model evaluation and report (k-fold cross validation)
+
+-   Capstone research
+
+    -   time series forecasting (exponential smooth / ARIMA / GARCH)- differences, pros and cons
+
+    -   time series clustering --\> Dynamic Time Warping, hierarchical clustering
+
+    -   k-medoids clustering (mixed data type)
+
+    -   test for stationarity (Augmented Dickey-Fuller test), normality (Shapiro Wilk), conditinal heteroscedasticity (ARCH LM), Box-Cox transformation
+
+## SQL \| Python \| R \| Tableau
+
+### Basic Statistics:
+
+-   Confidence intervals
+
+-   Tests of Hypotheses
+
+-   T-tests, correlation, regression, analysis of variance, chi-square tests
+
+## Probability: (usually test easy-medium prob questions)
+
+-   `Probability spaces` as models for phenomena with statistical regularity
+
+-   `Discrete spaces (binomial, hypergeometric, Poisson)`
+
+-   `Continuos spaces (normal, exponential) and densities`
+
+-   Random Variables \| Expectation \| Independence
+
+-   Conditional probability
+
+-   The Laws of large numbers
+
+-   Central Limit Theorem (CLT)
+
+***`MOST ASKED MATH TOPICS:`***
+
+-   PROB:
+
+    -   probability theorems
+
+    -   sampling & experimental design
+
+    -   random variables, PDF/CDF, expected values, etc.
+
+-   STATS
+
+    -   book: `Practical statistics for data scientists (Bruce)` \| engineering statistics handbook (NIST) \| Statistical inference (Casella & Berger)
+
+    -   A/B Testing, hypothesis test
+
+    -   differences of every type of distribution and how to test such type
+
+    -   OLS and logistic
+
+## ML Theory (for DS-Modeling job)
+
+-   book: Introduction to Statistical Learning \| Elements of statistical learning \| Hands-on ML with Scikit Learn, Keras, and TensorFlow (by OREILLY)
+-   bias variance \| sampling \| under/overfitting \| feature engineering \| model evaluation
+-   how to select an apropriate model and features
+-   pros and cons of different models
+-   ETL pipeline/model, prod readiness
+
+## A/B Testing and Product Sense
+
+## Statistical Testing
+
+-   parametric vs. non-parametric
+
+    -   each method's assumptions and pros & cons
+
+    -   differences: parametric --\> independent, unbiased sample \| non-parametric --\> ?
+
+-   `case studies -- experiment design:`
+
+    -   mean, standard deviation, median, IQR
+
+    -   Hypothesis testing
+
+        -   h0 / h1
+
+        -   choose statistical test and significance level
+
+        -   test statistics
+
+    -   correlation (pearson / Spearman rank / Kendall rank)
+
+    -   one-sample / two sample t-test \| ANOVA \| chi-square --\> goodness of fit, contigency
+
+    -   test distribution
+
+        -   histogram, skewness, kurtosis
+
+        -   KS (Kolmogorov-Smirnov) test
+
+        -   Shapiro-Wilk
+
+        -   68-95-99.7
+
+## Behavioral Questions

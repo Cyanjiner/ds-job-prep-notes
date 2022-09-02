@@ -1,5 +1,6 @@
 # Statistics and Probability
 
+
 ## Designing Studies
 
 `Population:` A collection of individuals or objects that we will be analyzing on their properties.
@@ -20,6 +21,14 @@
 
 #### Classify study type as ovbservational or experimental
 
+-   Observational studies: researcher collects data by observing but not directly interfering with how data arise ---\> correlation only
+
+    -   `Retrospective study:` when an observational study uses data `from the past`
+
+    -   `Prospective study:` .... data are collected `throughout the study`
+
+-   `Experiments:` when researchers `randomly assign` subjects to treatments (can be causal)
+
 -   If `random sampling` has been employed in data collection, the results should be `generalizable` to the target population.
 
 -   If `random assignment` has been employed in study design, the results suggest `causality.`
@@ -32,7 +41,11 @@
 
     -   `Stratified sampling:` First divide population into `homogenous` strata (subjects within each stratum are similar but different across strata), then `randomly` sample from `within each strata.`
 
-    -   `Cluster sampling:` Divide population into `heterogenous` clusters (subjects within clusters are different but `clusters are similar to each other` ---\> `randomly sample a few clusters` ---\> then `randomly sample WITHIN each cluster`
+        -   e.g. to make sure both genders are equally represented in a study, we might divide the population into males and females and then randomly sample from within each gender group
+
+    -   `Cluster sampling:` Divide population into `heterogenous` clusters (subjects within clusters are different but `clusters are similar to each other` ---\> `randomly sample a few clusters`
+
+        -   `Multistage sampling` add one other step : `randomly sample observations from WITHIN each cluster,` to cluster sampling
 
     -   Systematic sampling: randomly select
 
@@ -44,9 +57,15 @@
 
     -   Judgement
 
-    -   Convenience
+    -   `Convenience sample bias` occurs when individuals who are easily accessible, are `more likely to be included` in the sample.
 
-#### Principles of Experimental Design & Purposes
+    -   `Non-response bias` happens when only a `non-random` proportion of the randomly sampled people respond to a survey ---\> sample no longer representative (initial sample is random but the final valid sample is not)
+
+        -   e.g. when we take a random sample of individuals from Stanford, but certain groups of population, such as from a lower socioeconomic status, are much less likely to respond to the survey ---\> our sample is not representative enough of the entire Stanford community
+
+    -   `Volunteer Response bias` occurs when sample consists of only people who `volunteer to respond` bcuz they have `strong opinions` on the issue (no initial random sample)
+
+#### Principles of Experimental Design---Control, Randomize, Replicate, and Block---and their purposes
 
 -   Control any possible confounders?
 

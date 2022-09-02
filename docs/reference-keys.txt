@@ -4,6 +4,11 @@ sql-r-python-visualization-tools
 machine-learning-resources
 interview-questions-resume
 statistics-and-probability
+designing-studies
+identifying-variables-type
+classify-study-type-as-ovbservational-or-experimental
+sampling-techniques
+principles-of-experimental-designcontrol-randomize-replicate-and-blockand-their-purposes
 ab-testing
 what-is-ab-testing
 what-you-cant-do-with-ab-testing
@@ -11,3 +16,12 @@ example-audacity
 defining-the-hypothesis
 machine-learning-models
 product-sense
+my-ds-summer-intern-preparation-guide
+resume-related-technical-content
+sql-python-r-tableau
+basic-statistics
+probability-usually-test-easy-medium-prob-questions
+ml-theory-for-ds-modeling-job
+ab-testing-and-product-sense
+statistical-testing
+behavioral-questions

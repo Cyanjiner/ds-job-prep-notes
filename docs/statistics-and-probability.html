@@ -23,7 +23,7 @@
 <meta name="author" content="Jiner Zheng" />
 
 
-<meta name="date" content="2022-09-01" />
+<meta name="date" content="2022-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -79,7 +79,10 @@
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#machine-learning-resources"><i class="fa fa-check"></i><b>1.3</b> Machine Learning resources</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#interview-questions-resume"><i class="fa fa-check"></i><b>1.4</b> Interview Questions &amp; Resume</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html"><i class="fa fa-check"></i><b>2</b> Statistics and Probability</a></li>
+<li class="chapter" data-level="2" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html"><i class="fa fa-check"></i><b>2</b> Statistics and Probability</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#designing-studies"><i class="fa fa-check"></i><b>2.1</b> Designing Studies</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="ab-testing.html"><a href="ab-testing.html"><i class="fa fa-check"></i><b>3</b> A/B Testing</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="ab-testing.html"><a href="ab-testing.html#what-is-ab-testing"><i class="fa fa-check"></i><b>3.1</b> What is A/B testing?</a></li>
@@ -91,6 +94,19 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="machine-learning-models.html"><a href="machine-learning-models.html"><i class="fa fa-check"></i><b>4</b> Machine Learning Models</a></li>
 <li class="chapter" data-level="5" data-path="product-sense.html"><a href="product-sense.html"><i class="fa fa-check"></i><b>5</b> Product Sense</a></li>
+<li class="chapter" data-level="6" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html"><i class="fa fa-check"></i><b>6</b> My DS Summer Intern Preparation Guide</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#resume-related-technical-content"><i class="fa fa-check"></i><b>6.1</b> Resume related technical content</a></li>
+<li class="chapter" data-level="6.2" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#sql-python-r-tableau"><i class="fa fa-check"></i><b>6.2</b> SQL | Python | R | Tableau</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#basic-statistics"><i class="fa fa-check"></i><b>6.2.1</b> Basic Statistics:</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#probability-usually-test-easy-medium-prob-questions"><i class="fa fa-check"></i><b>6.3</b> Probability: (usually test easy-medium prob questions)</a></li>
+<li class="chapter" data-level="6.4" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#ml-theory-for-ds-modeling-job"><i class="fa fa-check"></i><b>6.4</b> ML Theory (for DS-Modeling job)</a></li>
+<li class="chapter" data-level="6.5" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#ab-testing-and-product-sense"><i class="fa fa-check"></i><b>6.5</b> A/B Testing and Product Sense</a></li>
+<li class="chapter" data-level="6.6" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#statistical-testing"><i class="fa fa-check"></i><b>6.6</b> Statistical Testing</a></li>
+<li class="chapter" data-level="6.7" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#behavioral-questions"><i class="fa fa-check"></i><b>6.7</b> Behavioral Questions</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -112,7 +128,76 @@
             <section class="normal" id="section-">
 <div id="statistics-and-probability" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Statistics and Probability<a href="statistics-and-probability.html#statistics-and-probability" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="designing-studies" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Designing Studies<a href="statistics-and-probability.html#designing-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>Population:</code> A collection of individuals or objects that we will be analyzing on their properties.</p>
+<p><code>Sample:</code> A representative subset of population chosen to be analyzed (a well-chosen sample contains most of the information about a particular population parameter.</p>
+<div id="identifying-variables-type" class="section level4 hasAnchor" number="2.1.0.1">
+<h4><span class="header-section-number">2.1.0.1</span> Identifying variables type:<a href="statistics-and-probability.html#identifying-variables-type" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Numerical vs. Categorical</p>
+<ul>
+<li><p>numerical —&gt; continuous or discrete? (based on whether or not they can take on an infinite number of values or only non-negative <code>whole</code> numbers, respectively)</p></li>
+<li><p>categorical —&gt; ordinal? (whether or not levels have a natural ordering)</p></li>
+</ul></li>
+<li><p>Associated (Explanatory) vs. Independent (Response) —&gt; show relationships w/ other vars?</p></li>
+<li><p>Confounding variables</p></li>
+</ul>
+</div>
+<div id="classify-study-type-as-ovbservational-or-experimental" class="section level4 hasAnchor" number="2.1.0.2">
+<h4><span class="header-section-number">2.1.0.2</span> Classify study type as ovbservational or experimental<a href="statistics-and-probability.html#classify-study-type-as-ovbservational-or-experimental" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Observational studies: researcher collects data by observing but not directly interfering with how data arise —&gt; correlation only</p>
+<ul>
+<li><p><code>Retrospective study:</code> when an observational study uses data <code>from the past</code></p></li>
+<li><p><code>Prospective study:</code> …. data are collected <code>throughout the study</code></p></li>
+</ul></li>
+<li><p><code>Experiments:</code> when researchers <code>randomly assign</code> subjects to treatments (can be causal)</p></li>
+<li><p>If <code>random sampling</code> has been employed in data collection, the results should be <code>generalizable</code> to the target population.</p></li>
+<li><p>If <code>random assignment</code> has been employed in study design, the results suggest <code>causality.</code></p></li>
+</ul>
+</div>
+<div id="sampling-techniques" class="section level4 hasAnchor" number="2.1.0.3">
+<h4><span class="header-section-number">2.1.0.3</span> Sampling Techniques<a href="statistics-and-probability.html#sampling-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Probability Sampling</p>
+<ul>
+<li><p><code>Random sampling:</code> choosing sample randomly without any given logic —&gt; each member have equal chance of being selected in the sample.</p></li>
+<li><p><code>Stratified sampling:</code> First divide population into <code>homogenous</code> strata (subjects within each stratum are similar but different across strata), then <code>randomly</code> sample from <code>within each strata.</code></p>
+<ul>
+<li>e.g. to make sure both genders are equally represented in a study, we might divide the population into males and females and then randomly sample from within each gender group</li>
+</ul></li>
+<li><p><code>Cluster sampling:</code> Divide population into <code>heterogenous</code> clusters (subjects within clusters are different but <code>clusters are similar to each other</code> —&gt; <code>randomly sample a few clusters</code></p>
+<ul>
+<li><code>Multistage sampling</code> add one other step : <code>randomly sample observations from WITHIN each cluster,</code> to cluster sampling</li>
+</ul></li>
+<li><p>Systematic sampling: randomly select</p></li>
+</ul></li>
+<li><p>Non-Probability Sampling</p>
+<ul>
+<li><p>Snowball</p></li>
+<li><p>Quota</p></li>
+<li><p>Judgement</p></li>
+<li><p><code>Convenience sample bias</code> occurs when individuals who are easily accessible, are <code>more likely to be included</code> in the sample.</p></li>
+<li><p><code>Non-response bias</code> happens when only a <code>non-random</code> proportion of the randomly sampled people respond to a survey —&gt; sample no longer representative (initial sample is random but the final valid sample is not)</p>
+<ul>
+<li>e.g. when we take a random sample of individuals from Stanford, but certain groups of population, such as from a lower socioeconomic status, are much less likely to respond to the survey —&gt; our sample is not representative enough of the entire Stanford community</li>
+</ul></li>
+<li><p><code>Volunteer Response bias</code> occurs when sample consists of only people who <code>volunteer to respond</code> bcuz they have <code>strong opinions</code> on the issue (no initial random sample)</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="principles-of-experimental-designcontrol-randomize-replicate-and-blockand-their-purposes" class="section level4 hasAnchor" number="2.1.0.4">
+<h4><span class="header-section-number">2.1.0.4</span> Principles of Experimental Design—Control, Randomize, Replicate, and Block—and their purposes<a href="statistics-and-probability.html#principles-of-experimental-designcontrol-randomize-replicate-and-blockand-their-purposes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Control any possible confounders?</p></li>
+<li><p>Randomize into treatment and control groups</p></li>
+<li><p>Replicate by using a sufficiently large sample or repeating the experiment</p></li>
+<li><p>Block any variables that might influence the response</p></li>
+</ul>
 
+</div>
+</div>
 </div>
             </section>
 
