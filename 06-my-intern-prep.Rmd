@@ -2,7 +2,7 @@
 
 KEY Concepts to review:
 
-## Resume related technical content
+## Resume related technical content --\> JINER only
 
 -   Intern experience 1 - Statistical Consultant (R, Tableau)
 

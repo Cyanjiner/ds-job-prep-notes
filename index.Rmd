@@ -9,17 +9,36 @@ site: bookdown::bookdown_site
 
 ## Statistics, Probability, and A/B Testing
 
--   [Introduction to A/B Testing by Google on Coursera]()
+### Stanford Courses (NON-EDUC):
 
+1.  [STATS 160-Introduction to Statistical Methods](https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&q=STATS+160%3A+Introduction+to+Statistical+Methods%3A+Precalculus&collapse=)
+    -   COVERS estimation \| confidence intervals \| test of hypotheses \| t-tests \| correlation && regression \| analysis of variance and chi-square tests
+2.  [STATS 116-Theory of Probability](https://explorecourses.stanford.edu/search?q=STATS116) or [CS109-Introduction to Probability for Computer Scientists](https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=cs109&collapse=)
+    -   COVERS probability spaces \| discrete spaces (binomial, hypergeometric, Possion) \| continuous spaces (normal, exponential) and densities \| random variables \| expectation \| independence \| conditional probability \| the laws of large numbers and central limit theorem (CLT)
+
+### Online Resources
+
+-   `Coursera:` [Introduction to Probability and Data with R by Duke University](https://www.coursera.org/learn/probability-intro): If you are already familiar with R then skip week 3-5 sections, week 6 & 8 are most useful for reviewing important probability concepts)
+-   `Coursera:` [Six Sigma Advanced Define and Measure Phases](https://www.coursera.org/learn/six-sigma-define-measure-advanced#syllabus): Week 3-5 covers probability & statistics and statistical distribution
+-   `Book:` [Practical Statistics for Data Scientists](https://learning.oreilly.com/library/view/practical-statistics-for/9781491952955/) (available on [Oreilly](https://www.oreilly.com/) Stanford account has free access)
+-   `Useful website for reviewing / practicing prob & stats questions:` [Brilliant](https://brilliant.org/)
+-   `Udacity:` [Introduction to **A/B Testing** by Google](https://www.udacity.com/course/ab-testing--ud257)
+
+```{=html}
+
+<p><i><mark>Additional Tips:</mark> <small>A/B Testing is NOT required by all DS/DA jobs, but if you are interested in applying for a Product Data Scientist then it is REQUIRED. Be sure to browse DS/DA interns JD so that you know what skills would be needed.</small></i></p>
+```
 ## SQL / R / Python / Visualization Tools
 
 -   `SQL syntax guide:` [SQL ZOO](https://sqlzoo.net/wiki/SQL_Tutorial), [W3schools](https://www.w3schools.com/sql/)
 
 -   `SQL classes:`
 
-    -   Udemy: [SQL-MySQL for Data Analytics and Business Intelligence](https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/) + [The Ultimate MySQL Bootcamp](https://www.udemy.com/course/the-ultimate-sql-bootcamp-from-a-to-z-quickly/) (should take less than a week to learn these two courses)
+    -   `Stanford class:` [CS145 Database Management and Data Systems](https://cs145-fa21.github.io/)
 
-    -   Other resources: [18 BEST SQL online learning resources](https://academy.vertabelo.com/blog/18-best-online-resources-for-learning-sql-and-database-concepts/)
+    -   `Udemy:` [SQL-MySQL for Data Analytics and Business Intelligence](https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/) + [The Ultimate MySQL Bootcamp](https://www.udemy.com/course/the-ultimate-sql-bootcamp-from-a-to-z-quickly/) (should take less than a week to learn these two courses)
+
+    -   `Other resources:` [18 BEST SQL online learning resources](https://academy.vertabelo.com/blog/18-best-online-resources-for-learning-sql-and-database-concepts/)
 
 -   `SQL Practices:` [Hackerrank](https://www.hackerrank.com/domains/sql) (easy), [Summary of SQL in LeetCode](https://byrony.github.io/summary-of-sql-questions-on-leetcode.html) (go for medium and hard!!)
 
@@ -29,7 +48,7 @@ site: bookdown::bookdown_site
 
 -   `R: Datacamp` (for learning how to program in R. However, most tech companies prefer Python so no need to be an R expert, but it is good to learn especially if you are also interested in doing research in academic)
 
--   `Tableau / Power BI:` [Learning Path: Your Guide to become a Tableau Expert](https://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/tableau-learning-path/) \| [Tableau Tutorial](<https://www.tutorialspoint.com/tableau/index.htm>) \| [Power BI Tutorial](https://www.tutorialspoint.com/power_bi/index.htm) (looking at online tutorial guides are sufficient for learning data viz tools cuz they are easy, but if you prefer taking online video lessons then [Coursera---Data Visualization and Communication with Tableau by Duke](https://www.coursera.org/learn/analytics-tableau) will be a good choice).
+-   `Tableau / Power BI:` [Learning Path: Your Guide to become a Tableau Expert](https://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/tableau-learning-path/) \| [Tableau Tutorial](https://www.tutorialspoint.com/tableau/index.htm) \| [Power BI Tutorial](https://www.tutorialspoint.com/power_bi/index.htm) (looking at online tutorial guides are sufficient for learning data viz tools cuz they are easy, but if you prefer taking online video lessons then [Coursera---Data Visualization and Communication with Tableau by Duke](https://www.coursera.org/learn/analytics-tableau) will be a good choice).
 
 -   `Other helpful resources:`
 
@@ -49,13 +68,28 @@ site: bookdown::bookdown_site
 
 ## Machine Learning resources
 
-1.  [Machine Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/machine-learning-introduction)
+### Stanford Classes:
+
+-   [STATS 202-Data Mining and Analysis (Terms: Aut, Sum)](https://explorecourses.stanford.edu/search;jsessionid=p74yiuxezho7f6aq2w837sbg?q=STATS+202%3A+Data+Mining+and+Analysis&view=catalog&filter-coursestatus-Active=on&academicYear=20172018) --\> [course website](https://stats-202.github.io/)
+-   [STATS 216-Introduction to Statistical Learning (Terms: Win)](https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&q=STATS%20216:%20Introduction%20to%20Statistical%20Learning&academicYear=20132014) --\> [course syllabus](https://canvas.stanford.edu/courses/110840/assignments/syllabus): *This is a math-light version of STATS 202*
+-   [CS 129-Applied Machine Learning (Terms: Win)](https://explorecourses.stanford.edu/search?q=CS129) --\> [course website](https://web.stanford.edu/class/cs129/): *similar to the ML course by Andrew Ng on Coursera*
+-   [CS 229-Machine Learning (Terms: Aut, Win, Spr, Sum)](https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=CS+229%3A+Machine+Learning+NG&collapse=) --\> [course website](https://cs229.stanford.edu/): *This is a very MATHY ML class, so if you are not comfortable with doing mathematical proofs of some ML theories do not take it for credit.*
+-   `USEFUL RESOURCE:` [A collection/guide of Stanford AI courses under CS/STATS department](<https://huyenchip.com/2018/03/30/guide-to-Artificial-Intelligence-Stanford.html>)
+
+### Online Resources
+
+1.   [**`Machine Learning Specialization by Andrew Ng on Coursera`**](https://www.coursera.org/specializations/machine-learning-introduction)
 
 -   `Topics covered:`
+
     -   **`Supervised Learning:`** multiple linear regression, logistic regression, neural networks, & decision trees)
+
     -   **`Unsupervised Learning:`** clustering, dimensionality reduction, recommender systems
+
     -   *Some AI & ML innovation:* evaluating and tuning models, taking a data-centric approach to improving performance
+
 -   `Applied Learning Project:`
+
     -   Build ML models using `Numpy` & `Scikit`
 
     -   Build & train a neural network with `Tensorflow` to perform multi-class classificaton
@@ -65,18 +99,20 @@ site: bookdown::bookdown_site
     -   Build recommender systems with `a collaborative filtering` approach and `a content-based deep learning` method
 
 2.  [15 hours of expert ML videos](https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/).
-3.  [《An Introduction to Statistical Learning》](https://www.statlearning.com/)
+
+3.  [《An Introduction to Statistical Learning》](https://www.statlearning.com/)(This book is also used for Stanford's course STATS 202: Data Mining and Analysis)
+
 4.  [Machine Learning 101](https://medium.com/machine-learning-101) on [Towards Data Science](https://towardsdatascience.com/) and many other articles
 
 `Other useful resources (notes):`
 
 -   [Data Science Specialization Course Notes](http://sux13.github.io/DataScienceSpCourseNotes/) (Notes for all 9 courses in Coursera Data Science Specialization from JHU, taken by Xing ---\> topics include Experimental Design / EDA / Statistical Inferences / Regression models / Practical Machine Learning, etc.)
 
--   [Natural Language Processing Notes -- Python](https://alvinntnu.github.io/python-notes/nlp/nlp-primer.html) (chapters from Python Notes for Linguistics by [Alvin Chen](https://alvinchen.myftp.org/)).
-
--   [Hands-on-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow](https://github.com/Akramz/Hands-on-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow) (GitHub repo for notes & code [.ipynb] on the book w/ same name)
+-   [Notes on《Hands-on-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow》](https://github.com/Akramz/Hands-on-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow) (GitHub repo for notes & code [.ipynb] on the book w/ same name) This book is also available on [Oreilly](https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)
 
 -   [Data Science with R: A Resource Compendium](https://bookdown.org/martin_monkman/DataScienceResources_book/) very very very complete collection of data science resources with R by Martin Monkman, ranging from topics like data wrangling, Bayesian methods, to time series modeling & ML methods)
+
+-   [Natural Language Processing Notes -- Python](https://alvinntnu.github.io/python-notes/nlp/nlp-primer.html) (chapters from Python Notes for Linguistics by [Alvin Chen](https://alvinchen.myftp.org/)).
 
 ```{=html}
 
@@ -86,12 +122,12 @@ site: bookdown::bookdown_site
 
 -   [MIT Sample Resumes](https://cdn.uconnectlabs.com/wp-content/uploads/sites/123/2021/08/sampe-resumes-capd.pdf)
 
--    [VMock Dashboard](https://www.vmock.com/) (A smart platform that rates & analyzes your resume)
+-   [VMock Dashboard](https://www.vmock.com/) (A smart platform that rates & analyzes your resume)
 
 -   [FAANGPath Resume Template](https://www.overleaf.com/latex/templates/faangpath-simple-template/npsfpdqnxmbc) (a FREE tech resume template built with `LaTeX` on `Overleaf`)
 
 -   `DS Interview related GitHub respository:`
 
-    -    [Data-Science-Interview-Resources](https://github.com/rbhatia46/Data-Science-Interview-Resources) \| [120-Data-Science-Interview-Questions](https://github.com/kojino/120-Data-Science-Interview-Questions)
+    -   [Data-Science-Interview-Resources](https://github.com/rbhatia46/Data-Science-Interview-Resources) \| [120-Data-Science-Interview-Questions](https://github.com/kojino/120-Data-Science-Interview-Questions)
 
-    -    [`Cracking-the-data-science-interview`](https://github.com/khanhnamle1994/cracking-the-data-science-interview)(this one contains almost ALL related resources for DS job prepraration, but it might be overwhelming if you just start your DS-prep journey [a lot of cheat sheets on KEY topics/concepts, so I recommend **selectively** using some resources there).
+    -   [`Cracking-the-data-science-interview`](https://github.com/khanhnamle1994/cracking-the-data-science-interview)(this one contains almost ALL related resources for DS job prepraration, but it might be overwhelming if you just start your DS-prep journey [a lot of cheat sheets on KEY topics/concepts, so I recommend **selectively** using some resources there).

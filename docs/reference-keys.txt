@@ -1,7 +1,11 @@
 summary-resources-for-ds-learning
 statistics-probability-and-ab-testing
+stanford-courses-non-educ
+online-resources
 sql-r-python-visualization-tools
 machine-learning-resources
+stanford-classes
+online-resources-1
 interview-questions-resume
 statistics-and-probability
 designing-studies
@@ -17,7 +21,7 @@ defining-the-hypothesis
 machine-learning-models
 product-sense
 my-ds-summer-intern-preparation-guide
-resume-related-technical-content
+resume-related-technical-content-jiner-only
 sql-python-r-tableau
 basic-statistics
 probability-usually-test-easy-medium-prob-questions
