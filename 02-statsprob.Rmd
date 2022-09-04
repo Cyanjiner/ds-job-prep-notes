@@ -1,13 +1,12 @@
 # Statistics and Probability
 
-
 ## Designing Studies
 
 `Population:` A collection of individuals or objects that we will be analyzing on their properties.
 
 `Sample:` A representative subset of population chosen to be analyzed (a well-chosen sample contains most of the information about a particular population parameter.
 
-#### Identifying variables type:
+### Identifying variables type:
 
 -   Numerical vs. Categorical
 
@@ -19,7 +18,7 @@
 
 -   Confounding variables
 
-#### Classify study type as ovbservational or experimental
+### Classify study type as ovbservational or experimental
 
 -   Observational studies: researcher collects data by observing but not directly interfering with how data arise ---\> correlation only
 
@@ -29,15 +28,11 @@
 
 -   `Experiments:` when researchers `randomly assign` subjects to treatments (can be causal)
 
--   If `random sampling` has been employed in data collection, the results should be `generalizable` to the target population.
-
--   If `random assignment` has been employed in study design, the results suggest `causality.`
-
-#### Sampling Techniques
+### Sampling Techniques
 
 -   Probability Sampling
 
-    -   `Random sampling:` choosing sample randomly without any given logic ---\> each member have equal chance of being selected in the sample.
+    -   `Random sampling:` choosing sample randomly without any given logic ---\> each member has an equal chance of being selected in the sample.
 
     -   `Stratified sampling:` First divide population into `homogenous` strata (subjects within each stratum are similar but different across strata), then `randomly` sample from `within each strata.`
 
@@ -45,9 +40,9 @@
 
     -   `Cluster sampling:` Divide population into `heterogenous` clusters (subjects within clusters are different but `clusters are similar to each other` ---\> `randomly sample a few clusters`
 
-        -   `Multistage sampling` add one other step : `randomly sample observations from WITHIN each cluster,` to cluster sampling
+        -   `Multistage sampling` add one other step to cluster sampling: `randomly sample observations from WITHIN each cluster`
 
-    -   Systematic sampling: randomly select
+    -   Systematic sampling
 
 -   Non-Probability Sampling
 
@@ -65,12 +60,60 @@
 
     -   `Volunteer Response bias` occurs when sample consists of only people who `volunteer to respond` bcuz they have `strong opinions` on the issue (no initial random sample)
 
-#### Principles of Experimental Design---Control, Randomize, Replicate, and Block---and their purposes
+### Principles of Experimental Design---Control, Randomize, Replicate, and Block---and their purposes
 
--   Control any possible confounders?
+1.  `Control` --- compare treatment of interest to a control group
+
+2.  `Randomize` --- randomly assign subjects to treatments
+
+3.  `Replicate` --- collect a sufficiently large sample, or replicate the entire study
+
+4.  `Block` --- block for variables known or suspected to affect outcome
+
+    -   if there are variables known or suspected to affect the response variable, first group the subject into blocks based on these variables ---\> then randomized cases within each block to treatment groups
+
+    -   e.g. design an experiment to investigate if energy gels make you run faster: the treatment group gets the energy gel, the control group does not. It is suspected that energy gels might effect `pro and amateur` athletes differently therefore we `block for pro status`. \<\-- we divide our sample into pro and amateur athletes, then randomly assign pro and amateur athletes to treatment and control groups so that both pro and amateur athletes are equally represented in the resulting treatment and control group.
+
+`Blocking variable vs. Explanatory variable`
+
+-   Explanatory variables `(factors)` are conditions we `impose` on our experimental units.
+
+-   Blocking variables are `characteristics` that the experimental units come with *(which may affect how experimental units respond to response variable differently)*.
+
+`Other terminologies`
+
+-   `Placebo:` a `fake treatment,` often used as the control group in medical studies
+
+-   `Placebo effect:` when experimental units show `improvement` just becuz they `believe` they're receiving a `special` treatment
+
+-   `Blinding:` when experimental units DO NOT know they are in the control or treatment groups.
+
+-   `Double-blind study:` when BOTH the experimenters and researchers DO NOT know who is in the control or treatment group.
+
+`Experimental Design Workflow:`
+
+-   Control any possible `confounders / confounding variables` *(non-explanatory factors that may influence different responses)*
 
 -   Randomize into treatment and control groups
 
 -   Replicate by using a sufficiently large sample or repeating the experiment
 
 -   Block any variables that might influence the response
+
+*\* Stratified sampling allows for controlling for possible confounders in the sampling stage, while blocking allows for controlling for such variables during random assignment.*
+
+### Random Sampling vs. Random Assignment
+
+-   If `random sampling` has been employed in data collection, the results should be `generalizable` to the target population. *(but still NOT causal)*
+
+    -   WHY? ---\> if subjects are randomly selected from the population, then each subject in the population is equally likely to be selected so that the resulting sample is likely `representative` of the population.
+
+-   If `random assignment` has been employed in study design, the results suggest `causality.`
+
+    -   WHY? ---\> in our sample, subjects usually exhibit slightly different characteristics from one another. Through random assignment, we ensure that these different `characteristics are represented equally in the treatment and control groups` ---\> allows us to `attribute any observed difference` between treatment and control groups `to treatment` being observed on the subjects, since otherwise these groups are essentially THE SAME.
+
+-   A study that relies on `volunteers` employ `random assignment (experiment)`, but NOT random sampling can be used to make causal conclusions but ONLY apply to the sample (so results cannot be generalized).
+
+-   A study that uses NO random assignment, but DOES use random sampling, is a `typical observation study`. Results can ONLY be used to make correlation statements, but they CAN be generalized to the population at large.
+
+-   A study that DOES NOT use random assignment or random sampling, can ONLY be used to make correlational statements, and these conclusions are NOT generalizable. This is an `unideal observational study`.
