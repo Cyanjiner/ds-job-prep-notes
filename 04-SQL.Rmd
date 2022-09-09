@@ -17,7 +17,23 @@ knitr::opts_chunk$set(connection = "db")
 
 ## Common keywords and examples:
 
-`SELECT` indicates which *fields* should be selected. `FROM` indicates where these *fields* are located. `SELECT DISTINCT` allows you to select field content. `UPDATE` updates data in a database `DELETE` deletes data from a database `CREATE DATABASE` creates a new databases `DROP DATABASE` drops an existing SQL database `ALTER DATABASE` modifies a database `CREATE TABLE` creates a new table
+`SELECT` indicates which *fields* should be selected. 
+
+`FROM` indicates where these *fields* are located. 
+
+`SELECT DISTINCT` allows you to select field content. 
+
+`UPDATE` updates data in a database 
+
+`DELETE` deletes data from a database 
+
+`CREATE DATABASE` creates a new databases 
+
+`DROP DATABASE` drops an existing SQL database 
+
+`ALTER DATABASE` modifies a database 
+
+`CREATE TABLE` creates a new table
 
 ```{sql}
 /*create a new table */
