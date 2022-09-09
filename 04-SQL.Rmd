@@ -1,0 +1,148 @@
+# Database Management and Data Systems (SQL)
+
+```{r setup, include=FALSE}
+library(RSQLite)
+library(DBI)
+library(knitr)
+db <- dbConnect(RSQLite::SQLite(), ":memory:")
+knitr::opts_chunk$set(eval=FALSE, echo=TRUE)
+knitr::opts_chunk$set(connection = "db")
+```
+
+`Database schemas` show `data types` for each field (column) in all tables (data frame), and they also show `relationships` between tables.
+
+`SQL (Structured Query Language)` is used to answer questions / extract information both within and across relational database tables
+
+[SQL Style Guide by Simon Holywell](https://www.sqlstyle.guide/) *Keywords* are reserved words for **operations**.
+
+## Common keywords and examples:
+
+`SELECT` indicates which *fields* should be selected. `FROM` indicates where these *fields* are located. `SELECT DISTINCT` allows you to select field content. `UPDATE` updates data in a database `DELETE` deletes data from a database `CREATE DATABASE` creates a new databases `DROP DATABASE` drops an existing SQL database `ALTER DATABASE` modifies a database `CREATE TABLE` creates a new table
+
+```{sql}
+/*create a new table */
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    ...
+);
+
+/* create a copy of an existing table */
+CREATE TABLE new_table_name AS
+    SELECT column1, column2, ...
+    FROM existing_table_name,
+    WEHRE conditions;
+```
+
+`ALTER TABLE` modifies a table `DROP TABLE table_name` deletes a table `CREATE INDEX` creates an index (search key) `DROP INDEX` deletes an index `BACKUP DATABASE` is used in SQL Server to create a full back up of an existing SQL database `TO DIST = 'filepath';` Use *aliasing* to rename columns:
+
+```{sql}
+SELECT DISTINCT var_name1 AS new_var_name1, var_name2
+FROM table_name;
+```
+
+*View* is a virtual table that is the result of a saved `SELECT` statement. When accessed, views automatically update in response to updates in the underlying data.
+
+```{sql}
+CREATE VIEW new_table_name AS
+SELECT id, var_name1, var_name2
+FROM table_name;
+```
+
+Group by | Having
+-   the `HAVING` clause was added becuz `WHERE` cannot be used with aggregated functions.
+
+```{sql}
+/* List the number of customers in each country, ordered by the country with the most customers first.*/
+SELECT COUNT(customerID),
+country,
+FROM customers
+GROUP BY country
+ORDER BY COUNT(customerID) DESC; 
+
+/* List the # of customers in each country, sorted high to low (but only include countries with more than 5 customers) */
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5
+ORDER BY COUNT(CustomerID) DESC;
+
+/* List if the employees "Davolio" or "Fuller" have registered more than 25 orders */
+SELECT Employees.LastName, COUNT(Orders.OrderID) AS NumberOfOrders
+FROM Orders
+INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+WHERE LastName = 'Davolio' OR LastName = 'Fuller'
+GROUP BY LastName 
+HAVING COUNT(Orders.OrderID) > 25;
+```
+
+Join examples
+
+```{sql}
+/* INNER JOIN selects records that have matching values in BOTH tables */
+SELECT column_name
+FROM table1
+INNER JOIN table2 ON table1.column_name = table2.column_name;
+
+/* LEFT JOIN selects all records from the left table (table1) and the matching records from the right table (table2) */
+SELECT column_name
+FROM table1
+LEFT JOIN table2 ON table1.column_name = table2.column_name;
+
+/* RIGHT JOIN selects all records from the right table (table2) and the matching records from the left table (table1) */
+SELECT column_name
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+
+/* FULL OUTER JOIN returns all records when there is a match in left (table1) OR right (table2) table records -- FULL OUTER JOIN == FULL JOIN */
+SELECT column_name
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;
+
+/* a self join is a regular join, but the table is joined with itself */
+SELECT column_name
+FROM table1 T1, table2 T2 -- T1, T2 are two aliases of table 1 and table 2
+WHERE condition
+
+/* SQL Self Join Example: matching customers from the same city */
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID -- <> stands for not equal 
+AND A.City = B.City
+ORDER BY A.City;
+```
+
+The SQL UNION Operator
+
+-   the `UNION` operator is used to combine the result-set of two or more `SELECT` statements
+
+    -   Every `SELECT` statement within UNION must have the same number of columns
+
+    -   The columns must also have similar data types
+
+    -   The columns in every `SELECT` statement must also be in the same order
+```{sql}
+/* UNION : selects only distinct values by default */
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+
+/* UNION ALL : allows duplicate values */
+SELECT column_name(s) FROM table1
+UNION ALL
+SELECT column_name(s) FROM table2;
+
+/* example1: returns the German cities (duplicate values also) from both the customers and the suppliers table */
+SELECT City, Country FROM Customers
+WHERE Country='Germany'
+UNION ALL
+SELECT City, Country FROM Suppliers
+WHERE Country='Germany'
+ORDER BY City;
+```
+
+
+

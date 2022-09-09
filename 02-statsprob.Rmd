@@ -1,5 +1,52 @@
 # Statistics and Probability
 
+## IMPORTANT Concepts to review
+
+1.  Probability Basics and Random Variables
+    -   beginnings of prob: sample spaces, basic counting and combinatorial principles *(not necessary to know all ins-and-outs but helpful to understand basics for simplifying problems*
+
+    -   random variables
+
+        -   expectation
+
+        -   variance
+
+        -   covariance
+2.  Probability Distributions
+    -   discrete & continuous
+
+    -   uniform, normal, poisson, binomial, geometric
+3.  Hypothesis Testing
+    -   central limit theorem
+
+    -   sampling distributions
+
+    -   p-values
+
+    -   confidence intervals
+
+    -   type I and type II errors
+4.  Modeling
+    -   maximum likelihood estimation
+
+    -   bayesian statistics
+
+### Key terms for Variability Metrics
+
+`Variability` (also `dispersion`) measures whether the data values are tightly clustered or spread out.
+
+`Deviations / Errors / Residuals:` the difference between the observed values and the estimate of location (i.e. mean / median, etc.)
+
+`Variance / mean-squared-error:` the sum of squared residuals from the mean divided by n-1 where n is the number of data values.
+
+`Standard deviation:` the square root of variance
+
+`Mean absolute deviation:` the mean of the absolute values of the deviations from the mean.
+
+`Percentile / Quantile:` the value such that P percent of the values take on this value or less and (100-P) percent take on this value or more.
+
+`Interquartile range / IQR:` the difference between the 75th percentile and the 25th percentile.
+
 ## Designing Studies
 
 `Population:` A collection of individuals or objects that we will be analyzing on their properties.
