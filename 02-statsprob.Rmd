@@ -164,3 +164,15 @@
 -   A study that uses NO random assignment, but DOES use random sampling, is a `typical observation study`. Results can ONLY be used to make correlation statements, but they CAN be generalized to the population at large.
 
 -   A study that DOES NOT use random assignment or random sampling, can ONLY be used to make correlational statements, and these conclusions are NOT generalizable. This is an `unideal observational study`.
+
+### Hypothesis Tests and Resampling
+
+### Statistical Significance and p-values
+
+`p-value:` Given a chance model that embodies the null hypothesis, the p-value is the probability of obtaining results as `unsusual` or `extreme` as the observed results.
+
+`Alpha:` The probability threshold of `"unusualness"` that chance results must `surpass` for actual outcomes to be deemed statistically significant.
+
+`Type 1 error (false-positive):` Mistakenly concluding an effect is `real` (when it is due to chance). ***(i.e. reject H0 when it is actually true)***
+
+`Type 2 error (false-negative):` Mistakenly concluding an effect is due to `chance` (when it is real). ***(i.e. fails to reject H0 when it is actually false)***
