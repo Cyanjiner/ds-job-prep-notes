@@ -74,7 +74,7 @@ site: bookdown::bookdown_site
 -   [STATS 216-Introduction to Statistical Learning (Terms: Win)](https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&q=STATS%20216:%20Introduction%20to%20Statistical%20Learning&academicYear=20132014) --\> [course syllabus](https://canvas.stanford.edu/courses/110840/assignments/syllabus): *This is a math-light version of STATS 202*
 -   [CS 129-Applied Machine Learning (Terms: Win)](https://explorecourses.stanford.edu/search?q=CS129) --\> [course website](https://web.stanford.edu/class/cs129/): *similar to the ML course by Andrew Ng on Coursera*
 -   [CS 229-Machine Learning (Terms: Aut, Win, Spr, Sum)](https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=CS+229%3A+Machine+Learning+NG&collapse=) --\> [course website](https://cs229.stanford.edu/): *This is a very MATHY ML class, so if you are not comfortable with doing mathematical proofs of some ML theories do not take it for credit.*
--   `USEFUL RESOURCE:` [A collection/guide of Stanford AI courses under CS/STATS department](https://huyenchip.com/2018/03/30/guide-to-Artificial-Intelligence-Stanford.html)
+-   `USEFUL RESOURCE:` [A collection/guide of Stanford AI courses under CS/STATS department](https://huyenchip.com/2018/03/30/guide-to-Artificial-Intelligence-Stanford.html) | [Stanford Grades Distribution 2020](http://txti.es/stanford-grades-2020/images)
 
 ### Online Resources
 
