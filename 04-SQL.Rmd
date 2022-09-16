@@ -17,31 +17,22 @@ knitr::opts_chunk$set(connection = "db")
 
 ## Common keywords and examples:
 
-`SELECT` indicates which *fields* should be selected. 
+### CRUD operations
 
-`FROM` indicates where these *fields* are located. 
+-   CREATE ---\> Databases \| Tables \| Views \| Users \| Permissions \| Security Groups
 
-`SELECT DISTINCT` allows you to select field content. 
+```{sql }
+/* create a new table w/ column names, data type, size */
+CREATE TABLE test_table( -- unique table name
+  test_date date,
+  test_name varchar(20),
+  test_int int
+)
 
-`UPDATE` updates data in a database 
-
-`DELETE` deletes data from a database 
-
-`CREATE DATABASE` creates a new databases 
-
-`DROP DATABASE` drops an existing SQL database 
-
-`ALTER DATABASE` modifies a database 
-
-`CREATE TABLE` creates a new table
-
-```{sql}
-/*create a new table */
-CREATE TABLE table_name (
-    column1 datatype,
-    column2 datatype,
-    ...
-);
+/* data types: */
+Dates: date (YYYY-MM-DD) | datetime (YYYY-MM-DD hh:mm:ss) | time
+Numeric: int | decimal | float | bit (1=TRUE, 0=FALSE. Also accepts NULL)
+Strings: char | varchar | nvarchar
 
 /* create a copy of an existing table */
 CREATE TABLE new_table_name AS
@@ -50,12 +41,102 @@ CREATE TABLE new_table_name AS
     WEHRE conditions;
 ```
 
-`ALTER TABLE` modifies a table `DROP TABLE table_name` deletes a table `CREATE INDEX` creates an index (search key) `DROP INDEX` deletes an index `BACKUP DATABASE` is used in SQL Server to create a full back up of an existing SQL database `TO DIST = 'filepath';` Use *aliasing* to rename columns:
+-   INSERT, --- insert new records into existing database tables
+
+```{sql }
+/* insert new columns & values */
+INSERT INTO table_name (col1, col2, col3)
+VALUES
+  ('value1', 'value2', 'value3')
+  
+/* insert + select columns & values from another existing table */
+INSERT INTO table_name (col1, col2, col3)
+SELECT
+  column1,
+  column2,
+  column3
+FROM other_table
+WHERE condition(s);
+```
+
+-   UPDATE --- Amend existing database records
+
+```{sql}
+UPDATE table_name
+SET 
+  column1 = value1,
+  column2 = value2
+WHERE condition(s)
+```
+
+-   DELETE --- delete existing records from tables
+
+```{sql}
+DELETE 
+FROM table_name
+WHERE condition(s)
+
+/* another method: TRUNCATE --> remove all data from ALL columns at once */
+TRUNCATE TABLE table_name
+```
+
+-   Declare Variables ---\> so it will be easier to use in later conditions without repetitively calling the same values
+
+```{sql}
+-- declare your variables
+DECLARE @start DATE
+DECLARE @stop DATE
+DECLARE @affected INT;
+
+-- set relevant values for each variable
+SET @start = '2022-01-01'
+SET @stop = '2022-12-31'
+SET @affected = 5000; -- threshold for # of affected customers
+
+SELECT 
+  column1,
+  column2,
+  affected_customers
+FROM 
+  table_name
+WHERE date BETWEEN @start AND @stop
+AND affected_customers >= @affected;
+```
+
+-   Temporary tables
+
+```{sql}
+SELECT
+  col1,
+  col2,
+  col3 INTO #my_temp_table -- #my_temp_table exists until connection or session ends
+FROM my_existing_table
+WHERE condition(s);
+
+-- Remove table manually
+DROP TABLE #my_temp_table
+```
+
+-   READ
+
+    -   Example: `SELECT` statements
+
+        -   `SELECT` indicates which *fields* should be selected.
+
+        -   `FROM` indicates where these *fields* are located.
+
+        -   `SELECT DISTINCT` allows you to select field content.
 
 ```{sql}
 SELECT DISTINCT var_name1 AS new_var_name1, var_name2
 FROM table_name;
 ```
+
+`DROP DATABASE` drops an existing SQL database
+
+`ALTER DATABASE` modifies a database
+
+`ALTER TABLE` modifies a table `DROP TABLE table_name` deletes a table `CREATE INDEX` creates an index (search key) `DROP INDEX` deletes an index `BACKUP DATABASE` is used in SQL Server to create a full back up of an existing SQL database `TO DIST = 'filepath';` Use *aliasing* to rename columns:
 
 *View* is a virtual table that is the result of a saved `SELECT` statement. When accessed, views automatically update in response to updates in the underlying data.
 
@@ -65,8 +146,13 @@ SELECT id, var_name1, var_name2
 FROM table_name;
 ```
 
-Group by | Having
--   the `HAVING` clause was added becuz `WHERE` cannot be used with aggregated functions.
+Group by \| Having \| WHERE
+
+-   `GROUP BY` splits data up into combinations of one or more values
+
+-   `WHERE` filters on row values
+
+-   `HAVING` appears ***after*** the `GROUP BY` clause and ***filters*** on groups or aggregates
 
 ```{sql}
 /* List the number of customers in each country, ordered by the country with the most customers first.*/
@@ -133,6 +219,8 @@ ORDER BY A.City;
 
 The SQL UNION Operator
 
+-   `UNION` discards duplicates while `UNION ALL` does not
+
 -   the `UNION` operator is used to combine the result-set of two or more `SELECT` statements
 
     -   Every `SELECT` statement within UNION must have the same number of columns
@@ -140,25 +228,107 @@ The SQL UNION Operator
     -   The columns must also have similar data types
 
     -   The columns in every `SELECT` statement must also be in the same order
+
+    ```{sql}
+    /* UNION : selects only distinct values by default */
+    SELECT column_name(s) FROM table1
+    UNION
+    SELECT column_name(s) FROM table2;
+
+    /* UNION ALL : allows duplicate values */
+    SELECT column_name(s) FROM table1
+    UNION ALL
+    SELECT column_name(s) FROM table2;
+
+    /* example1: returns the German cities (duplicate values also) from both the customers and the suppliers table */
+    SELECT City, Country FROM Customers
+    WHERE Country='Germany'
+    UNION ALL
+    SELECT City, Country FROM Suppliers
+    WHERE Country='Germany'
+    ORDER BY City;
+    ```
+
+CASE statements can be used to create columns (new variables) for
+
+-   categorizing data
+
+-   filtering data
+
+-   aggregating data based on results of a logical test
+
+    -   e.g. `COUNT(CASE statement)`--\>returns the number of rows returned by case statements instead of string / text
+
+    -   similar aggregations include SUM/AVG/ROUND(AVG(...), digits)
+
+    -   Percentages with CASE and AVG
+
 ```{sql}
-/* UNION : selects only distinct values by default */
-SELECT column_name(s) FROM table1
-UNION
-SELECT column_name(s) FROM table2;
-
-/* UNION ALL : allows duplicate values */
-SELECT column_name(s) FROM table1
-UNION ALL
-SELECT column_name(s) FROM table2;
-
-/* example1: returns the German cities (duplicate values also) from both the customers and the suppliers table */
-SELECT City, Country FROM Customers
-WHERE Country='Germany'
-UNION ALL
-SELECT City, Country FROM Suppliers
-WHERE Country='Germany'
-ORDER BY City;
+SELECT 
+  column1,
+  ROUND(AVG(CASE WHEN condition1 AND condition2 THEN 0
+                 WHEN condition1 AND condition3 THEN 1 
+                 END), 2) AS pct_column,
+FROM table1
+GROUP BY column1
 ```
 
+```{sql }
+SELECT
+  id,
+  home_goal,
+  away_goal,
+  CASE WHEN home_goal > away_goal THEN 'Home Team Win'
+       WHEN home_goal < away_goal THEN 'Away Team Win'
+       ELSE 'Tie' END AS outcome
+    /* ELSE NULL AS outcome --> if everything else should be N.A.
+       END AS outcome --> if we want to exclude every other conditions 
+       END IS NOT NULL --> keep all clauses excluding missing values*/
+FROM match
+WHERE season = '2013/2014';
 
+/* Example 1: CASE WHEN + COUNT GROUP BY */
+-- Identify the home team as Bayern Munich, Schalke 04, or neither
+SELECT 
+    CASE WHEN hometeam_id = 10189 THEN 'FC Schalke 04'
+         WHEN hometeam_id = 9823 THEN 'FC Bayern Munich'
+         ELSE 'Other' END AS home_team,
+    COUNT(id) AS total_matches
+FROM matches_germany
+-- Group by the CASE statement alias
+GROUP BY home_team;
 
+/* Example 2: CASE WHEN + LEFT JOIN + WHERE */
+SELECT 
+	m.date,
+	t.team_long_name AS opponent,
+    -- Complete the CASE statement with an alias
+	CASE WHEN m.home_goal > away_goal THEN 'Barcelona win!'
+       WHEN m.home_goal < away_goal THEN 'Barcelona loss :(' 
+       ELSE 'Tie' END AS outcome 
+FROM matches_spain AS m
+LEFT JOIN teams_spain AS t 
+ON m.awayteam_id = t.team_api_id
+-- Filter for Barcelona as the home team
+WHERE m.hometeam_id = 8634; 
+```
+
+TEXT operations
+
+```{sql }
+SELECT 
+  colunm,
+  LEN(column) AS column_length -- returns # of chars
+  LEFT(column, 20) AS first_20_left_column -- returns first 20 chars from the LEFT
+  RIGHT(column, 20) AS last_20_column -- returns last 20 chars from the RIGHT
+  CHARINDEX('_', column) AS char_location -- returns the index of a char/string in column
+  SUBSTRING(column, start, length) AS target_section 
+        -- returns substring starting at location 12 and has length of 12
+FROM table;
+
+/* REPLACE */
+SELECT
+  TOP(5) REPLACE(column, 'a','b') AS replaced_column_with_b
+        -- replaces char 'a' in column with char 'b' for all first 5 rows
+FROM table;
+```
