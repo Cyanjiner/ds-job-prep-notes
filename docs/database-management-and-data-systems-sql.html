@@ -23,7 +23,7 @@
 <meta name="author" content="Jiner Zheng" />
 
 
-<meta name="date" content="2022-09-09" />
+<meta name="date" content="2022-09-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,20 +164,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.3" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#sampling-techniques"><i class="fa fa-check"></i><b>2.2.3</b> Sampling Techniques</a></li>
 <li class="chapter" data-level="2.2.4" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#principles-of-experimental-designcontrol-randomize-replicate-and-blockand-their-purposes"><i class="fa fa-check"></i><b>2.2.4</b> Principles of Experimental Design—Control, Randomize, Replicate, and Block—and their purposes</a></li>
 <li class="chapter" data-level="2.2.5" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#random-sampling-vs.-random-assignment"><i class="fa fa-check"></i><b>2.2.5</b> Random Sampling vs. Random Assignment</a></li>
+<li class="chapter" data-level="2.2.6" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#hypothesis-tests-and-resampling"><i class="fa fa-check"></i><b>2.2.6</b> Hypothesis Tests and Resampling</a></li>
+<li class="chapter" data-level="2.2.7" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#statistical-significance-and-p-values"><i class="fa fa-check"></i><b>2.2.7</b> Statistical Significance and p-values</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="ab-testing.html"><a href="ab-testing.html"><i class="fa fa-check"></i><b>3</b> A/B Testing</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="ab-testing.html"><a href="ab-testing.html#what-is-ab-testing"><i class="fa fa-check"></i><b>3.1</b> What is A/B testing?</a></li>
 <li class="chapter" data-level="3.2" data-path="ab-testing.html"><a href="ab-testing.html#what-you-cant-do-with-ab-testing"><i class="fa fa-check"></i><b>3.2</b> What you can’t do with A/B testing?</a></li>
-<li class="chapter" data-level="3.3" data-path="ab-testing.html"><a href="ab-testing.html#example-audacity"><i class="fa fa-check"></i><b>3.3</b> Example: Audacity</a>
+<li class="chapter" data-level="3.3" data-path="ab-testing.html"><a href="ab-testing.html#defining-the-hypothesis"><i class="fa fa-check"></i><b>3.3</b> Defining the hypothesis</a></li>
+<li class="chapter" data-level="3.4" data-path="ab-testing.html"><a href="ab-testing.html#defining-metrics-and-gathering-data"><i class="fa fa-check"></i><b>3.4</b> Defining Metrics and Gathering Data</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="ab-testing.html"><a href="ab-testing.html#defining-the-hypothesis"><i class="fa fa-check"></i><b>3.3.1</b> Defining the hypothesis</a></li>
+<li class="chapter" data-level="3.4.1" data-path="ab-testing.html"><a href="ab-testing.html#high-level-concepts-for-metrics"><i class="fa fa-check"></i><b>3.4.1</b> High-Level concepts for metrics</a></li>
+<li class="chapter" data-level="3.4.2" data-path="ab-testing.html"><a href="ab-testing.html#methods-for-coming-up-w-proxy-metrics-or-validating-metrics"><i class="fa fa-check"></i><b>3.4.2</b> Methods for Coming up w/ Proxy Metrics or Validating Metrics</a></li>
+<li class="chapter" data-level="3.4.3" data-path="ab-testing.html"><a href="ab-testing.html#gathering-additional-data"><i class="fa fa-check"></i><b>3.4.3</b> Gathering Additional Data</a></li>
+<li class="chapter" data-level="3.4.4" data-path="ab-testing.html"><a href="ab-testing.html#segmenting-and-filtering-data"><i class="fa fa-check"></i><b>3.4.4</b> Segmenting and Filtering Data</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="ab-testing.html"><a href="ab-testing.html#designing-an-ab-test"><i class="fa fa-check"></i><b>3.5</b> Designing an A/B test</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="ab-testing.html"><a href="ab-testing.html#summary-workflow-of-ab-testing"><i class="fa fa-check"></i><b>3.5.1</b> Summary workflow of A/B testing:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="ab-testing.html"><a href="ab-testing.html#step1-choose-and-characterize-metrics-for-both-sanity-check-and-evaluation"><i class="fa fa-check"></i><b>3.6</b> Step1: Choose and characterize metrics for both <code>sanity check and evaluation</code></a></li>
+<li class="chapter" data-level="3.7" data-path="ab-testing.html"><a href="ab-testing.html#step-2-choose-significance-level-statistical-power-and-practical-significance-level"><i class="fa fa-check"></i><b>3.7</b> Step 2: Choose significance level, statistical power and practical significance level</a></li>
+<li class="chapter" data-level="3.8" data-path="ab-testing.html"><a href="ab-testing.html#step-3-calculate-required-sample-size"><i class="fa fa-check"></i><b>3.8</b> Step 3: Calculate required sample size</a></li>
+<li class="chapter" data-level="3.9" data-path="ab-testing.html"><a href="ab-testing.html#step-4-take-sample-for-controltreatment-groups-and-run-the-test"><i class="fa fa-check"></i><b>3.9</b> Step 4: Take sample for control/treatment groups and run the test</a></li>
+<li class="chapter" data-level="3.10" data-path="ab-testing.html"><a href="ab-testing.html#step-5-analyze-the-results-and-draw-conclusions"><i class="fa fa-check"></i><b>3.10</b> Step 5: Analyze the results and draw conclusions</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="ab-testing.html"><a href="ab-testing.html#first-step-sanity-check"><i class="fa fa-check"></i><b>3.10.1</b> First step — Sanity Check</a></li>
+<li class="chapter" data-level="3.10.2" data-path="ab-testing.html"><a href="ab-testing.html#second-step-analyze-the-results"><i class="fa fa-check"></i><b>3.10.2</b> Second step — Analyze the Results</a></li>
+<li class="chapter" data-level="3.10.3" data-path="ab-testing.html"><a href="ab-testing.html#last-step-draw-conclusions"><i class="fa fa-check"></i><b>3.10.3</b> Last step — Draw Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.11" data-path="ab-testing.html"><a href="ab-testing.html#other-things-to-keep-in-mind"><i class="fa fa-check"></i><b>3.11</b> Other things to keep in mind</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html"><i class="fa fa-check"></i><b>4</b> Database Management and Data Systems (SQL)</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#common-keywords-and-examples"><i class="fa fa-check"></i><b>4.1</b> Common keywords and examples:</a></li>
+<li class="chapter" data-level="4.1" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#crud-operations"><i class="fa fa-check"></i><b>4.1</b> CRUD Operations</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#create-databases-tables-views-users-permissions-security-groups"><i class="fa fa-check"></i><b>4.1.1</b> CREATE —&gt; Databases | Tables | Views | Users | Permissions | Security Groups</a></li>
+<li class="chapter" data-level="4.1.2" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#insert-insert-new-records-into-existing-database-tables"><i class="fa fa-check"></i><b>4.1.2</b> INSERT, — insert new records into existing database tables</a></li>
+<li class="chapter" data-level="4.1.3" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#update-amend-existing-database-records"><i class="fa fa-check"></i><b>4.1.3</b> UPDATE — Amend existing database records</a></li>
+<li class="chapter" data-level="4.1.4" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#delete-delete-existing-records-from-tables"><i class="fa fa-check"></i><b>4.1.4</b> DELETE — delete existing records from tables</a></li>
+<li class="chapter" data-level="4.1.5" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#declare-variables-so-it-will-be-easier-to-use-in-later-conditions-without-repetitively-calling-the-same-values"><i class="fa fa-check"></i><b>4.1.5</b> Declare Variables —&gt; so it will be easier to use in later conditions without repetitively calling the same values</a></li>
+<li class="chapter" data-level="4.1.6" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#temporary-tables"><i class="fa fa-check"></i><b>4.1.6</b> Temporary tables</a></li>
+<li class="chapter" data-level="4.1.7" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#read-view"><i class="fa fa-check"></i><b>4.1.7</b> READ | VIEW</a></li>
+<li class="chapter" data-level="4.1.8" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#group-by-having-where"><i class="fa fa-check"></i><b>4.1.8</b> GROUP BY | HAVING | WHERE</a></li>
+<li class="chapter" data-level="4.1.9" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#join-examples"><i class="fa fa-check"></i><b>4.1.9</b> JOIN examples</a></li>
+<li class="chapter" data-level="4.1.10" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#union-operator"><i class="fa fa-check"></i><b>4.1.10</b> UNION Operator</a></li>
+<li class="chapter" data-level="4.1.11" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#case-statements-can-be-used-to-create-columns-new-variables-for"><i class="fa fa-check"></i><b>4.1.11</b> CASE statements can be used to create columns (new variables) for</a></li>
+<li class="chapter" data-level="4.1.12" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#text-operations"><i class="fa fa-check"></i><b>4.1.12</b> TEXT operations</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="machine-learning-models.html"><a href="machine-learning-models.html"><i class="fa fa-check"></i><b>5</b> Machine Learning Models</a></li>
 <li class="chapter" data-level="6" data-path="product-sense.html"><a href="product-sense.html"><i class="fa fa-check"></i><b>6</b> Product Sense</a></li>
@@ -218,121 +253,283 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><code>Database schemas</code> show <code>data types</code> for each field (column) in all tables (data frame), and they also show <code>relationships</code> between tables.</p>
 <p><code>SQL (Structured Query Language)</code> is used to answer questions / extract information both within and across relational database tables</p>
 <p><a href="https://www.sqlstyle.guide/">SQL Style Guide by Simon Holywell</a> <em>Keywords</em> are reserved words for <strong>operations</strong>.</p>
-<div id="common-keywords-and-examples" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Common keywords and examples:<a href="database-management-and-data-systems-sql.html#common-keywords-and-examples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><code>SELECT</code> indicates which <em>fields</em> should be selected.</p>
-<p><code>FROM</code> indicates where these <em>fields</em> are located.</p>
-<p><code>SELECT DISTINCT</code> allows you to select field content.</p>
-<p><code>UPDATE</code> updates data in a database</p>
-<p><code>DELETE</code> deletes data from a database</p>
-<p><code>CREATE DATABASE</code> creates a new databases</p>
+<div id="crud-operations" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> CRUD Operations<a href="database-management-and-data-systems-sql.html#crud-operations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="create-databases-tables-views-users-permissions-security-groups" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> CREATE —&gt; Databases | Tables | Views | Users | Permissions | Security Groups<a href="database-management-and-data-systems-sql.html#create-databases-tables-views-users-permissions-security-groups" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="database-management-and-data-systems-sql.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* create a new table w/ column names, data type, size */</span></span>
+<span id="cb1-2"><a href="database-management-and-data-systems-sql.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> test_table( <span class="co">-- unique table name</span></span>
+<span id="cb1-3"><a href="database-management-and-data-systems-sql.html#cb1-3" aria-hidden="true" tabindex="-1"></a>  test_date <span class="dt">date</span>,</span>
+<span id="cb1-4"><a href="database-management-and-data-systems-sql.html#cb1-4" aria-hidden="true" tabindex="-1"></a>  test_name <span class="dt">varchar</span>(<span class="dv">20</span>),</span>
+<span id="cb1-5"><a href="database-management-and-data-systems-sql.html#cb1-5" aria-hidden="true" tabindex="-1"></a>  test_int <span class="dt">int</span></span>
+<span id="cb1-6"><a href="database-management-and-data-systems-sql.html#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-7"><a href="database-management-and-data-systems-sql.html#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="database-management-and-data-systems-sql.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">/* data types: */</span></span>
+<span id="cb1-9"><a href="database-management-and-data-systems-sql.html#cb1-9" aria-hidden="true" tabindex="-1"></a>Dates: <span class="dt">date</span> (YYYY<span class="op">-</span>MM<span class="op">-</span>DD) | datetime (YYYY<span class="op">-</span>MM<span class="op">-</span>DD hh<span class="ch">:mm:ss</span>) | <span class="dt">time</span></span>
+<span id="cb1-10"><a href="database-management-and-data-systems-sql.html#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">Numeric</span>: <span class="dt">int</span> | <span class="dt">decimal</span> | <span class="dt">float</span> | bit (<span class="dv">1</span><span class="op">=</span><span class="kw">TRUE</span>, <span class="dv">0</span><span class="op">=</span><span class="kw">FALSE</span>. Also accepts <span class="kw">NULL</span>)</span>
+<span id="cb1-11"><a href="database-management-and-data-systems-sql.html#cb1-11" aria-hidden="true" tabindex="-1"></a>Strings: <span class="dt">char</span> | <span class="dt">varchar</span> | <span class="dt">nvarchar</span></span>
+<span id="cb1-12"><a href="database-management-and-data-systems-sql.html#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="database-management-and-data-systems-sql.html#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">/* create a copy of an existing table */</span></span>
+<span id="cb1-14"><a href="database-management-and-data-systems-sql.html#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> new_table_name <span class="kw">AS</span></span>
+<span id="cb1-15"><a href="database-management-and-data-systems-sql.html#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> column1, column2, <span class="op">..</span>.</span>
+<span id="cb1-16"><a href="database-management-and-data-systems-sql.html#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> existing_table_name,</span>
+<span id="cb1-17"><a href="database-management-and-data-systems-sql.html#cb1-17" aria-hidden="true" tabindex="-1"></a>    WEHRE conditions;</span></code></pre></div>
+</div>
+<div id="insert-insert-new-records-into-existing-database-tables" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> INSERT, — insert new records into existing database tables<a href="database-management-and-data-systems-sql.html#insert-insert-new-records-into-existing-database-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="database-management-and-data-systems-sql.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* insert new columns &amp; values */</span></span>
+<span id="cb2-2"><a href="database-management-and-data-systems-sql.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> table_name (col1, col2, col3)</span>
+<span id="cb2-3"><a href="database-management-and-data-systems-sql.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">VALUES</span></span>
+<span id="cb2-4"><a href="database-management-and-data-systems-sql.html#cb2-4" aria-hidden="true" tabindex="-1"></a>  (<span class="st">&#39;value1&#39;</span>, <span class="st">&#39;value2&#39;</span>, <span class="st">&#39;value3&#39;</span>)</span>
+<span id="cb2-5"><a href="database-management-and-data-systems-sql.html#cb2-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-6"><a href="database-management-and-data-systems-sql.html#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* insert + select columns &amp; values from another existing table */</span></span>
+<span id="cb2-7"><a href="database-management-and-data-systems-sql.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> table_name (col1, col2, col3)</span>
+<span id="cb2-8"><a href="database-management-and-data-systems-sql.html#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb2-9"><a href="database-management-and-data-systems-sql.html#cb2-9" aria-hidden="true" tabindex="-1"></a>  column1,</span>
+<span id="cb2-10"><a href="database-management-and-data-systems-sql.html#cb2-10" aria-hidden="true" tabindex="-1"></a>  column2,</span>
+<span id="cb2-11"><a href="database-management-and-data-systems-sql.html#cb2-11" aria-hidden="true" tabindex="-1"></a>  column3</span>
+<span id="cb2-12"><a href="database-management-and-data-systems-sql.html#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> other_table</span>
+<span id="cb2-13"><a href="database-management-and-data-systems-sql.html#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition(s);</span></code></pre></div>
+</div>
+<div id="update-amend-existing-database-records" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> UPDATE — Amend existing database records<a href="database-management-and-data-systems-sql.html#update-amend-existing-database-records" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="database-management-and-data-systems-sql.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> table_name</span>
+<span id="cb3-2"><a href="database-management-and-data-systems-sql.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> </span>
+<span id="cb3-3"><a href="database-management-and-data-systems-sql.html#cb3-3" aria-hidden="true" tabindex="-1"></a>  column1 <span class="op">=</span> value1,</span>
+<span id="cb3-4"><a href="database-management-and-data-systems-sql.html#cb3-4" aria-hidden="true" tabindex="-1"></a>  column2 <span class="op">=</span> value2</span>
+<span id="cb3-5"><a href="database-management-and-data-systems-sql.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition(s)</span></code></pre></div>
+</div>
+<div id="delete-delete-existing-records-from-tables" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> DELETE — delete existing records from tables<a href="database-management-and-data-systems-sql.html#delete-delete-existing-records-from-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb4-1"><a href="database-management-and-data-systems-sql.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DELETE</span> </span>
+<span id="cb4-2"><a href="database-management-and-data-systems-sql.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table_name</span>
+<span id="cb4-3"><a href="database-management-and-data-systems-sql.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition(s)</span>
+<span id="cb4-4"><a href="database-management-and-data-systems-sql.html#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="database-management-and-data-systems-sql.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">/* another method: TRUNCATE --&gt; remove all data from ALL columns at once */</span></span>
+<span id="cb4-6"><a href="database-management-and-data-systems-sql.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">TRUNCATE</span> <span class="kw">TABLE</span> table_name</span></code></pre></div>
+</div>
+<div id="declare-variables-so-it-will-be-easier-to-use-in-later-conditions-without-repetitively-calling-the-same-values" class="section level3 hasAnchor" number="4.1.5">
+<h3><span class="header-section-number">4.1.5</span> Declare Variables —&gt; so it will be easier to use in later conditions without repetitively calling the same values<a href="database-management-and-data-systems-sql.html#declare-variables-so-it-will-be-easier-to-use-in-later-conditions-without-repetitively-calling-the-same-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb5-1"><a href="database-management-and-data-systems-sql.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- declare your variables</span></span>
+<span id="cb5-2"><a href="database-management-and-data-systems-sql.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">DECLARE</span> @start <span class="dt">DATE</span></span>
+<span id="cb5-3"><a href="database-management-and-data-systems-sql.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">DECLARE</span> @stop <span class="dt">DATE</span></span>
+<span id="cb5-4"><a href="database-management-and-data-systems-sql.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">DECLARE</span> @affected <span class="dt">INT</span>;</span>
+<span id="cb5-5"><a href="database-management-and-data-systems-sql.html#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="database-management-and-data-systems-sql.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">-- set relevant values for each variable</span></span>
+<span id="cb5-7"><a href="database-management-and-data-systems-sql.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> @start <span class="op">=</span> <span class="st">&#39;2022-01-01&#39;</span></span>
+<span id="cb5-8"><a href="database-management-and-data-systems-sql.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> @stop <span class="op">=</span> <span class="st">&#39;2022-12-31&#39;</span></span>
+<span id="cb5-9"><a href="database-management-and-data-systems-sql.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> @affected <span class="op">=</span> <span class="dv">5000</span>; <span class="co">-- threshold for # of affected customers</span></span>
+<span id="cb5-10"><a href="database-management-and-data-systems-sql.html#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="database-management-and-data-systems-sql.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
+<span id="cb5-12"><a href="database-management-and-data-systems-sql.html#cb5-12" aria-hidden="true" tabindex="-1"></a>  column1,</span>
+<span id="cb5-13"><a href="database-management-and-data-systems-sql.html#cb5-13" aria-hidden="true" tabindex="-1"></a>  column2,</span>
+<span id="cb5-14"><a href="database-management-and-data-systems-sql.html#cb5-14" aria-hidden="true" tabindex="-1"></a>  affected_customers</span>
+<span id="cb5-15"><a href="database-management-and-data-systems-sql.html#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> </span>
+<span id="cb5-16"><a href="database-management-and-data-systems-sql.html#cb5-16" aria-hidden="true" tabindex="-1"></a>  table_name</span>
+<span id="cb5-17"><a href="database-management-and-data-systems-sql.html#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="dt">date</span> <span class="kw">BETWEEN</span> @start <span class="kw">AND</span> @stop</span>
+<span id="cb5-18"><a href="database-management-and-data-systems-sql.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="kw">AND</span> affected_customers <span class="op">&gt;=</span> @affected;</span></code></pre></div>
+</div>
+<div id="temporary-tables" class="section level3 hasAnchor" number="4.1.6">
+<h3><span class="header-section-number">4.1.6</span> Temporary tables<a href="database-management-and-data-systems-sql.html#temporary-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="database-management-and-data-systems-sql.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb6-2"><a href="database-management-and-data-systems-sql.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  col1,</span>
+<span id="cb6-3"><a href="database-management-and-data-systems-sql.html#cb6-3" aria-hidden="true" tabindex="-1"></a>  col2,</span>
+<span id="cb6-4"><a href="database-management-and-data-systems-sql.html#cb6-4" aria-hidden="true" tabindex="-1"></a>  col3 <span class="kw">INTO</span> #my_temp_table <span class="co">-- #my_temp_table exists until connection or session ends</span></span>
+<span id="cb6-5"><a href="database-management-and-data-systems-sql.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> my_existing_table</span>
+<span id="cb6-6"><a href="database-management-and-data-systems-sql.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition(s);</span>
+<span id="cb6-7"><a href="database-management-and-data-systems-sql.html#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="database-management-and-data-systems-sql.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">-- Remove table manually</span></span>
+<span id="cb6-9"><a href="database-management-and-data-systems-sql.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> #my_temp_table</span></code></pre></div>
+</div>
+<div id="read-view" class="section level3 hasAnchor" number="4.1.7">
+<h3><span class="header-section-number">4.1.7</span> READ | VIEW<a href="database-management-and-data-systems-sql.html#read-view" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Example: <code>SELECT</code> statements</p>
+<ul>
+<li><p><code>SELECT</code> indicates which <em>fields</em> should be selected.</p></li>
+<li><p><code>FROM</code> indicates where these <em>fields</em> are located.</p></li>
+<li><p><code>SELECT DISTINCT</code> allows you to select field content.</p></li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="database-management-and-data-systems-sql.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> var_name1 <span class="kw">AS</span> new_var_name1, var_name2</span>
+<span id="cb7-2"><a href="database-management-and-data-systems-sql.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table_name;</span></code></pre></div>
 <p><code>DROP DATABASE</code> drops an existing SQL database</p>
 <p><code>ALTER DATABASE</code> modifies a database</p>
-<p><code>CREATE TABLE</code> creates a new table</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="database-management-and-data-systems-sql.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*create a new table */</span></span>
-<span id="cb1-2"><a href="database-management-and-data-systems-sql.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> table_name (</span>
-<span id="cb1-3"><a href="database-management-and-data-systems-sql.html#cb1-3" aria-hidden="true" tabindex="-1"></a>    column1 datatype,</span>
-<span id="cb1-4"><a href="database-management-and-data-systems-sql.html#cb1-4" aria-hidden="true" tabindex="-1"></a>    column2 datatype,</span>
-<span id="cb1-5"><a href="database-management-and-data-systems-sql.html#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">..</span>.</span>
-<span id="cb1-6"><a href="database-management-and-data-systems-sql.html#cb1-6" aria-hidden="true" tabindex="-1"></a>);</span>
-<span id="cb1-7"><a href="database-management-and-data-systems-sql.html#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="database-management-and-data-systems-sql.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">/* create a copy of an existing table */</span></span>
-<span id="cb1-9"><a href="database-management-and-data-systems-sql.html#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> new_table_name <span class="kw">AS</span></span>
-<span id="cb1-10"><a href="database-management-and-data-systems-sql.html#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> column1, column2, <span class="op">..</span>.</span>
-<span id="cb1-11"><a href="database-management-and-data-systems-sql.html#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> existing_table_name,</span>
-<span id="cb1-12"><a href="database-management-and-data-systems-sql.html#cb1-12" aria-hidden="true" tabindex="-1"></a>    WEHRE conditions;</span></code></pre></div>
 <p><code>ALTER TABLE</code> modifies a table <code>DROP TABLE table_name</code> deletes a table <code>CREATE INDEX</code> creates an index (search key) <code>DROP INDEX</code> deletes an index <code>BACKUP DATABASE</code> is used in SQL Server to create a full back up of an existing SQL database <code>TO DIST = 'filepath';</code> Use <em>aliasing</em> to rename columns:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="database-management-and-data-systems-sql.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> var_name1 <span class="kw">AS</span> new_var_name1, var_name2</span>
-<span id="cb2-2"><a href="database-management-and-data-systems-sql.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table_name;</span></code></pre></div>
 <p><em>View</em> is a virtual table that is the result of a saved <code>SELECT</code> statement. When accessed, views automatically update in response to updates in the underlying data.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="database-management-and-data-systems-sql.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">VIEW</span> new_table_name <span class="kw">AS</span></span>
-<span id="cb3-2"><a href="database-management-and-data-systems-sql.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">id</span>, var_name1, var_name2</span>
-<span id="cb3-3"><a href="database-management-and-data-systems-sql.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table_name;</span></code></pre></div>
-<p>Group by | Having
-- the <code>HAVING</code> clause was added becuz <code>WHERE</code> cannot be used with aggregated functions.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb4-1"><a href="database-management-and-data-systems-sql.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* List the number of customers in each country, ordered by the country with the most customers first.*/</span></span>
-<span id="cb4-2"><a href="database-management-and-data-systems-sql.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(customerID),</span>
-<span id="cb4-3"><a href="database-management-and-data-systems-sql.html#cb4-3" aria-hidden="true" tabindex="-1"></a>country,</span>
-<span id="cb4-4"><a href="database-management-and-data-systems-sql.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> customers</span>
-<span id="cb4-5"><a href="database-management-and-data-systems-sql.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> country</span>
-<span id="cb4-6"><a href="database-management-and-data-systems-sql.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">COUNT</span>(customerID) <span class="kw">DESC</span>; </span>
-<span id="cb4-7"><a href="database-management-and-data-systems-sql.html#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="database-management-and-data-systems-sql.html#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">/* List the # of customers in each country, sorted high to low (but only include countries with more than 5 customers) */</span></span>
-<span id="cb4-9"><a href="database-management-and-data-systems-sql.html#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(CustomerID), Country</span>
-<span id="cb4-10"><a href="database-management-and-data-systems-sql.html#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Customers</span>
-<span id="cb4-11"><a href="database-management-and-data-systems-sql.html#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> Country</span>
-<span id="cb4-12"><a href="database-management-and-data-systems-sql.html#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">HAVING</span> <span class="fu">COUNT</span>(CustomerID) <span class="op">&gt;</span> <span class="dv">5</span></span>
-<span id="cb4-13"><a href="database-management-and-data-systems-sql.html#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">COUNT</span>(CustomerID) <span class="kw">DESC</span>;</span>
-<span id="cb4-14"><a href="database-management-and-data-systems-sql.html#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="database-management-and-data-systems-sql.html#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">/* List if the employees &quot;Davolio&quot; or &quot;Fuller&quot; have registered more than 25 orders */</span></span>
-<span id="cb4-16"><a href="database-management-and-data-systems-sql.html#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> Employees.LastName, <span class="fu">COUNT</span>(Orders.OrderID) <span class="kw">AS</span> NumberOfOrders</span>
-<span id="cb4-17"><a href="database-management-and-data-systems-sql.html#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Orders</span>
-<span id="cb4-18"><a href="database-management-and-data-systems-sql.html#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> Employees <span class="kw">ON</span> Orders.EmployeeID <span class="op">=</span> Employees.EmployeeID</span>
-<span id="cb4-19"><a href="database-management-and-data-systems-sql.html#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> LastName <span class="op">=</span> <span class="st">&#39;Davolio&#39;</span> <span class="kw">OR</span> LastName <span class="op">=</span> <span class="st">&#39;Fuller&#39;</span></span>
-<span id="cb4-20"><a href="database-management-and-data-systems-sql.html#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> LastName </span>
-<span id="cb4-21"><a href="database-management-and-data-systems-sql.html#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="kw">HAVING</span> <span class="fu">COUNT</span>(Orders.OrderID) <span class="op">&gt;</span> <span class="dv">25</span>;</span></code></pre></div>
-<p>Join examples</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb5-1"><a href="database-management-and-data-systems-sql.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* INNER JOIN selects records that have matching values in BOTH tables */</span></span>
-<span id="cb5-2"><a href="database-management-and-data-systems-sql.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name</span>
-<span id="cb5-3"><a href="database-management-and-data-systems-sql.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
-<span id="cb5-4"><a href="database-management-and-data-systems-sql.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> table2 <span class="kw">ON</span> table1.column_name <span class="op">=</span> table2.column_name;</span>
-<span id="cb5-5"><a href="database-management-and-data-systems-sql.html#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="database-management-and-data-systems-sql.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* LEFT JOIN selects all records from the left table (table1) and the matching records from the right table (table2) */</span></span>
-<span id="cb5-7"><a href="database-management-and-data-systems-sql.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name</span>
-<span id="cb5-8"><a href="database-management-and-data-systems-sql.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
-<span id="cb5-9"><a href="database-management-and-data-systems-sql.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> table2 <span class="kw">ON</span> table1.column_name <span class="op">=</span> table2.column_name;</span>
-<span id="cb5-10"><a href="database-management-and-data-systems-sql.html#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="database-management-and-data-systems-sql.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* RIGHT JOIN selects all records from the right table (table2) and the matching records from the left table (table1) */</span></span>
-<span id="cb5-12"><a href="database-management-and-data-systems-sql.html#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name</span>
-<span id="cb5-13"><a href="database-management-and-data-systems-sql.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
-<span id="cb5-14"><a href="database-management-and-data-systems-sql.html#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="kw">RIGHT</span> <span class="kw">JOIN</span> table2</span>
-<span id="cb5-15"><a href="database-management-and-data-systems-sql.html#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="kw">ON</span> table1.column_name <span class="op">=</span> table2.column_name;</span>
-<span id="cb5-16"><a href="database-management-and-data-systems-sql.html#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="database-management-and-data-systems-sql.html#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co">/* FULL OUTER JOIN returns all records when there is a match in left (table1) OR right (table2) table records -- FULL OUTER JOIN == FULL JOIN */</span></span>
-<span id="cb5-18"><a href="database-management-and-data-systems-sql.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name</span>
-<span id="cb5-19"><a href="database-management-and-data-systems-sql.html#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
-<span id="cb5-20"><a href="database-management-and-data-systems-sql.html#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="kw">FULL</span> <span class="kw">OUTER</span> <span class="kw">JOIN</span> table2</span>
-<span id="cb5-21"><a href="database-management-and-data-systems-sql.html#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="kw">ON</span> table1.column_name <span class="op">=</span> table2.column_name</span>
-<span id="cb5-22"><a href="database-management-and-data-systems-sql.html#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition;</span>
-<span id="cb5-23"><a href="database-management-and-data-systems-sql.html#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-24"><a href="database-management-and-data-systems-sql.html#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co">/* a self join is a regular join, but the table is joined with itself */</span></span>
-<span id="cb5-25"><a href="database-management-and-data-systems-sql.html#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name</span>
-<span id="cb5-26"><a href="database-management-and-data-systems-sql.html#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1 T1, table2 T2 <span class="co">-- T1, T2 are two aliases of table 1 and table 2</span></span>
-<span id="cb5-27"><a href="database-management-and-data-systems-sql.html#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition</span>
-<span id="cb5-28"><a href="database-management-and-data-systems-sql.html#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-29"><a href="database-management-and-data-systems-sql.html#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co">/* SQL Self Join Example: matching customers from the same city */</span></span>
-<span id="cb5-30"><a href="database-management-and-data-systems-sql.html#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> A.CustomerName <span class="kw">AS</span> CustomerName1, B.CustomerName <span class="kw">AS</span> CustomerName2, A.City</span>
-<span id="cb5-31"><a href="database-management-and-data-systems-sql.html#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Customers A, Customers B</span>
-<span id="cb5-32"><a href="database-management-and-data-systems-sql.html#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> A.CustomerID <span class="op">&lt;&gt;</span> B.CustomerID <span class="co">-- &lt;&gt; stands for not equal </span></span>
-<span id="cb5-33"><a href="database-management-and-data-systems-sql.html#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="kw">AND</span> A.City <span class="op">=</span> B.City</span>
-<span id="cb5-34"><a href="database-management-and-data-systems-sql.html#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> A.City;</span></code></pre></div>
-<p>The SQL UNION Operator</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb8-1"><a href="database-management-and-data-systems-sql.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">VIEW</span> new_table_name <span class="kw">AS</span></span>
+<span id="cb8-2"><a href="database-management-and-data-systems-sql.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">id</span>, var_name1, var_name2</span>
+<span id="cb8-3"><a href="database-management-and-data-systems-sql.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table_name;</span></code></pre></div>
+</div>
+<div id="group-by-having-where" class="section level3 hasAnchor" number="4.1.8">
+<h3><span class="header-section-number">4.1.8</span> GROUP BY | HAVING | WHERE<a href="database-management-and-data-systems-sql.html#group-by-having-where" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
+<li><p><code>GROUP BY</code> splits data up into combinations of one or more values</p></li>
+<li><p><code>WHERE</code> filters on row values</p></li>
+<li><p><code>HAVING</code> appears <strong><em>after</em></strong> the <code>GROUP BY</code> clause and <strong><em>filters</em></strong> on groups or aggregates</p></li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb9-1"><a href="database-management-and-data-systems-sql.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* List the number of customers in each country, ordered by the country with the most customers first.*/</span></span>
+<span id="cb9-2"><a href="database-management-and-data-systems-sql.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(customerID),</span>
+<span id="cb9-3"><a href="database-management-and-data-systems-sql.html#cb9-3" aria-hidden="true" tabindex="-1"></a>country,</span>
+<span id="cb9-4"><a href="database-management-and-data-systems-sql.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> customers</span>
+<span id="cb9-5"><a href="database-management-and-data-systems-sql.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> country</span>
+<span id="cb9-6"><a href="database-management-and-data-systems-sql.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">COUNT</span>(customerID) <span class="kw">DESC</span>; </span>
+<span id="cb9-7"><a href="database-management-and-data-systems-sql.html#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="database-management-and-data-systems-sql.html#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">/* List the # of customers in each country, sorted high to low (but only include countries with more than 5 customers) */</span></span>
+<span id="cb9-9"><a href="database-management-and-data-systems-sql.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(CustomerID), Country</span>
+<span id="cb9-10"><a href="database-management-and-data-systems-sql.html#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Customers</span>
+<span id="cb9-11"><a href="database-management-and-data-systems-sql.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> Country</span>
+<span id="cb9-12"><a href="database-management-and-data-systems-sql.html#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="kw">HAVING</span> <span class="fu">COUNT</span>(CustomerID) <span class="op">&gt;</span> <span class="dv">5</span></span>
+<span id="cb9-13"><a href="database-management-and-data-systems-sql.html#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">COUNT</span>(CustomerID) <span class="kw">DESC</span>;</span>
+<span id="cb9-14"><a href="database-management-and-data-systems-sql.html#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="database-management-and-data-systems-sql.html#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">/* List if the employees &quot;Davolio&quot; or &quot;Fuller&quot; have registered more than 25 orders */</span></span>
+<span id="cb9-16"><a href="database-management-and-data-systems-sql.html#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> Employees.LastName, <span class="fu">COUNT</span>(Orders.OrderID) <span class="kw">AS</span> NumberOfOrders</span>
+<span id="cb9-17"><a href="database-management-and-data-systems-sql.html#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Orders</span>
+<span id="cb9-18"><a href="database-management-and-data-systems-sql.html#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> Employees <span class="kw">ON</span> Orders.EmployeeID <span class="op">=</span> Employees.EmployeeID</span>
+<span id="cb9-19"><a href="database-management-and-data-systems-sql.html#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> LastName <span class="op">=</span> <span class="st">&#39;Davolio&#39;</span> <span class="kw">OR</span> LastName <span class="op">=</span> <span class="st">&#39;Fuller&#39;</span></span>
+<span id="cb9-20"><a href="database-management-and-data-systems-sql.html#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> LastName </span>
+<span id="cb9-21"><a href="database-management-and-data-systems-sql.html#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="kw">HAVING</span> <span class="fu">COUNT</span>(Orders.OrderID) <span class="op">&gt;</span> <span class="dv">25</span>;</span></code></pre></div>
+</div>
+<div id="join-examples" class="section level3 hasAnchor" number="4.1.9">
+<h3><span class="header-section-number">4.1.9</span> JOIN examples<a href="database-management-and-data-systems-sql.html#join-examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb10-1"><a href="database-management-and-data-systems-sql.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* INNER JOIN selects records that have matching values in BOTH tables */</span></span>
+<span id="cb10-2"><a href="database-management-and-data-systems-sql.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name</span>
+<span id="cb10-3"><a href="database-management-and-data-systems-sql.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
+<span id="cb10-4"><a href="database-management-and-data-systems-sql.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> table2 <span class="kw">ON</span> table1.column_name <span class="op">=</span> table2.column_name;</span>
+<span id="cb10-5"><a href="database-management-and-data-systems-sql.html#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="database-management-and-data-systems-sql.html#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* LEFT JOIN selects all records from the left table (table1) and the matching records from the right table (table2) */</span></span>
+<span id="cb10-7"><a href="database-management-and-data-systems-sql.html#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name</span>
+<span id="cb10-8"><a href="database-management-and-data-systems-sql.html#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
+<span id="cb10-9"><a href="database-management-and-data-systems-sql.html#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> table2 <span class="kw">ON</span> table1.column_name <span class="op">=</span> table2.column_name;</span>
+<span id="cb10-10"><a href="database-management-and-data-systems-sql.html#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="database-management-and-data-systems-sql.html#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* RIGHT JOIN selects all records from the right table (table2) and the matching records from the left table (table1) */</span></span>
+<span id="cb10-12"><a href="database-management-and-data-systems-sql.html#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name</span>
+<span id="cb10-13"><a href="database-management-and-data-systems-sql.html#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
+<span id="cb10-14"><a href="database-management-and-data-systems-sql.html#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="kw">RIGHT</span> <span class="kw">JOIN</span> table2</span>
+<span id="cb10-15"><a href="database-management-and-data-systems-sql.html#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="kw">ON</span> table1.column_name <span class="op">=</span> table2.column_name;</span>
+<span id="cb10-16"><a href="database-management-and-data-systems-sql.html#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="database-management-and-data-systems-sql.html#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co">/* FULL OUTER JOIN returns all records when there is a match in left (table1) OR right (table2) table records -- FULL OUTER JOIN == FULL JOIN */</span></span>
+<span id="cb10-18"><a href="database-management-and-data-systems-sql.html#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name</span>
+<span id="cb10-19"><a href="database-management-and-data-systems-sql.html#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
+<span id="cb10-20"><a href="database-management-and-data-systems-sql.html#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="kw">FULL</span> <span class="kw">OUTER</span> <span class="kw">JOIN</span> table2</span>
+<span id="cb10-21"><a href="database-management-and-data-systems-sql.html#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="kw">ON</span> table1.column_name <span class="op">=</span> table2.column_name</span>
+<span id="cb10-22"><a href="database-management-and-data-systems-sql.html#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition;</span>
+<span id="cb10-23"><a href="database-management-and-data-systems-sql.html#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="database-management-and-data-systems-sql.html#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co">/* a self join is a regular join, but the table is joined with itself */</span></span>
+<span id="cb10-25"><a href="database-management-and-data-systems-sql.html#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name</span>
+<span id="cb10-26"><a href="database-management-and-data-systems-sql.html#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1 T1, table2 T2 <span class="co">-- T1, T2 are two aliases of table 1 and table 2</span></span>
+<span id="cb10-27"><a href="database-management-and-data-systems-sql.html#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition</span>
+<span id="cb10-28"><a href="database-management-and-data-systems-sql.html#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="database-management-and-data-systems-sql.html#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">/* SQL Self Join Example: matching customers from the same city */</span></span>
+<span id="cb10-30"><a href="database-management-and-data-systems-sql.html#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> A.CustomerName <span class="kw">AS</span> CustomerName1, B.CustomerName <span class="kw">AS</span> CustomerName2, A.City</span>
+<span id="cb10-31"><a href="database-management-and-data-systems-sql.html#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Customers A, Customers B</span>
+<span id="cb10-32"><a href="database-management-and-data-systems-sql.html#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> A.CustomerID <span class="op">&lt;&gt;</span> B.CustomerID <span class="co">-- &lt;&gt; stands for not equal </span></span>
+<span id="cb10-33"><a href="database-management-and-data-systems-sql.html#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="kw">AND</span> A.City <span class="op">=</span> B.City</span>
+<span id="cb10-34"><a href="database-management-and-data-systems-sql.html#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> A.City;</span></code></pre></div>
+</div>
+<div id="union-operator" class="section level3 hasAnchor" number="4.1.10">
+<h3><span class="header-section-number">4.1.10</span> UNION Operator<a href="database-management-and-data-systems-sql.html#union-operator" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><code>UNION</code> discards duplicates while <code>UNION ALL</code> does not</p></li>
 <li><p>the <code>UNION</code> operator is used to combine the result-set of two or more <code>SELECT</code> statements</p>
 <ul>
 <li><p>Every <code>SELECT</code> statement within UNION must have the same number of columns</p></li>
 <li><p>The columns must also have similar data types</p></li>
 <li><p>The columns in every <code>SELECT</code> statement must also be in the same order</p></li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb11-1"><a href="database-management-and-data-systems-sql.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* UNION : selects only distinct values by default */</span></span>
+<span id="cb11-2"><a href="database-management-and-data-systems-sql.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name(s) <span class="kw">FROM</span> table1</span>
+<span id="cb11-3"><a href="database-management-and-data-systems-sql.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">UNION</span></span>
+<span id="cb11-4"><a href="database-management-and-data-systems-sql.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name(s) <span class="kw">FROM</span> table2;</span>
+<span id="cb11-5"><a href="database-management-and-data-systems-sql.html#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="database-management-and-data-systems-sql.html#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* UNION ALL : allows duplicate values */</span></span>
+<span id="cb11-7"><a href="database-management-and-data-systems-sql.html#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name(s) <span class="kw">FROM</span> table1</span>
+<span id="cb11-8"><a href="database-management-and-data-systems-sql.html#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="kw">UNION</span> <span class="kw">ALL</span></span>
+<span id="cb11-9"><a href="database-management-and-data-systems-sql.html#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name(s) <span class="kw">FROM</span> table2;</span>
+<span id="cb11-10"><a href="database-management-and-data-systems-sql.html#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="database-management-and-data-systems-sql.html#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* example1: returns the German cities (duplicate values also) from both the customers and the suppliers table */</span></span>
+<span id="cb11-12"><a href="database-management-and-data-systems-sql.html#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> City, Country <span class="kw">FROM</span> Customers</span>
+<span id="cb11-13"><a href="database-management-and-data-systems-sql.html#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> Country<span class="op">=</span><span class="st">&#39;Germany&#39;</span></span>
+<span id="cb11-14"><a href="database-management-and-data-systems-sql.html#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="kw">UNION</span> <span class="kw">ALL</span></span>
+<span id="cb11-15"><a href="database-management-and-data-systems-sql.html#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> City, Country <span class="kw">FROM</span> Suppliers</span>
+<span id="cb11-16"><a href="database-management-and-data-systems-sql.html#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> Country<span class="op">=</span><span class="st">&#39;Germany&#39;</span></span>
+<span id="cb11-17"><a href="database-management-and-data-systems-sql.html#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> City;</span></code></pre></div></li>
+</ul>
+</div>
+<div id="case-statements-can-be-used-to-create-columns-new-variables-for" class="section level3 hasAnchor" number="4.1.11">
+<h3><span class="header-section-number">4.1.11</span> CASE statements can be used to create columns (new variables) for<a href="database-management-and-data-systems-sql.html#case-statements-can-be-used-to-create-columns-new-variables-for" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>categorizing data</p></li>
+<li><p>filtering data</p></li>
+<li><p>aggregating data based on results of a logical test</p>
+<ul>
+<li><p>e.g. <code>COUNT(CASE statement)</code>–&gt;returns the number of rows returned by case statements instead of string / text</p></li>
+<li><p>similar aggregations include SUM/AVG/ROUND(AVG(…), digits)</p></li>
+<li><p>Percentages with CASE and AVG</p></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="database-management-and-data-systems-sql.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* UNION : selects only distinct values by default */</span></span>
-<span id="cb6-2"><a href="database-management-and-data-systems-sql.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name(s) <span class="kw">FROM</span> table1</span>
-<span id="cb6-3"><a href="database-management-and-data-systems-sql.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">UNION</span></span>
-<span id="cb6-4"><a href="database-management-and-data-systems-sql.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name(s) <span class="kw">FROM</span> table2;</span>
-<span id="cb6-5"><a href="database-management-and-data-systems-sql.html#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="database-management-and-data-systems-sql.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* UNION ALL : allows duplicate values */</span></span>
-<span id="cb6-7"><a href="database-management-and-data-systems-sql.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name(s) <span class="kw">FROM</span> table1</span>
-<span id="cb6-8"><a href="database-management-and-data-systems-sql.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="kw">UNION</span> <span class="kw">ALL</span></span>
-<span id="cb6-9"><a href="database-management-and-data-systems-sql.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column_name(s) <span class="kw">FROM</span> table2;</span>
-<span id="cb6-10"><a href="database-management-and-data-systems-sql.html#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="database-management-and-data-systems-sql.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* example1: returns the German cities (duplicate values also) from both the customers and the suppliers table */</span></span>
-<span id="cb6-12"><a href="database-management-and-data-systems-sql.html#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> City, Country <span class="kw">FROM</span> Customers</span>
-<span id="cb6-13"><a href="database-management-and-data-systems-sql.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> Country<span class="op">=</span><span class="st">&#39;Germany&#39;</span></span>
-<span id="cb6-14"><a href="database-management-and-data-systems-sql.html#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="kw">UNION</span> <span class="kw">ALL</span></span>
-<span id="cb6-15"><a href="database-management-and-data-systems-sql.html#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> City, Country <span class="kw">FROM</span> Suppliers</span>
-<span id="cb6-16"><a href="database-management-and-data-systems-sql.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> Country<span class="op">=</span><span class="st">&#39;Germany&#39;</span></span>
-<span id="cb6-17"><a href="database-management-and-data-systems-sql.html#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> City;</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb12-1"><a href="database-management-and-data-systems-sql.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
+<span id="cb12-2"><a href="database-management-and-data-systems-sql.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  column1,</span>
+<span id="cb12-3"><a href="database-management-and-data-systems-sql.html#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ROUND</span>(<span class="fu">AVG</span>(<span class="cf">CASE</span> <span class="cf">WHEN</span> condition1 <span class="kw">AND</span> condition2 <span class="cf">THEN</span> <span class="dv">0</span></span>
+<span id="cb12-4"><a href="database-management-and-data-systems-sql.html#cb12-4" aria-hidden="true" tabindex="-1"></a>                 <span class="cf">WHEN</span> condition1 <span class="kw">AND</span> condition3 <span class="cf">THEN</span> <span class="dv">1</span> </span>
+<span id="cb12-5"><a href="database-management-and-data-systems-sql.html#cb12-5" aria-hidden="true" tabindex="-1"></a>                 <span class="cf">END</span>), <span class="dv">2</span>) <span class="kw">AS</span> pct_column,</span>
+<span id="cb12-6"><a href="database-management-and-data-systems-sql.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
+<span id="cb12-7"><a href="database-management-and-data-systems-sql.html#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> column1</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb13-1"><a href="database-management-and-data-systems-sql.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb13-2"><a href="database-management-and-data-systems-sql.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">id</span>,</span>
+<span id="cb13-3"><a href="database-management-and-data-systems-sql.html#cb13-3" aria-hidden="true" tabindex="-1"></a>  home_goal,</span>
+<span id="cb13-4"><a href="database-management-and-data-systems-sql.html#cb13-4" aria-hidden="true" tabindex="-1"></a>  away_goal,</span>
+<span id="cb13-5"><a href="database-management-and-data-systems-sql.html#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">CASE</span> <span class="cf">WHEN</span> home_goal <span class="op">&gt;</span> away_goal <span class="cf">THEN</span> <span class="st">&#39;Home Team Win&#39;</span></span>
+<span id="cb13-6"><a href="database-management-and-data-systems-sql.html#cb13-6" aria-hidden="true" tabindex="-1"></a>       <span class="cf">WHEN</span> home_goal <span class="op">&lt;</span> away_goal <span class="cf">THEN</span> <span class="st">&#39;Away Team Win&#39;</span></span>
+<span id="cb13-7"><a href="database-management-and-data-systems-sql.html#cb13-7" aria-hidden="true" tabindex="-1"></a>       <span class="cf">ELSE</span> <span class="st">&#39;Tie&#39;</span> <span class="cf">END</span> <span class="kw">AS</span> outcome</span>
+<span id="cb13-8"><a href="database-management-and-data-systems-sql.html#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* ELSE NULL AS outcome --&gt; if everything else should be N.A.</span></span>
+<span id="cb13-9"><a href="database-management-and-data-systems-sql.html#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">       </span><span class="re">END</span><span class="co"> AS outcome --&gt; if we want to exclude every other conditions </span></span>
+<span id="cb13-10"><a href="database-management-and-data-systems-sql.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">       </span><span class="re">END</span><span class="co"> IS NOT NULL --&gt; keep all clauses excluding missing values*/</span></span>
+<span id="cb13-11"><a href="database-management-and-data-systems-sql.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> match</span>
+<span id="cb13-12"><a href="database-management-and-data-systems-sql.html#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> season <span class="op">=</span> <span class="st">&#39;2013/2014&#39;</span>;</span>
+<span id="cb13-13"><a href="database-management-and-data-systems-sql.html#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="database-management-and-data-systems-sql.html#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co">/* Example 1: CASE WHEN + COUNT GROUP BY */</span></span>
+<span id="cb13-15"><a href="database-management-and-data-systems-sql.html#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co">-- Identify the home team as Bayern Munich, Schalke 04, or neither</span></span>
+<span id="cb13-16"><a href="database-management-and-data-systems-sql.html#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
+<span id="cb13-17"><a href="database-management-and-data-systems-sql.html#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">CASE</span> <span class="cf">WHEN</span> hometeam_id <span class="op">=</span> <span class="dv">10189</span> <span class="cf">THEN</span> <span class="st">&#39;FC Schalke 04&#39;</span></span>
+<span id="cb13-18"><a href="database-management-and-data-systems-sql.html#cb13-18" aria-hidden="true" tabindex="-1"></a>         <span class="cf">WHEN</span> hometeam_id <span class="op">=</span> <span class="dv">9823</span> <span class="cf">THEN</span> <span class="st">&#39;FC Bayern Munich&#39;</span></span>
+<span id="cb13-19"><a href="database-management-and-data-systems-sql.html#cb13-19" aria-hidden="true" tabindex="-1"></a>         <span class="cf">ELSE</span> <span class="st">&#39;Other&#39;</span> <span class="cf">END</span> <span class="kw">AS</span> home_team,</span>
+<span id="cb13-20"><a href="database-management-and-data-systems-sql.html#cb13-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">COUNT</span>(<span class="kw">id</span>) <span class="kw">AS</span> total_matches</span>
+<span id="cb13-21"><a href="database-management-and-data-systems-sql.html#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> matches_germany</span>
+<span id="cb13-22"><a href="database-management-and-data-systems-sql.html#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="co">-- Group by the CASE statement alias</span></span>
+<span id="cb13-23"><a href="database-management-and-data-systems-sql.html#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> home_team;</span>
+<span id="cb13-24"><a href="database-management-and-data-systems-sql.html#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-25"><a href="database-management-and-data-systems-sql.html#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="co">/* Example 2: CASE WHEN + LEFT JOIN + WHERE */</span></span>
+<span id="cb13-26"><a href="database-management-and-data-systems-sql.html#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
+<span id="cb13-27"><a href="database-management-and-data-systems-sql.html#cb13-27" aria-hidden="true" tabindex="-1"></a>    m.<span class="dt">date</span>,</span>
+<span id="cb13-28"><a href="database-management-and-data-systems-sql.html#cb13-28" aria-hidden="true" tabindex="-1"></a>    t.team_long_name <span class="kw">AS</span> opponent,</span>
+<span id="cb13-29"><a href="database-management-and-data-systems-sql.html#cb13-29" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- Complete the CASE statement with an alias</span></span>
+<span id="cb13-30"><a href="database-management-and-data-systems-sql.html#cb13-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">CASE</span> <span class="cf">WHEN</span> m.home_goal <span class="op">&gt;</span> away_goal <span class="cf">THEN</span> <span class="st">&#39;Barcelona win!&#39;</span></span>
+<span id="cb13-31"><a href="database-management-and-data-systems-sql.html#cb13-31" aria-hidden="true" tabindex="-1"></a>       <span class="cf">WHEN</span> m.home_goal <span class="op">&lt;</span> away_goal <span class="cf">THEN</span> <span class="st">&#39;Barcelona loss :(&#39;</span> </span>
+<span id="cb13-32"><a href="database-management-and-data-systems-sql.html#cb13-32" aria-hidden="true" tabindex="-1"></a>       <span class="cf">ELSE</span> <span class="st">&#39;Tie&#39;</span> <span class="cf">END</span> <span class="kw">AS</span> outcome </span>
+<span id="cb13-33"><a href="database-management-and-data-systems-sql.html#cb13-33" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> matches_spain <span class="kw">AS</span> m</span>
+<span id="cb13-34"><a href="database-management-and-data-systems-sql.html#cb13-34" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> teams_spain <span class="kw">AS</span> t </span>
+<span id="cb13-35"><a href="database-management-and-data-systems-sql.html#cb13-35" aria-hidden="true" tabindex="-1"></a><span class="kw">ON</span> m.awayteam_id <span class="op">=</span> t.team_api_id</span>
+<span id="cb13-36"><a href="database-management-and-data-systems-sql.html#cb13-36" aria-hidden="true" tabindex="-1"></a><span class="co">-- Filter for Barcelona as the home team</span></span>
+<span id="cb13-37"><a href="database-management-and-data-systems-sql.html#cb13-37" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> m.hometeam_id <span class="op">=</span> <span class="dv">8634</span>; </span></code></pre></div>
+</div>
+<div id="text-operations" class="section level3 hasAnchor" number="4.1.12">
+<h3><span class="header-section-number">4.1.12</span> TEXT operations<a href="database-management-and-data-systems-sql.html#text-operations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb14-1"><a href="database-management-and-data-systems-sql.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
+<span id="cb14-2"><a href="database-management-and-data-systems-sql.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  colunm,</span>
+<span id="cb14-3"><a href="database-management-and-data-systems-sql.html#cb14-3" aria-hidden="true" tabindex="-1"></a>  LEN(<span class="kw">column</span>) <span class="kw">AS</span> column_length <span class="co">-- returns # of chars</span></span>
+<span id="cb14-4"><a href="database-management-and-data-systems-sql.html#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">LEFT</span>(<span class="kw">column</span>, <span class="dv">20</span>) <span class="kw">AS</span> first_20_left_column <span class="co">-- returns first 20 chars from the LEFT</span></span>
+<span id="cb14-5"><a href="database-management-and-data-systems-sql.html#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">RIGHT</span>(<span class="kw">column</span>, <span class="dv">20</span>) <span class="kw">AS</span> last_20_column <span class="co">-- returns last 20 chars from the RIGHT</span></span>
+<span id="cb14-6"><a href="database-management-and-data-systems-sql.html#cb14-6" aria-hidden="true" tabindex="-1"></a>  CHARINDEX(<span class="st">&#39;_&#39;</span>, <span class="kw">column</span>) <span class="kw">AS</span> char_location <span class="co">-- returns the index of a char/string in column</span></span>
+<span id="cb14-7"><a href="database-management-and-data-systems-sql.html#cb14-7" aria-hidden="true" tabindex="-1"></a>  SUBSTRING(<span class="kw">column</span>, <span class="kw">start</span>, <span class="fu">length</span>) <span class="kw">AS</span> target_section </span>
+<span id="cb14-8"><a href="database-management-and-data-systems-sql.html#cb14-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">-- returns substring starting at location 12 and has length of 12</span></span>
+<span id="cb14-9"><a href="database-management-and-data-systems-sql.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span>;</span>
+<span id="cb14-10"><a href="database-management-and-data-systems-sql.html#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="database-management-and-data-systems-sql.html#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* REPLACE */</span></span>
+<span id="cb14-12"><a href="database-management-and-data-systems-sql.html#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb14-13"><a href="database-management-and-data-systems-sql.html#cb14-13" aria-hidden="true" tabindex="-1"></a>  TOP(<span class="dv">5</span>) <span class="kw">REPLACE</span>(<span class="kw">column</span>, <span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>) <span class="kw">AS</span> replaced_column_with_b</span>
+<span id="cb14-14"><a href="database-management-and-data-systems-sql.html#cb14-14" aria-hidden="true" tabindex="-1"></a>        <span class="co">-- replaces char &#39;a&#39; in column with char &#39;b&#39; for all first 5 rows</span></span>
+<span id="cb14-15"><a href="database-management-and-data-systems-sql.html#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span>;</span></code></pre></div>
 
+</div>
 </div>
 </div>
             </section>

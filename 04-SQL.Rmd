@@ -15,11 +15,9 @@ knitr::opts_chunk$set(connection = "db")
 
 [SQL Style Guide by Simon Holywell](https://www.sqlstyle.guide/) *Keywords* are reserved words for **operations**.
 
-## Common keywords and examples:
+## CRUD Operations
 
-### CRUD operations
-
--   CREATE ---\> Databases \| Tables \| Views \| Users \| Permissions \| Security Groups
+### CREATE ---\> Databases \| Tables \| Views \| Users \| Permissions \| Security Groups
 
 ```{sql }
 /* create a new table w/ column names, data type, size */
@@ -41,7 +39,7 @@ CREATE TABLE new_table_name AS
     WEHRE conditions;
 ```
 
--   INSERT, --- insert new records into existing database tables
+### INSERT, --- insert new records into existing database tables
 
 ```{sql }
 /* insert new columns & values */
@@ -59,7 +57,7 @@ FROM other_table
 WHERE condition(s);
 ```
 
--   UPDATE --- Amend existing database records
+### UPDATE --- Amend existing database records
 
 ```{sql}
 UPDATE table_name
@@ -69,7 +67,7 @@ SET
 WHERE condition(s)
 ```
 
--   DELETE --- delete existing records from tables
+### DELETE --- delete existing records from tables
 
 ```{sql}
 DELETE 
@@ -80,7 +78,7 @@ WHERE condition(s)
 TRUNCATE TABLE table_name
 ```
 
--   Declare Variables ---\> so it will be easier to use in later conditions without repetitively calling the same values
+### Declare Variables ---\> so it will be easier to use in later conditions without repetitively calling the same values
 
 ```{sql}
 -- declare your variables
@@ -103,7 +101,7 @@ WHERE date BETWEEN @start AND @stop
 AND affected_customers >= @affected;
 ```
 
--   Temporary tables
+### Temporary tables
 
 ```{sql}
 SELECT
@@ -117,15 +115,15 @@ WHERE condition(s);
 DROP TABLE #my_temp_table
 ```
 
--   READ
+### READ \| VIEW
 
-    -   Example: `SELECT` statements
+Example: `SELECT` statements
 
-        -   `SELECT` indicates which *fields* should be selected.
+-   `SELECT` indicates which *fields* should be selected.
 
-        -   `FROM` indicates where these *fields* are located.
+-   `FROM` indicates where these *fields* are located.
 
-        -   `SELECT DISTINCT` allows you to select field content.
+-   `SELECT DISTINCT` allows you to select field content.
 
 ```{sql}
 SELECT DISTINCT var_name1 AS new_var_name1, var_name2
@@ -146,7 +144,7 @@ SELECT id, var_name1, var_name2
 FROM table_name;
 ```
 
-Group by \| Having \| WHERE
+### GROUP BY \| HAVING \| WHERE
 
 -   `GROUP BY` splits data up into combinations of one or more values
 
@@ -178,7 +176,7 @@ GROUP BY LastName
 HAVING COUNT(Orders.OrderID) > 25;
 ```
 
-Join examples
+### JOIN examples
 
 ```{sql}
 /* INNER JOIN selects records that have matching values in BOTH tables */
@@ -217,7 +215,7 @@ AND A.City = B.City
 ORDER BY A.City;
 ```
 
-The SQL UNION Operator
+### UNION Operator
 
 -   `UNION` discards duplicates while `UNION ALL` does not
 
@@ -249,7 +247,7 @@ The SQL UNION Operator
     ORDER BY City;
     ```
 
-CASE statements can be used to create columns (new variables) for
+### CASE statements can be used to create columns (new variables) for
 
 -   categorizing data
 
@@ -313,7 +311,7 @@ ON m.awayteam_id = t.team_api_id
 WHERE m.hometeam_id = 8634; 
 ```
 
-TEXT operations
+### TEXT operations
 
 ```{sql }
 SELECT 

@@ -23,7 +23,7 @@
 <meta name="author" content="Jiner Zheng" />
 
 
-<meta name="date" content="2022-09-09" />
+<meta name="date" content="2022-09-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,20 +164,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.3" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#sampling-techniques"><i class="fa fa-check"></i><b>2.2.3</b> Sampling Techniques</a></li>
 <li class="chapter" data-level="2.2.4" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#principles-of-experimental-designcontrol-randomize-replicate-and-blockand-their-purposes"><i class="fa fa-check"></i><b>2.2.4</b> Principles of Experimental Design—Control, Randomize, Replicate, and Block—and their purposes</a></li>
 <li class="chapter" data-level="2.2.5" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#random-sampling-vs.-random-assignment"><i class="fa fa-check"></i><b>2.2.5</b> Random Sampling vs. Random Assignment</a></li>
+<li class="chapter" data-level="2.2.6" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#hypothesis-tests-and-resampling"><i class="fa fa-check"></i><b>2.2.6</b> Hypothesis Tests and Resampling</a></li>
+<li class="chapter" data-level="2.2.7" data-path="statistics-and-probability.html"><a href="statistics-and-probability.html#statistical-significance-and-p-values"><i class="fa fa-check"></i><b>2.2.7</b> Statistical Significance and p-values</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="ab-testing.html"><a href="ab-testing.html"><i class="fa fa-check"></i><b>3</b> A/B Testing</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="ab-testing.html"><a href="ab-testing.html#what-is-ab-testing"><i class="fa fa-check"></i><b>3.1</b> What is A/B testing?</a></li>
 <li class="chapter" data-level="3.2" data-path="ab-testing.html"><a href="ab-testing.html#what-you-cant-do-with-ab-testing"><i class="fa fa-check"></i><b>3.2</b> What you can’t do with A/B testing?</a></li>
-<li class="chapter" data-level="3.3" data-path="ab-testing.html"><a href="ab-testing.html#example-audacity"><i class="fa fa-check"></i><b>3.3</b> Example: Audacity</a>
+<li class="chapter" data-level="3.3" data-path="ab-testing.html"><a href="ab-testing.html#defining-the-hypothesis"><i class="fa fa-check"></i><b>3.3</b> Defining the hypothesis</a></li>
+<li class="chapter" data-level="3.4" data-path="ab-testing.html"><a href="ab-testing.html#defining-metrics-and-gathering-data"><i class="fa fa-check"></i><b>3.4</b> Defining Metrics and Gathering Data</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="ab-testing.html"><a href="ab-testing.html#defining-the-hypothesis"><i class="fa fa-check"></i><b>3.3.1</b> Defining the hypothesis</a></li>
+<li class="chapter" data-level="3.4.1" data-path="ab-testing.html"><a href="ab-testing.html#high-level-concepts-for-metrics"><i class="fa fa-check"></i><b>3.4.1</b> High-Level concepts for metrics</a></li>
+<li class="chapter" data-level="3.4.2" data-path="ab-testing.html"><a href="ab-testing.html#methods-for-coming-up-w-proxy-metrics-or-validating-metrics"><i class="fa fa-check"></i><b>3.4.2</b> Methods for Coming up w/ Proxy Metrics or Validating Metrics</a></li>
+<li class="chapter" data-level="3.4.3" data-path="ab-testing.html"><a href="ab-testing.html#gathering-additional-data"><i class="fa fa-check"></i><b>3.4.3</b> Gathering Additional Data</a></li>
+<li class="chapter" data-level="3.4.4" data-path="ab-testing.html"><a href="ab-testing.html#segmenting-and-filtering-data"><i class="fa fa-check"></i><b>3.4.4</b> Segmenting and Filtering Data</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="ab-testing.html"><a href="ab-testing.html#designing-an-ab-test"><i class="fa fa-check"></i><b>3.5</b> Designing an A/B test</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="ab-testing.html"><a href="ab-testing.html#summary-workflow-of-ab-testing"><i class="fa fa-check"></i><b>3.5.1</b> Summary workflow of A/B testing:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="ab-testing.html"><a href="ab-testing.html#step1-choose-and-characterize-metrics-for-both-sanity-check-and-evaluation"><i class="fa fa-check"></i><b>3.6</b> Step1: Choose and characterize metrics for both <code>sanity check and evaluation</code></a></li>
+<li class="chapter" data-level="3.7" data-path="ab-testing.html"><a href="ab-testing.html#step-2-choose-significance-level-statistical-power-and-practical-significance-level"><i class="fa fa-check"></i><b>3.7</b> Step 2: Choose significance level, statistical power and practical significance level</a></li>
+<li class="chapter" data-level="3.8" data-path="ab-testing.html"><a href="ab-testing.html#step-3-calculate-required-sample-size"><i class="fa fa-check"></i><b>3.8</b> Step 3: Calculate required sample size</a></li>
+<li class="chapter" data-level="3.9" data-path="ab-testing.html"><a href="ab-testing.html#step-4-take-sample-for-controltreatment-groups-and-run-the-test"><i class="fa fa-check"></i><b>3.9</b> Step 4: Take sample for control/treatment groups and run the test</a></li>
+<li class="chapter" data-level="3.10" data-path="ab-testing.html"><a href="ab-testing.html#step-5-analyze-the-results-and-draw-conclusions"><i class="fa fa-check"></i><b>3.10</b> Step 5: Analyze the results and draw conclusions</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="ab-testing.html"><a href="ab-testing.html#first-step-sanity-check"><i class="fa fa-check"></i><b>3.10.1</b> First step — Sanity Check</a></li>
+<li class="chapter" data-level="3.10.2" data-path="ab-testing.html"><a href="ab-testing.html#second-step-analyze-the-results"><i class="fa fa-check"></i><b>3.10.2</b> Second step — Analyze the Results</a></li>
+<li class="chapter" data-level="3.10.3" data-path="ab-testing.html"><a href="ab-testing.html#last-step-draw-conclusions"><i class="fa fa-check"></i><b>3.10.3</b> Last step — Draw Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.11" data-path="ab-testing.html"><a href="ab-testing.html#other-things-to-keep-in-mind"><i class="fa fa-check"></i><b>3.11</b> Other things to keep in mind</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html"><i class="fa fa-check"></i><b>4</b> Database Management and Data Systems (SQL)</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#common-keywords-and-examples"><i class="fa fa-check"></i><b>4.1</b> Common keywords and examples:</a></li>
+<li class="chapter" data-level="4.1" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#crud-operations"><i class="fa fa-check"></i><b>4.1</b> CRUD Operations</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#create-databases-tables-views-users-permissions-security-groups"><i class="fa fa-check"></i><b>4.1.1</b> CREATE —&gt; Databases | Tables | Views | Users | Permissions | Security Groups</a></li>
+<li class="chapter" data-level="4.1.2" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#insert-insert-new-records-into-existing-database-tables"><i class="fa fa-check"></i><b>4.1.2</b> INSERT, — insert new records into existing database tables</a></li>
+<li class="chapter" data-level="4.1.3" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#update-amend-existing-database-records"><i class="fa fa-check"></i><b>4.1.3</b> UPDATE — Amend existing database records</a></li>
+<li class="chapter" data-level="4.1.4" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#delete-delete-existing-records-from-tables"><i class="fa fa-check"></i><b>4.1.4</b> DELETE — delete existing records from tables</a></li>
+<li class="chapter" data-level="4.1.5" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#declare-variables-so-it-will-be-easier-to-use-in-later-conditions-without-repetitively-calling-the-same-values"><i class="fa fa-check"></i><b>4.1.5</b> Declare Variables —&gt; so it will be easier to use in later conditions without repetitively calling the same values</a></li>
+<li class="chapter" data-level="4.1.6" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#temporary-tables"><i class="fa fa-check"></i><b>4.1.6</b> Temporary tables</a></li>
+<li class="chapter" data-level="4.1.7" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#read-view"><i class="fa fa-check"></i><b>4.1.7</b> READ | VIEW</a></li>
+<li class="chapter" data-level="4.1.8" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#group-by-having-where"><i class="fa fa-check"></i><b>4.1.8</b> GROUP BY | HAVING | WHERE</a></li>
+<li class="chapter" data-level="4.1.9" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#join-examples"><i class="fa fa-check"></i><b>4.1.9</b> JOIN examples</a></li>
+<li class="chapter" data-level="4.1.10" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#union-operator"><i class="fa fa-check"></i><b>4.1.10</b> UNION Operator</a></li>
+<li class="chapter" data-level="4.1.11" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#case-statements-can-be-used-to-create-columns-new-variables-for"><i class="fa fa-check"></i><b>4.1.11</b> CASE statements can be used to create columns (new variables) for</a></li>
+<li class="chapter" data-level="4.1.12" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#text-operations"><i class="fa fa-check"></i><b>4.1.12</b> TEXT operations</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="machine-learning-models.html"><a href="machine-learning-models.html"><i class="fa fa-check"></i><b>5</b> Machine Learning Models</a></li>
 <li class="chapter" data-level="6" data-path="product-sense.html"><a href="product-sense.html"><i class="fa fa-check"></i><b>6</b> Product Sense</a></li>
@@ -265,10 +300,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong><code>Quantitative approach</code></strong><code>:</code> We can also analyze the <code>logs</code> of what users did on the website to see if a hypothesis can be developed about what’s <code>causing</code> changes in their behavior. And that’s something where you may want to go forward and actually design and randomize an experiment through a perspective analysis. We can use the two data sources to compliment each other.</li>
 </ul>
 </div>
-<div id="example-audacity" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Example: Audacity<a href="ab-testing.html#example-audacity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="defining-the-hypothesis" class="section level3 hasAnchor" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> Defining the hypothesis<a href="ab-testing.html#defining-the-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="defining-the-hypothesis" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Defining the hypothesis<a href="ab-testing.html#defining-the-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p><strong><code>Initial Hypothesis:</code></strong> changing the “start now” button from <code>orange</code> to <code>pink</code> will <code>increase</code> how many students explore Audacity’s courses.</p></li>
 <li><p><strong><code>Choosing Metrics:</code></strong></p>
@@ -290,8 +323,296 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><strong><code>Updated hypothesis:</code></strong> Changing the “Start Now” button from orange to pink will increase the <code>click-through-probability</code> of the button. (--&gt; assume that this will ultimately increase business profits).</li>
 </ul>
-
 </div>
+<div id="defining-metrics-and-gathering-data" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Defining Metrics and Gathering Data<a href="ab-testing.html#defining-metrics-and-gathering-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="high-level-concepts-for-metrics" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> High-Level concepts for metrics<a href="ab-testing.html#high-level-concepts-for-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>define business objectives</p></li>
+<li><p>break overall objectives down to step by step using <code>customer funnel</code></p></li>
+<li><p>Funnel –&gt; we typically have fewer and fewer users that get to each stage of the funnel</p></li>
+<li><p><code>OEC (overall evaluation criterion)</code> —&gt; a composite metric / an objective weighted function that combines all of these different metrics</p></li>
+<li><p><code>Categories of SUMMARY Metrics</code></p>
+<ul>
+<li><p>sums and counts</p></li>
+<li><p>means, medians, percentiles</p></li>
+<li><p>probability (0 or 1) and rate (0 or more)</p></li>
+<li><p>ratios</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="methods-for-coming-up-w-proxy-metrics-or-validating-metrics" class="section level3 hasAnchor" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Methods for Coming up w/ Proxy Metrics or Validating Metrics<a href="ab-testing.html#methods-for-coming-up-w-proxy-metrics-or-validating-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><code>Retrospective Analysis</code>: if we have logs or other data capture mechanisms to see what users do. Running analyses on this existing set of observational data without an experiment structure is called retrospective analysis or observational analysis. [correlation NOT causation]</li>
+<li><code>Long-term Prospective Experiments</code></li>
+<li><code>Human Evaluation</code></li>
+</ul>
+<p><em>1. It is important to take into account your <strong>corporate culture</strong> as you define business metrics becuz some companies care more about obtaining market share / making revenues, but others just wanna make their existing users happy</em></p>
+<p><em>2. It is usually more robust to <strong>triangulate between different methods</strong>. For example, if we wanted to see if students are really happy with our course website, we might look through our <strong>logs</strong> and say that somebody took a second course, which we’ll say is being happy: 1) what did they do? 2) how long did they spend? 3) how many months were they active for this site? —&gt; we wanna get some baseline for that. And then given that they took a second course, then we might also want to trigger <strong>surveys</strong> that happened within your site or do <strong>a focus group</strong> where people who’ve done a single course actually get a survey that says are you considering taking a second course?</em></p>
+</div>
+<div id="gathering-additional-data" class="section level3 hasAnchor" number="3.4.3">
+<h3><span class="header-section-number">3.4.3</span> Gathering Additional Data<a href="ab-testing.html#gathering-additional-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><code>External data:</code> see what data is OUT relating to similar websites / mobile applications</p></li>
+<li><p><code>User Experience Research (UER):</code> tracks a specific user experience and understand a typical user journey in terms of experience</p>
+<ul>
+<li><p><strong>good for brainstorming ideas</strong> <em>from coming up with ideas to changes to test / to identifying problems with your user experience in a way that you can translate into a possible metric that you could use to evaluate your A/B test.</em></p></li>
+<li><p><strong>can use special equipment</strong> <em>such as an eye-tracking cameras to see what users are looking at even if they don’t click on the button</em></p></li>
+<li><p><strong>want to validate results of UER</strong> with something like the retrospective analyses</p></li>
+</ul></li>
+<li><p><code>Focus Groups</code>: where you bring a bunch of users or potential users together for a group discussion to elicit feedback. You can talk to more total users than with a UER study. but you can’t go as deep for each person.</p>
+<ul>
+<li><p>get feedback on <strong>hypotheticals</strong></p></li>
+<li><p>run <strong>the risk of group think</strong> and convergence on fewer opinions</p></li>
+</ul></li>
+<li><p><code>Surveys:</code> where u recruit a bunch of people to ask them questions, either online, or in person, or via telephone</p>
+<ul>
+<li><p>cheap for <strong>getting almost all users</strong> involved</p></li>
+<li><p>data often <strong>quantitative</strong> but n<strong>ot very deep</strong> or individually customized</p></li>
+<li><p>useful for metrics you cannot directly measure</p></li>
+<li><p>need to be careful about survey results —&gt; bcuz users don’t have to tell the truth and their answers can be dependent on how the questions are phrased.</p></li>
+</ul></li>
+</ul>
+<p><img src="pics/customer-funnel.png" width="350" alt="Applying techniques to metrics" /><img src="pics/difficult_metrics.png" width="350" alt="Techniques to measure difficult metrics" /></p>
+<ul>
+<li><p><code>Example: Which techniques to use?</code></p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Measure user engagement</strong> (course completion too long-term)</p>
+<ul>
+<li>Survey | UER + Retrospective analysis <em>(of users who have completed courses and see what behaviors they have in common)</em></li>
+</ul></li>
+<li><p><strong>Decide whether to extend inventory</strong></p>
+<ul>
+<li><p>Focus group <em>—&gt;get ideas from users about what products they wanna see</em></p></li>
+<li><p>External data <em>—&gt; what users buy from other shopping sites</em></p></li>
+</ul></li>
+<li><p><strong>Which ads get most views</strong></p>
+<ul>
+<li><p>External data <em>—&gt; look for studies to see if there’s something we can measure like <strong>time spent on the page</strong> / <strong>mouse hover events</strong> —&gt; use as a <strong>proxy</strong> for whether the ad was viewed</em></p></li>
+<li><p>UER <em>—&gt; to observe users and see what ads they are paying attention to with an <strong>eye-tracking camera</strong> and then try to find a metric that correlates with that</em></p></li>
+</ul></li>
+</ol></li>
+</ul>
+</div>
+<div id="segmenting-and-filtering-data" class="section level3 hasAnchor" number="3.4.4">
+<h3><span class="header-section-number">3.4.4</span> Segmenting and Filtering Data<a href="ab-testing.html#segmenting-and-filtering-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>External reasons: We want to filter out abuse on our site such as <strong>spam or fraud</strong> (e.g. competitor visiting)</p>
+<p>Internal reasons: when our change only impacts <strong>a subset of the traffic</strong></p>
+<p>GOAL: to <strong>de-bias</strong> or <strong>dull-bias</strong> our data</p>
+</div>
+</div>
+<div id="designing-an-ab-test" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Designing an A/B test<a href="ab-testing.html#designing-an-ab-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>reference: 1. <a href="https://towardsdatascience.com/a-summary-of-udacity-a-b-testing-course-9ecc32dedbb1"><strong>A Summary of Udacity A/B Testing Course by Kelly Peng</strong></a></p>
+<ol start="2" style="list-style-type: decimal">
+<li><a href="https://towardsdatascience.com/the-as-and-b-s-of-a-b-testing-a-beginner-s-guide-to-experimentation-d54a60218e13#:~:text=Sanity%20Metrics%3A%20These%20are%20called,wrong%20in%20the%20experiment%20setup."><strong>The A’s and B’s of A/B Testing by Tanmayee W</strong></a></li>
+</ol>
+<div id="summary-workflow-of-ab-testing" class="section level3 hasAnchor" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Summary workflow of A/B testing:<a href="ab-testing.html#summary-workflow-of-ab-testing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><code>Choose and characterize metrics</code> to evaluate experiments <em>—&gt; identify what we care about and how we wanna measure the effect</em></li>
+<li>Choose <code>significance level (alpha), statistical power (1-beta) and practical significance level</code> <em>—&gt; we rly wanna launch the change if tests are statistically significant</em></li>
+<li>Calculate required <code>sample size</code></li>
+<li>Take sample for <code>control or treatment groups</code> and <code>run the test</code></li>
+<li><code>Analyze results</code> and <code>draw valid conclusions</code></li>
+</ol>
+</div>
+</div>
+<div id="step1-choose-and-characterize-metrics-for-both-sanity-check-and-evaluation" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Step1: Choose and characterize metrics for both <code>sanity check and evaluation</code><a href="ab-testing.html#step1-choose-and-characterize-metrics-for-both-sanity-check-and-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p><code>Invariant metrics:</code> metrics we choose for sanity check</p>
+<ul>
+<li><p>these metrics should NOT change across control and experiment groups during the course of the experiment</p></li>
+<li><p>they are NOT supposed to be affected by the experiment</p></li>
+<li><p>if they DO change then there is something fundamentally wrong in the experiment setup.</p></li>
+</ul></li>
+<li><p><code>Evaluation metrics:</code> metrics used to measure which variation is better</p>
+<ul>
+<li><p>e.g. we could use daily active users (DAU) to measure user engagement</p></li>
+<li><p>e.g. use click through rate (CLR) to measure a button design on a webpage</p></li>
+</ul></li>
+<li><p><code>Four Categories of Metrics</code> to keep in mind</p>
+<ul>
+<li><p>Sums &amp; counts</p></li>
+<li><p>Distributional metrics (mean | median | percentiles)</p></li>
+<li><p>Probability &amp; rates (e.g. click-through probability, CLR)</p></li>
+<li><p>Ratios: any two numbers divide by each other (e.g. # of revenue-generating clicks / total # of clicks)</p></li>
+</ul></li>
+<li><p><code>Sensitivity and Robustness</code> to consider</p>
+<ul>
+<li><p>we want to choose a metric that has <code>high sensitivity</code> —&gt; metric can pick up the change we care about</p></li>
+<li><p>we want to choose metric to be <code>robust</code> against changes we DO NOT care about —&gt; metric does not change a lot when nothing we’re interested happened</p></li>
+</ul></li>
+<li><p><code>Measure Sensitivity &amp; Robustness</code></p>
+<ul>
+<li><p>Run experiments</p></li>
+<li><p>Use A/A test to see if metrics pick up difference <em>(if yes, then metrics are NOT robust)</em></p></li>
+<li><p>Retrospective analysis</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="step-2-choose-significance-level-statistical-power-and-practical-significance-level" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Step 2: Choose significance level, statistical power and practical significance level<a href="ab-testing.html#step-2-choose-significance-level-statistical-power-and-practical-significance-level" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Usually the significance level is <code>0.05</code> and power is set as <code>0.8.</code> Practical significance level varies depends on each individual tests —&gt; tells us how much change the test detscts that makes we rly wanna launch the change.</p>
+<p>It is important to understand what constitutes as statistically significant change may NOT be practically significant change!</p>
+<ul>
+<li><p><strong><code>Business needs</code></strong> have to be identified and <strong><code>ROI</code></strong> <em>(return on investment)</em> has to calculate if the change has to be actually rolled out.</p></li>
+<li><p>Is the roll-out worth the efforts? | Is business impact greater if we decide to launch the change?</p></li>
+<li><p>While we make these critical decisions, it may be worthwhile to consider <strong><code>opportunity costs</code></strong> <em>(the loss of potential gain from other alternatives);</em> <strong><code>engineering and roll-out costs</code></strong> <em>(costs to launch the new product or services);</em> <strong><code>customer support</code></strong> or <strong><code>sales issues</code></strong> that may be involved if we go ahead with the change.</p></li>
+</ul>
+</div>
+<div id="step-3-calculate-required-sample-size" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> Step 3: Calculate required sample size<a href="ab-testing.html#step-3-calculate-required-sample-size" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this step, we would need to consider <code>the choice of metric</code> | <code>choice of unit of diversion</code> | <code>choice of population</code> into account bcuz they ALL affect the <strong>variability of our metrics.</strong> Then decide on the size of experiment.</p>
+<ul>
+<li><p><code>Subject</code> for a/b testing is commonly called <code>Unit of Diversion</code></p>
+<ul>
+<li><p><code>event-based</code> (e.g. page views) —&gt; useful for measuring <strong>latency change</strong> such as website load time</p></li>
+<li><p><code>anonymous id-based</code> (e.g. cookies) —&gt; <strong>user visible changes</strong></p></li>
+<li><p><code>user-id based</code> —&gt; <strong>user visible changes</strong></p></li>
+</ul></li>
+<li><p><code>Population</code> depends on what subjects are relevant for the study under consideration. Is the population of particular demographic, region/country relevant? Choose accordingly.</p></li>
+<li><p><code>How to reduce the size of an experiment to get it done faster?</code></p>
+<ul>
+<li><p>increase significance level alpha</p></li>
+<li><p>reduce power (1-beta) which means increase beta</p></li>
+<li><p>change the unit of diversion if originally it is not the same with unit of analysis</p>
+<ul>
+<li><code>unit of analysis:</code> denominator of our evaluation metric</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="step-4-take-sample-for-controltreatment-groups-and-run-the-test" class="section level2 hasAnchor" number="3.9">
+<h2><span class="header-section-number">3.9</span> Step 4: Take sample for control/treatment groups and run the test<a href="ab-testing.html#step-4-take-sample-for-controltreatment-groups-and-run-the-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Things to keep in mind:</p>
+<ul>
+<li><p><code>Duration:</code> What’s the best time to run it and how long the experiment would take place? Students going back to college? Holidays? Weekend vs. weekdays?</p></li>
+<li><p><code>Exposure:</code> What fraction of traffic we want to expose the experiment to? Suggestion is to take a <strong>small</strong> fraction, run <strong>multiple tests</strong> at the same time (different days: weekend, weekday, holiday).</p></li>
+<li><p><code>Learning effect:</code> When there’s a new change, in the beginning users may against the change <em>(change aversion)</em> or use the change a lot <em>(novelty effect)</em> But overtime, user behavior becomes stable and more fit to measure any effects of change, which is called <code>plateau stage</code> .</p>
+<ul>
+<li><p>the key thing to measure learning effect is TIME, but in reality we don’t have much luxury of taking that much time to make a decision.</p></li>
+<li><p>Suggestion: <em>run a smaller group of users for a longer period of time</em></p></li>
+</ul></li>
+</ul>
+</div>
+<div id="step-5-analyze-the-results-and-draw-conclusions" class="section level2 hasAnchor" number="3.10">
+<h2><span class="header-section-number">3.10</span> Step 5: Analyze the results and draw conclusions<a href="ab-testing.html#step-5-analyze-the-results-and-draw-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="first-step-sanity-check" class="section level3 hasAnchor" number="3.10.1">
+<h3><span class="header-section-number">3.10.1</span> First step — Sanity Check<a href="ab-testing.html#first-step-sanity-check" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Check if our invariant metrics have changed. If sanity check failed then we do not proceed becuz it means there’s something wrong with experiment setup. —&gt; go analyze why sanity check has failed by using <code>retrospective analysis</code> or look into if there exists any <code>learning effect.</code></p>
+</div>
+<div id="second-step-analyze-the-results" class="section level3 hasAnchor" number="3.10.2">
+<h3><span class="header-section-number">3.10.2</span> Second step — Analyze the Results<a href="ab-testing.html#second-step-analyze-the-results" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong><em>Case 1: One Single Metric —&gt; if NOT significant</em></strong></p>
+<ul>
+<li><p>First try: break down the experiment into different segments</p>
+<ul>
+<li><p>check results on different platforms (web &amp; mobile)</p></li>
+<li><p>check results across different periods of time (days, weeks, months, years, etc.)</p></li>
+</ul></li>
+<li><p>Second try: cross checking by using different methods</p>
+<ul>
+<li><p>e.g. compare with <code>non-parametric sign test</code> <em>(a test that compares the sizes of two groups &amp; it is non-parametric or <strong>“distribution free”</strong> which means it <strong>DOES NOT assume the data comes from a particular distribution</strong>)</em> with <code>parametric hypothesis test</code> (<em>tests that <strong>make assumptions about parameters of the population distribution</strong> which the sample was taken — e.g. Two-sample t-test, paired t-test, ANOVA, Pearson correlation).</em></p>
+<ul>
+<li><p>if two tests NOT agree —&gt; look into data critically cuz we might be suffering from <code>Simpson's paradox</code> (<em>a phenomenon when a trend appears in different groups of data but it disappears when the different groups are combined and looked at holistically)</em></p></li>
+<li><p>Reasons for Simpson’s paradox:</p>
+<ul>
+<li><p>experiment setup is incorrect</p></li>
+<li><p>the change affects the new users and experienced users differently</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p><strong><em>Case 2: Measuring Multiple Metrics at the same time</em></strong></p>
+<ul>
+<li><p>One potential problem is that we might see a significant result <strong>by chance</strong></p>
+<ul>
+<li><p>e.g. if we are running tests with 20 variants, and we test each hypothesis separately:</p>
+<ul>
+<li><p>P (one significant result) = 1 - P (no significant results)</p></li>
+<li><p>P (one significant result) = 1 - (1 - 0.05) ^20 = 0.64</p></li>
+</ul></li>
+<li><p>Ways to Solve this problem:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong><code>Bootstrap:</code></strong> divide the test samples into further more sample and run experiments again and again on each sub-divided sample <em>—&gt; the significant metric should disappear if it occurred by chance in the first place.</em></p></li>
+<li><p><strong><code>Bonferroni correction:</code></strong> Divide the significance level 0.05 by the number of tests run. Then check the statistical significance of our tests as against this adjusted level of significance.</p>
+<ul>
+<li>The problem of Bonferroni correction is it tends to be too conservative. If many metrics are tested at the same time, maybe none of them turned out to be significant.</li>
+</ul></li>
+<li><p><strong><code>Control Family-wise Error Rate (FWER):</code></strong> Adjust the probability that any metric will show false positives</p></li>
+<li><p><strong><code>Control false discovery rate (FDR):</code></strong> Fix an acceptable rate of false positives generated by any metric in the experiment.</p>
+<ul>
+<li><p>FDR = # false positives / # total rejections</p></li>
+<li><p>Say we decide 0.05 as FDR then this means that out of 100 samples, we are ready to accept 5 false positives per test.</p></li>
+</ul></li>
+</ol></li>
+</ul></li>
+<li><p>Another potential problem if — What if metrics are <strong>NOT moving at the SAME direction</strong> as we expected?</p>
+<ul>
+<li><p>e.g. expect DAU &amp; average length of time users use our app both increase. HOWEVER, we observe DAU decrease while average length of time increase.</p></li>
+<li><p>To solve this problem —&gt; <strong>dive deeper and figure out WHY</strong></p>
+<ul>
+<li><p>Have one <code>OEC (Overall Evaluation Criterion).</code></p></li>
+<li><p>A good OEC gives us a balance between short-term and long-term goal, or balance between different metrics.</p></li>
+<li><p>However, we need to keep in mind that OEC helps us understand what our business care about, and how do we balance metrics such as stay time and click, but it DOES NOT help us make a product change decision.</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="last-step-draw-conclusions" class="section level3 hasAnchor" number="3.10.3">
+<h3><span class="header-section-number">3.10.3</span> Last step — Draw Conclusions<a href="ab-testing.html#last-step-draw-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When we DO have a significant result from a test, we need to introspect a few things before deciding launch the change or not:</p>
+<ol style="list-style-type: decimal">
+<li><p>Do we understand the change? What does the change mean to users and business stakeholders?</p></li>
+<li><p>Will the change actually bring about value for the business?</p></li>
+<li><p>How will our users feel post-launch?</p></li>
+<li><p>Will there be differentiated opinions among different customer segments? Do we risk losing some of our customers?</p></li>
+</ol>
+<p>In other words: do I have statistically significant and practically significant result in order to justify the change? Do I understand what the change actually done to our user experience? Is it worth it to launch?</p>
+</div>
+</div>
+<div id="other-things-to-keep-in-mind" class="section level2 hasAnchor" number="3.11">
+<h2><span class="header-section-number">3.11</span> Other things to keep in mind<a href="ab-testing.html#other-things-to-keep-in-mind" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p><strong>RAMP UP</strong></p></li>
+<li><p>Always do a <code>ramp up</code> when we wanna launch a change after a/b testing. Becuzz we wanna know if there’s any incidental impact to unaffected users that we didn’t test in the original experiment.</p></li>
+<li><p>When we are ramping up the change, we may see the effect <strong>flatten out.</strong> Thus making the tested effect not repeatable. Reasons including:</p>
+<ul>
+<li><p><code>Seasonality Effect:</code> Social network platform user behavior changes a lot when students start summer vacation or going back to school. Holidays affect users’ shopping behaviors a lot.</p>
+<ul>
+<li>Solution: use <strong><code>hold-back method</code></strong> —launch the change to everyone except for one small hold-back group of users, and continue comparing their behavior to the control group</li>
+</ul></li>
+<li><p><code>Novelty effect / Change Aversion:</code> <strong>cohort analysis</strong> — involves breaking down dataset into related groups (or cohorts) over time and observing how their behavior changes. These groups or cohorts usually share common characteristics or experiences within a defined time-span.</p></li>
+</ul></li>
+<li><p><strong>RISK: What risk are participants exposed to?</strong></p>
+<ul>
+<li><p>The main threshold is whether the risk exceeds that of <strong>“minimal risk”.</strong></p>
+<ul>
+<li><p><code>Minimal risk:</code> defined as the probability and magnitude of harm that a participant would encounter in normal daily life.</p></li>
+<li><p>The harm considered encompasses physical, psychological and emotional, social, and economic concerns.</p></li>
+</ul></li>
+<li><p>If the risk exceeds minimal risk, then <strong>informed consent</strong> is required.</p></li>
+</ul></li>
+<li><p><strong>BENEFIT: What’s the potential benefit of the outcome of the study?</strong></p>
+<ul>
+<li>It is important to be able to state what benefit would be from completing the study.</li>
+</ul></li>
+<li><p><strong>CHOICE: What other choices do participants have?</strong></p>
+<ul>
+<li>In online experiments, the issues to consider are what the other alternative services that a user might have, and what the switching costs might be, in terms of time. money, information, etc.</li>
+</ul></li>
+<li><p><strong>PRIVACY: What privacy do participants have?</strong></p>
+<ul>
+<li>For new data being collected and stored, how sensitive is the data and what are the internal safeguards for handling that data? Then, for that data, how will it be used and how will participants’ data be protected? How are participants guaranteed that their data, which was collected for use in the study, will not be used for some other purposes?</li>
+</ul></li>
+</ul>
+
 </div>
 </div>
             </section>
