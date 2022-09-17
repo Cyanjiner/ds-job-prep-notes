@@ -4,53 +4,81 @@ KEY Concepts to review:
 
 ## Resume related technical content --\> JINER only
 
--   Intern experience 1 - Statistical Consultant (R, Tableau)
+### Intern experience 1 - Statistical Consultant (R, Tableau)
 
-    -   data manipulation & visualization methods / packages
+-   data manipulation & visualization methods / packages
 
-    -   multiple regression model
+-   multiple regression model
 
-    -   latent class analysis / k-means clustering
+-   latent class analysis / k-means clustering
 
-    -   chi-square (goodness of fit, contigency)
+-   chi-square (goodness of fit, contigency)
 
--   Intern experience 2 - Data Science Intern (R, Python)
+### Intern experience 2 - Data Science Intern (R, Python)
 
-    -   how to design key metrics?
+#### how to design key metrics?
 
-    -   ETL pipeline and R ShinyApp dashboard
+#### ETL pipeline and R ShinyApp dashboard
 
-    -   User-based Collaborative Filtering algorthm
+#### User-based Collaborative Filtering algorthm
 
-    -   RFM analysis and k-means
+-   User based collaborative filtering algorithm finds similar users and gives them recommendations based on what other people with similar consumption patterns like to purchase as well.
 
-    -   classification --\> predict user churn rate
+-   While Item-based Collaborative Filtering finds similarity patterns between items themselves and recommends them to users based on the computed information.
 
--   Intern experience 3 - Data Science Intern
+-   In my internship for example, the goal of implementing this method was to decide what other courses we could recommend users to choose. Especially because our targeted customers are parents who have kids that are between 3-7 years old, and they usually purchase a general course bundles where they could decide later if they wanna let their kids learn courses within different categories such as sports, arts, and natural sciences, for example. In order to motivate them to consume or user those course credits within the bundle so that our business could actually make revenues or profits because our customers can always request a refund at anytime if they do not want to continue using these credits. In this case, the User-based Collaborative Filtering algorithm allows me to find parents whose kids might have similar interests or characteristics, and then we could recommend courses from other departments to our potential customers within the same customer segment based on the similarity of these customers.
 
-    -   SQL (pull data), SQL templates
+#### RFM analysis and k-means
 
-    -   feature engineering
+-   RFM stands for Recency, Frequency, and Montary Analysis. It is an effective customer segmentation technique to help us make strategic choices in business, and in my internship example, it would be used to formulated targeted customer retention strategies based on different customer segments.
 
-        -   sampling (distribution / weighted sample)
+-   RFM essentially distinguishes and segments customers into similar clusters and targets them with separated and personalized promoting methodologies, which in turn makes strides in customer engagement and retention.
 
-        -   one-hot encoding \| standardization (min-max) \| dummy coding \| missing values imputations (kNN)
+-   RFM metrics are very important to understand the behavior of customers as frequency and monetary value affects a customer's lifetime value, and recency affects retention, which is a measure of engagement. I used a hybrid of RFM and K-Means clustering to investigate who are the best customers, who contribute to the churn rate etc. and cluster out customers into three main classes based on the level of priority our customer management team should focus on either maintaining this customer, or activating this customer if they had been relatively less responsive group.
 
-        -   log / exp / box-cox
+-   K-means is an iterative algorithm that tries to partition the dataset into K distinct clusters, in this case our primary customer information datasets which include when they start and quit using our services, how long and how often they use our services, etc.
 
-        -   PCA \| LDA
+    -   K-means tries to make the intra-cluster data points as similar as possible while also keeping the clusters as far as possible. It assigns data points to a cluster such that the sum of the squared distance between the data points and the cluster's centroid is at the minimum.
 
-    -   ETL pipeline --\> model evaluation and report (k-fold cross validation)
+        -   The fundamental step for any unsupervised algorithm is to determine the optimal number of clusters into which data may be clustered. I used two methods to decide K value for the K-means clustering. One is the Elbow method and another is silhouette score.
 
--   Capstone research
+            -   The Elbow Method is a heuristic used in determining such optimal number of clusters. It is one of the most popular methods where we could simply plot the explained variation as a function of the number of clusters and picking the elbow of the curve as the number of clusters to use.
 
-    -   time series forecasting (exponential smooth / ARIMA / GARCH)- differences, pros and cons
+            -   The silhoutte analysis is an alternative. It is computed as the difference between the mean distance to the points in the nearest cluster that data point is not a part of and the mean intra-cluster distance to all the points in its own cluster, divided by the maximum value between these two.
 
-    -   time series clustering --\> Dynamic Time Warping, hierarchical clustering
+                -   Silhoutte coeffcient is between-1 and 1, where 1 denotes the best meaning that data is very compact within cluster to which it belongs and far away from the other clusters.
 
-    -   k-medoids clustering (mixed data type)
+            -   The major difference between elbow and silhoutte is that elbow only calculates the euclidean distance whereas silhoutte takes into account variables such as variance, skewness, high-low differences, etc.
 
-    -   test for stationarity (Augmented Dickey-Fuller test), normality (Shapiro Wilk), conditinal heteroscedasticity (ARCH LM), Box-Cox transformation
+            -   Elbow is better for datasets with smaller size or time complexity because of its calculation simplicity.
+
+#### classification --\> predict user churn rate
+
+### Intern experience 3 - Data Science Intern
+
+#### SQL (pull data), SQL templates
+
+#### feature engineering
+
+-   sampling (distribution / weighted sample)
+
+-   one-hot encoding \| standardization (min-max) \| dummy coding \| missing values imputations (kNN)
+
+-   log / exp / box-cox
+
+-   PCA \| LDA
+
+-   ETL pipeline --\> model evaluation and report (k-fold cross validation)
+
+### Capstone research
+
+#### time series forecasting (exponential smooth / ARIMA / GARCH)- differences, pros and cons
+
+#### time series clustering --\> Dynamic Time Warping, hierarchical clustering
+
+#### k-medoids clustering (mixed data type)
+
+#### test for stationarity (Augmented Dickey-Fuller test), normality (Shapiro Wilk), conditinal heteroscedasticity (ARCH LM), Box-Cox transformation
 
 ## SQL \| Python \| R \| Tableau
 
