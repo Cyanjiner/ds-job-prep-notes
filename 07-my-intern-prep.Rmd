@@ -1,10 +1,16 @@
 # My DS Summer Intern Preparation Guide
 
+```{r setup2, include=FALSE}
+library(knitr)
+library(reticulate)
+knitr::opts_chunk$set(eval=FALSE, echo=TRUE,python.reticulate = FALSE)
+```
+
 KEY Concepts to review:
 
 ## Resume related technical content --\> JINER only
 
-### Intern experience 1 - Statistical Consultant (R, Tableau)
+### Intern1 - Statistical Consultant (R, Tableau)
 
 -   data manipulation & visualization methods / packages
 
@@ -14,37 +20,47 @@ KEY Concepts to review:
 
 -   chi-square (goodness of fit, contigency)
 
-### Intern experience 2 - Data Science Intern (R, Python)
+### Intern2 - Data Science Intern (R, Python)
 
 #### how to design key metrics?
 
 #### ETL pipeline and R ShinyApp dashboard
 
+references: [Extract Transform Load (ETL)](https://www.databricks.com/glossary/extract-transform-load) \| [Dashboards in R Shiny](https://www.r-bloggers.com/2022/03/dashboards-in-r-shiny/)
+
+-   **`ETL Pipeline:`** the set of processes used to move data from a source or multiple sources into database such as a data warehouse. ETL stands for **`"Extract, Transform, Load"`** the three independent processes of data integration used to pull data from one database and move it to another. Once loaded, data can be used for reporting, analysis, and deriving actionable business insights.
+
+-   **`R Shiny Dashboard:`** let you access complete web application framework within R environment. Easily turn your work in R including analyses, visualizations, machine learning models, and more into web applications that deliver value to business.
+
+    -   It also enables **easy `customization of dashboard`** using custom HTML, CSS, Javascript and so on to create a unique, branded dashboard that's not possible with other BI software suite, where we can add colors, logos, fonts and more to better represent our business.
+
+    -    It is also **`open source and cost-friendly`** compared to its counterparts like Power BI or Tableau.
+
 #### User-based Collaborative Filtering algorthm
 
--   User based collaborative filtering algorithm finds similar users and gives them recommendations based on what other people with similar consumption patterns like to purchase as well.
+-   **`User based collaborative filtering algorithm`** finds similar users and gives them recommendations based on what other people with similar consumption patterns like to purchase as well.
 
--   While Item-based Collaborative Filtering finds similarity patterns between items themselves and recommends them to users based on the computed information.
+-   While **`Item-based Collaborative Filtering`** finds similarity patterns between items themselves and recommends them to users based on the computed information.
 
 -   In my internship for example, the goal of implementing this method was to decide what other courses we could recommend users to choose. Especially because our targeted customers are parents who have kids that are between 3-7 years old, and they usually purchase a general course bundles where they could decide later if they wanna let their kids learn courses within different categories such as sports, arts, and natural sciences, for example. In order to motivate them to consume or user those course credits within the bundle so that our business could actually make revenues or profits because our customers can always request a refund at anytime if they do not want to continue using these credits. In this case, the User-based Collaborative Filtering algorithm allows me to find parents whose kids might have similar interests or characteristics, and then we could recommend courses from other departments to our potential customers within the same customer segment based on the similarity of these customers.
 
 #### RFM analysis and k-means
 
--   RFM stands for Recency, Frequency, and Montary Analysis. It is an effective customer segmentation technique to help us make strategic choices in business, and in my internship example, it would be used to formulated targeted customer retention strategies based on different customer segments.
+-   RFM stands for **`Recency, Frequency, and Montary Analysis`**. It is an effective customer segmentation technique to help us make strategic choices in business, and in my internship example, it would be used to formulated targeted customer retention strategies based on different customer segments.
 
 -   RFM essentially distinguishes and segments customers into similar clusters and targets them with separated and personalized promoting methodologies, which in turn makes strides in customer engagement and retention.
 
 -   RFM metrics are very important to understand the behavior of customers as frequency and monetary value affects a customer's lifetime value, and recency affects retention, which is a measure of engagement. I used a hybrid of RFM and K-Means clustering to investigate who are the best customers, who contribute to the churn rate etc. and cluster out customers into three main classes based on the level of priority our customer management team should focus on either maintaining this customer, or activating this customer if they had been relatively less responsive group.
 
--   K-means is an iterative algorithm that tries to partition the dataset into K distinct clusters, in this case our primary customer information datasets which include when they start and quit using our services, how long and how often they use our services, etc.
+-   **`K-means`** is an iterative algorithm that tries to partition the dataset into K distinct clusters, in this case our primary customer information datasets which include when they start and quit using our services, how long and how often they use our services, etc.
 
     -   K-means tries to make the intra-cluster data points as similar as possible while also keeping the clusters as far as possible. It assigns data points to a cluster such that the sum of the squared distance between the data points and the cluster's centroid is at the minimum.
 
         -   The fundamental step for any unsupervised algorithm is to determine the optimal number of clusters into which data may be clustered. I used two methods to decide K value for the K-means clustering. One is the Elbow method and another is silhouette score.
 
-            -   The Elbow Method is a heuristic used in determining such optimal number of clusters. It is one of the most popular methods where we could simply plot the explained variation as a function of the number of clusters and picking the elbow of the curve as the number of clusters to use.
+            -   **`The Elbow Method i`**s a heuristic used in determining such optimal number of clusters. It is one of the most popular methods where we could simply plot the explained variation as a function of the number of clusters and picking the elbow of the curve as the number of clusters to use.
 
-            -   The silhoutte analysis is an alternative. It is computed as the difference between the mean distance to the points in the nearest cluster that data point is not a part of and the mean intra-cluster distance to all the points in its own cluster, divided by the maximum value between these two.
+            -   **`The silhoutte analysis`** is an alternative. It is computed as the difference between the mean distance to the points in the nearest cluster that data point is not a part of and the mean intra-cluster distance to all the points in its own cluster, divided by the maximum value between these two.
 
                 -   Silhoutte coeffcient is between-1 and 1, where 1 denotes the best meaning that data is very compact within cluster to which it belongs and far away from the other clusters.
 
@@ -54,21 +70,188 @@ KEY Concepts to review:
 
 #### classification --\> predict user churn rate
 
-### Intern experience 3 - Data Science Intern
+### Intern3 - Data Science Intern
 
 #### SQL (pull data), SQL templates
 
-#### feature engineering
+#### Feature Engineering
 
--   sampling (distribution / weighted sample)
+references: [Data Science in 5 minutes: What is One-hot Encoding?](https://www.educative.io/blog/one-hot-encoding)
 
--   one-hot encoding \| standardization (min-max) \| dummy coding \| missing values imputations (kNN)
+[What is feature engineering by Harshil Patel](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10)
 
--   log / exp / box-cox
+[Fundamental Techniques of Feature Engineering for Machine Learning by Emre Rençberoğlu](https://towardsdatascience.com/feature-engineering-for-machine-learning-3a5e293a5114#3abe)
 
--   PCA \| LDA
+1.  ***What is feature engineering?***
 
--   ETL pipeline --\> model evaluation and report (k-fold cross validation)
+    Feature engineering is the process of selecting, manipulating. and transforming raw data into desired features that can be used in statistical or machine learning approaches (e.g. supervised learning --- predictive models).
+
+2.  ***What is the goal of feature engineering?***
+
+    To simplify and speed up data transformations while also enhance model accuracy. becuz in raw data in real-life scenarios are often quite complex, we may have data type like texts, images, hyperlinks, etc. And regardless of the data or architecture, a terrible feature will have a direct impact on our model performance.
+
+3.  ***What are the processes of feature engineering?***
+
+    -   **`Feature Creation:`** which creates features involving creating new variables which will be most helpful for our model. This can be adding, removing, or aggregating some features.
+
+    -   **`Transformation:`** which is simply a function that transforms features from one representation to another without changing the actual values it meant to represent.
+
+    -   **`Feature Extraction:`** the process of extracting features from a data set to identify useful information without distorting the original relationships or significant information. This process compresses the amount of data into manageable quantities for our algorithms to process.
+
+        -   [12 Dimensionality Reduction Techniques with Python codes](https://www.analyticsvidhya.com/blog/2018/08/dimensionality-reduction-techniques-python/)
+
+        -   [Feature Extraction using Principal Component Analysis by Kai Zhao](https://towardsdatascience.com/feature-extraction-using-principal-component-analysis-a-simplified-visual-demo-e5592ced100a#:~:text=PCA%20is%20a%20dimensionality%20reduction,understand%20the%20final%20two%20steps.)
+
+        -   [LDA vs. PCA](https://towardsai.net/p/data-science/lda-vs-pca#:~:text=LDA%20focuses%20on%20finding%20a,variation%20in%20the%20data%20set.)
+
+    -   **`Exploratory Data Analysis:`** EDA is a powerful and simple tool to improve our understanding of data by exploring its properties. The goal may be to create new hypotheses or find patterns in data.
+
+        -   see some EDA techniques and sample code in python [here](https://www.projectpro.io/article/exploratory-data-analysis-in-python-stop-drop-and-explore/427).
+
+    -   **`Benchmark:`** a benchmark model is the most user-friendly, dependable, transparent, and interpretable model against which we can measure our own. It is a good idea to run test datasets to see if our new machine learning model outperforms a recognised benchmark. These benchmarks are often used as measures for comparing the performance between different machine learning models like neural networks and support vector machines, linear and non-linear classifiers, or different approaches like bagging and boosting.
+
+4.  ***What are the feature engineering techniques?***
+
+    -   **`Imputation:`** to deal with missing values coming from human errors, data flow interruptions, privacy concerns, or other factors contributing to missing values.
+
+        -   **`kNN Imputation:`** (k-nearest neighbor algorithm) ---\> matching a point with its closet k neighbors in a multi-dimentional space.
+
+            -   see kNN example in Python [here](https://machinelearningmastery.com/knn-imputation-for-missing-values-in-machine-learning/).
+
+            -   [The use of KNN for missing values by Yohan Obadia](https://towardsdatascience.com/the-use-of-knn-for-missing-values-cf33d935c637#:~:text=KNN%20is%20an%20algorithm%20that,all%20kind%20of%20missing%20data.)
+
+        -   **`Drop entire rows or columns:`** we could use 70% as an example value and try to drop the rows and columns where missing values are higher than this threshold.
+
+            ```{python}
+            threshold = 0.7
+
+            # drop columns w/ missing value > threshold
+            data = data[data.columns[data.isnull().mean() < threshold]]
+
+            # drop rows w/ missing value > threshold
+            data = data.loc[data.isnull().mean(axis=1) < threshold]
+            ```
+
+        -   **`Numerical Imputation:`** fill out missing values with 0 which represents NA. OR, to use the medians instead, becuz as the averages of columns are sensitive to outliers, while medians are more solid in this respect.
+
+            ```{python}
+            # Filling all missing values with 0
+            data = data.fillna(0)
+
+            # Filling missing values with medians of the columns
+            data = data.fillna(data.median())
+            ```
+
+        -   **`Categorical Imputation:`** replace missing values with the highest value in the column. In some cases, if we believe values in this column are evenly distributed and there is NO dominating value, then imputing a category like "other" would be a better choice.
+
+            ```{python}
+            #Max fill function for categorical columns
+            data['column_name'].fillna(data['column_name'].value_counts().idxmax(), inplace=True)
+            ```
+
+    -   **`Handling Outliers:`** to remove outliers from dataset so that we can produce a more accurate data representation. Depending on the model, this effect of outliers could be large or minimal (e,g, linear regression is particularly susceptible to outliers so we need to handle them prior to model training)
+
+        1.  **`Removal:`** DELETE outiler completely from the distribution. However, if there are outliers across numerous variables, this strategy may result in a big chunk of data being missed,
+
+        2.  **`Replacing values:`** with suitable imputation
+
+        3.  **`Capping:`** use an arbitrary value or a value from a variable distribution to replace the maximum and minimum values.
+
+            ```{python}
+            # Capping outlier rows with Percentiles
+            upper_lim = data['column'].quantile(.95)
+            lower_lim = data['column'].quantile(.05)
+
+            data.loc[(df[column] > upper_lim), column] = upper_lim
+            data.loc[(df[column] < lower_lim), column] = lower_lim
+            ```
+
+        4.  **`Discretization:`** convert continuous variable into discrete ones by constructing a series of continuous intervals (or bins) that span the range of our desired variable.
+
+            ```{python}
+            # Numerical Binning Example
+            VALUE      BIN
+            0-30   ->  Low
+            31-70  ->  Mid
+            71-100 ->  High
+
+            # Categorical Binning Example
+            VALUE     BIN
+            Spain  -> Europe
+            Italy  -> Europe
+            Brazil -> South America
+            ```
+
+    -   **`Log / BoxCox Transformation`**
+
+        -   to turn a skewed distribution into a normal or less-skewed distribution
+
+    -   **`One-hot Encoding:`** convert categorical variables such as gender, socio-economic status into a numerical form that can be processed by machine learning algorithms.
+
+        -   In one-hot encoding, we could assign binary variable for categorical variables with two levels, and if it has more levels like race or weekdays, then we could convert these levels into ordered or non-ordered integers or numbers based on if there exists any order or relationship within these levels.
+
+            ```{python}
+            # one-hot encoding with pandas --> create dummy variables
+            pd.get_dummies(df.dataframe, prefix='column_name')
+
+            # one-hot encoding with Sklearn
+            import sklearn.preprocessing as preprocessing
+            targets = np.array['level1','level2','level3']
+
+            labelEnc = preprocessing.LabelEncoder()
+
+            new_target = labelEnc.fit_transform(targets)
+
+            onehotEnc = preprocessing.OneHotEncoder()
+            onhotEnc.fit(new_target.reshape(-1,1))
+            targets_trans = onehotEnc.transform(new_target.reshape(-1,1))
+            ```
+
+    -   **`Feature Splitting:`** improve value of features toward the target to be learned
+
+        -   *e.g. Data better contributes to the target function than Date and Time.*
+
+            ```{python}
+            df['Date and Time'] = pd.to_datetime(df['Date and Time'])
+            df['Date'] = df['Date and Time'].dt.date
+            ```
+
+    -   **`Scaling:`** the scaling operation makes continuous features become similar in terms of range so that we could effectively save the model training time.
+
+        1.  **`Normalization:`** where all values are scaled in a specified range between 0 and 1 via min-max normalization. This modification has no influence on the feature's distribution but it does exacerbate the effects of outliers due to lower standard deviations.
+
+            ```{=tex}
+            \begin{equation}
+            \frac{\text{x - min(x)}}{\text{max(x) - min(x)}}
+            \end{equation}
+            ```
+            ```{python}
+            data['normalized'] = (data['value'] - data['value'].min()) / (data['value'].max() - data['value'].max() - data['value'].min())
+            ```
+
+        2.  **`Standardization:`** (also known as z-score normalization) is the process of scaling values while accounting for standard deviation. To arrive at a distribution with a 0 mean and 1 variance, all data points are subtracted by their mean and the result divided by the distribution's variance. If the standard deviation of features differs, the range of those features will likewise differ.
+
+            ```{=tex}
+            \begin{equation}
+            \frac{X - \mu}{\sigma}
+            \end{equation}
+            # sigma is standard deviation while mu is mean
+            ```
+            ```{python}
+            data['standardized'] = (data['value'] - data['value'].mean()) / data['value'].std()
+            ```
+
+5.  ***How do you evaluate model performances?***
+
+6.  ***Explain k-fold cross validation.***
+
+7.  ***Cross Validation in Time Series?***
+
+8.  ***What is the difference between supervised and unsupervised learning?***
+
+9.  ***What is feature?***
+
+    A feature is any measurable input (variable of interests) that can be used in a predictive model. For example, in our consumer coupon prediction model, we may be interested in taking demographic, geographical, or environmental features into account such as the level of consumers income, the region or city they come from, and holidays etc.
 
 ### Capstone research
 
