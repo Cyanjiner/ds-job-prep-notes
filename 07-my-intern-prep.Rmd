@@ -34,7 +34,7 @@ references: [Extract Transform Load (ETL)](https://www.databricks.com/glossary/e
 
     -   It also enables **easy `customization of dashboard`** using custom HTML, CSS, Javascript and so on to create a unique, branded dashboard that's not possible with other BI software suite, where we can add colors, logos, fonts and more to better represent our business.
 
-    -    It is also **`open source and cost-friendly`** compared to its counterparts like Power BI or Tableau.
+    -   It is also **`open source and cost-friendly`** compared to its counterparts like Power BI or Tableau.
 
 #### User-based Collaborative Filtering algorthm
 

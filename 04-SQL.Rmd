@@ -15,7 +15,7 @@ knitr::opts_chunk$set(connection = "db")
 
 [SQL Style Guide by Simon Holywell](https://www.sqlstyle.guide/) *Keywords* are reserved words for **operations**.
 
-## CRUD Operations
+## CRUD (create, read, update, delete) Operations
 
 ### CREATE ---\> Databases \| Tables \| Views \| Users \| Permissions \| Security Groups
 
@@ -143,6 +143,8 @@ CREATE VIEW new_table_name AS
 SELECT id, var_name1, var_name2
 FROM table_name;
 ```
+
+## Exploratory Data Analysis in SQL (T-SQL)
 
 ### GROUP BY \| HAVING \| WHERE
 
@@ -330,3 +332,265 @@ SELECT
         -- replaces char 'a' in column with char 'b' for all first 5 rows
 FROM table;
 ```
+
+### Substituting NULL values using COALESCE in T-SQL
+
+```{sql }
+COALESCE(value_1, value_2, value_3, ..., value_n)
+-- if value_n is NULL and value_2 is not NULL, return value_2
+-- ... value_n can also be some column
+
+SELECT column1, column2
+COALESCE(column1, column2, 'N/A') AS new_column
+FROM table1
+
+-- using ISNULL() function to replace all mising values in one column with values in another column or some other specified value
+SELECT column1, ISNULL(column1, column2) AS new_column1
+FROM table1
+```
+
+### DATE
+
+-   `DATEADD (DATEPART, number, date):` Add or subtract datetime values ---\> always returns a date
+
+    -   `DATEPART:` Unit of measurement (DD, MM, etc.)
+
+    -   `number:` an integer value to add
+
+    -   `date:` a datetime value
+
+-   DATEDIFF (datepart, startdate, enddate): Obtain the difference between two datetime values ---\> always returns a number
+
+    -   datepart: unit of measurement (DD, MM, etc,)
+
+    -   startdate: the starting date value
+
+    -   enddate: the ending datetime value
+
+    ```{sql }
+    /* date math w/ DATEDIFF */
+    SELECT 
+      date1, 
+      date2, 
+      DATEDIFF(DD, date1, date2) AS diff_day,
+      DATEDIFF(MM, date1, date2) AS diff_month,
+      DATEDIFF(YYYY, date1, date2) AS diff_year
+    FROM table1
+
+    /* date math w/ DATEADD */
+    SELECT
+      date1,
+      DATEADD(DD, 7, date1) AS date_after_a_week
+    FROM table1
+    ```
+
+### ROUND and TRUNCATE
+
+```{sql}
+-- round(17.8, 0) --> 18 while truncate rounds 17.8 to 17
+SELECT column1,
+ROUND(column2, 0) AS RoundingtoWhole,
+ROUND(column2, 0, 1) AS Truncating -- adding a third parameter 1 to round for truncating
+FROM table1
+```
+
+OTHER MATH functions
+
+`ABS():` absolute value
+
+`SQRT():` square root \| `SQUARE():` square
+
+`LOG(column, digit):` returns the LOG with base \# of digit
+
+### WHILE Loops & DECLARE
+
+Assigning values to variables and write loops
+
+```{sql}
+-- Declare the variable
+DECLARE @my_var INT
+-- Use SET a value to the variable
+SET @my_var = 1
+-- Show the value
+SELECT @my_var
+
+-- Specify the condition of the WHILE loop
+WHILE @my_var < 10
+  -- Begin the code to execude insde the WHILE loop
+  BEGIN
+    -- Keep incrementing the value of @my_var
+    SET @my_var = @my_var + 1
+    -- Check if @my_var is equal to 4
+    IF @my_var = 4
+      -- When my_var is 4 then break the loop
+      BREAK
+    -- End WHILE lopp
+  END
+-- View the value after the loop
+SELECT @my_var
+```
+
+### Derived Tables
+
+-   another name for a query acting as a table and are commonly used to **do aggregations** in T-SQL
+
+-   use derived tables when we want to **break down a complex query into smaller steps**
+
+-   great solution if we want to **create intermediate calculations** needed to be used in a larger query
+
+```{sql}
+SELECT a.* FROM Kidney a
+-- This derived table computes the Average age are joined to the actual table
+JOIN (SELECT AVG(age) AS AverageAge FROM kidney) b
+ON a.Age = b.AverageAge
+-- a & b are aliases for table Kidney and our derived table
+```
+
+### CTE (Common Table Expressions)
+
+-   another type of derived table
+
+-   can be used multiple times in a query and are defined like a table
+
+```{sql}
+-- CTE definitions start with the keyword WITH
+-- Followed by the CTE names and the columns it contains
+WITH CTEName (Co1, Col2)
+AS
+-- Define the CTE query
+(
+-- the two columns from the definition above
+    SELECT Col1, Col2
+    FROM TableName
+)
+
+/* CTEs in T-SQL example */
+-- Create a CTE to get the Maximum BloodPressure by Type
+WITH BloodPressureAge(Age, MaxBloodPressure)
+AS
+(SELECT Age, MAX(BloodPressure) AS MaxBloodPressure
+ FROM Kidney
+ GROUP BY Age)
+ 
+-- Create a query to use the CTE as a table
+SELECT a.Age, MIN(a.BloodPressure), b.MaxBloodPressure
+FROM Kidney a
+-- join the CTE with the table
+JOIN BloodPressureAge b
+     ON a.Age = b.Age
+GROUP BY a.Age, b.MaxBloodPressure
+```
+
+### Window functions in T-SQL
+
+-   Create the window with `OVER` clause
+
+-   `PARTITION BY` creates the frame
+
+-   If you do not include `PARTITION BY` the frame is **the entire table**
+
+-   Allows aggregations to be created at the same time as the window
+
+```{sql}
+-- Create a Window data grouping
+SELECT SalesPerson, SalesYear, CurrentQuota,
+       SUM(CurrentQuota)
+       OVER (PARTITION BY SalesYear ORDER BY SalesYear) AS YearlyTotal,
+       ModifiedDate AS ModDate
+FROM SaleGoal
+
+/* the above example partitions the table by SalesYear and uses the windowing function SUM to add up every row of the CurrentQuota column in the window to provide a total for the entire window in the YearTotal column.
+
+When the year changes, the value in the YearTotal column changes showing the total for the next year becuz the window is partitioned by sales year.
+*/
+
+/* use other aggregations in windowing function */
+SELECT .....
+       COUNT(...)
+       OVER (PARTITION BY ...) AS ...
+FROM ...
+```
+
+### **OTHER Common used window functions**
+
+-   `FIRST_VALUE()` returns the first values in the window
+
+-   `LAST_VALUE()` returns the last values in the window
+
+*\--\> becuz we are trying to find a specific record in a window, the position of the records must be specified using the `ORDER BY` command.*
+
+```{sql}
+-- Select the columns
+SELECT SalesPerson, SalesYear, CurrentQuota,
+  -- First value from every window
+     FIRST_VALUE(CurrentQuota)
+     OVER (PARTITION BY SalesYear ORDER BY ModifiedDate) AS StartQuota,
+  -- Last value from every window
+     LAST_VALUE(CurrentQuota)
+     OVER (PARTITION BY SalesYear ORDER BY ModifiedDate) AS EndQuota,
+     ModifiedDate as ModDate
+FROM SaleGoal
+```
+
+-   Getting the next value with `LEAD()` and previous value with `LAG()`
+
+    -   provides the ability to query the value from NEXT or PREVIOUSrow
+
+    -   also requires the use of `ORDER BY` to order the rows
+
+    ```{sql}
+    /* getting next value */
+    SELECT SalesPerson, SalesYear, CurrentQuota,
+    -- Create a window function to get values from next row
+           LEAD(CurrentQuota) -- use LAG(...) if need previous value
+           OVER (PARTITION BY SalesYear ORDER BY ModifiedDate) AS NextQuota,
+           ModifiedDate as ModDate
+    FROM SaleGoal
+    ```
+
+### **Adding row numbers**
+
+-   `ROW_NUMBER():` sequentially numbers the rows in the window
+
+-   `ORDER BY` is required when using `ROW_NUMBER()`
+
+```{sql}
+/* example of using ROW_NUMBER() to assign a new row number for each row in the window */
+SELECT SalesPerson, SalesYear, CurrentQuota,
+  ROW_NUMBER()
+  OVER (PARTITION BY SalesPerson ORDER BY SalesYear) AS QuotabySalesPerson
+FROM SaleGoal
+```
+
+### Using windows for Statistical Functions
+
+-   STDEV(): calculates the standard deviation
+
+    ```{sql}
+    SELECT SalesPerson, SalesYear, CurrentQuota,
+           STDEV(CurrentQuota)
+           OVER () AS StandardDev, -- do not include partition by if we are calculating for the entire table
+           ModifiedDate AS ModDate
+    FROM SaleGoal
+    ```
+
+-   Calculating the mode: 1) create a CTE containing an ordered count of values using ROW_NUMBER(); 2) write a query using the CTE to pick the value with the highest row number
+
+    ```{sql}
+    -- Create a CTE called QuotaCount 
+    WITH QuotaCount AS 
+    (
+    SELECT SalesPerson, SalesYear, CurrentQuota,
+           ROW_NUMBER() -- creating ordered count of values
+           OVER (PARTITION BY CurrentQuota ORDER BY CurrentQuota) AS QuotaList
+    FROM SaleGoal
+    )
+
+    -- select everything from CTE
+    SELECT * FROM QuotaCount
+
+    -- write a query using CTE to pick the value with highest count (i.e. row number)
+    SELECT CurrentQuota, QuotaList AS Mode
+    FROM QuotaCount
+    WHERE QuataList IN (SELECT MAX(QuotaList) FROM QuotaCount) -- select value in maximum count
+    ```
