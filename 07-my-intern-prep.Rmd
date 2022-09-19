@@ -235,7 +235,6 @@ references: [Data Science in 5 minutes: What is One-hot Encoding?](https://www.e
             \begin{equation}
             \frac{X - \mu}{\sigma}
             \end{equation}
-            # sigma is standard deviation while mu is mean
             ```
             ```{python}
             data['standardized'] = (data['value'] - data['value'].mean()) / data['value'].std()
@@ -255,7 +254,45 @@ references: [Data Science in 5 minutes: What is One-hot Encoding?](https://www.e
 
 ### Capstone research
 
+reference: [ARIMA by Adam Hayes](https://www.investopedia.com/terms/a/autoregressive-integrated-moving-average-arima.asp) \| [An Introduction to Time Series Forecast](https://www.infoworld.com/article/3622246/an-introduction-to-time-series-forecasting.html) \| [GARCH](https://lost-stats.github.io/Time_Series/GARCH_Model.html)
+
 #### time series forecasting (exponential smooth / ARIMA / GARCH)- differences, pros and cons
+
+1.  ***What is time series forecasting?***
+
+    To forecast or predict the future value or event over a period of time. It predicts future events by analyzing the trends of the past based on historical records. Time series forecasting is also an important area of machine learning and can be cast as a supervised learning problem.
+
+2.  ***What is ARIMA?***
+
+    ARIMA is called the autoregressive integrated moving average, It is a method for forecasting or predicting future outcomes based on historical time series. It is based on the statistical concept of serial correlation, where past data points influence future data points. The ARIMA model can also be understood as a form of regression analysis that gauges the strength of one dependent variable relative to other changing variables. Its goal is to predict future values by examining the differences between values in the series instead of through actual values.
+
+    An ARIMA model can also be understood by each of the three components. The first one is autoregression, the AR part of the model that shows a changing variable that regresses on its own lagged or prior values. 2) The Integrated (I) part of the model represents the differencing of raw observations to allow for time series to become stationary (i.e. in this process, data values are replaced by the difference between data values and previous values). 3) The last part, moving average, the MA part of the model incorporates the dependency between an observation and a residual error from a moving average model applied to lagged observations.
+
+3.  ***What is SARIMA?***
+
+    For this research, I adjusted the algorithm to either select an ARIMA or a SARIMA model based on if there exists any seasonal considerations we need to account for. The SARIMA, which is a seasonal ARIMA model, extends ARIMA by adding a linear combination of seasonal past values and/or forecast errors.
+
+4.  ***What are the differences between Autoregressive and Moving Average models?***
+
+    So an autoregressive model with a lag order of 1, for example, is a process where current value is based on its immediately preceding value like yesterday, while in an AR model with a lag order of 2, the current value is based on the previous two values like both yesterday and the day before yesterday.
+
+    A moving average, though, is a calculation used to analyze data points by creating a series of averages of different subsets from the full data set in order to smooth out the influence of outliers.
+
+    ARIMA combines autoregressive features with those of moving averages so that it can take into account trends, cycles, seasonality, and other non-static types of data when making forecasts.
+
+5.  ***What is GARCH?***
+
+    GARCH stands for generalized autoregressive conditional heteroskedasticity, and it is a statistical model used to analyze some particular time series data when the variance error is believed to be serially autocorrelated. GARCH models assume that the variance of the error term also follows an autoregressive moving average process. In order words, we usually implement GARCH on the fitted ARIMA model. GARCH can be very useful to help predict the volatility of returns on financial assets. Volatility can be understood as how much and how quickly the value moves over a given span of time, for example, we can use price volatility to describe price fluctuations of a commodity.
+
+6.  ***What are other time series forecasting techniques?***
+
+    There are many other useful statistical and machine learning models for time series analysis. For example, regression models, exponential smoothing methods (which produce forecasts based on weighted averages of past observations, in other words, exponential smoothing produces forecasts where the forecast most closely resembles recent observations). Some useful popular exponential smoothing methods include the DES (double exponential smoothing) whose forecasts are weighted averages of both the trend and time series itself, as well as the Holt-Winter method which accounts for both trend and seasonality.
+
+    Machine learning techniques like neural networks are also quite popular in time series analysis because they aim to solve problems that would be impossible or difficult to solve with these statistical or classical methods. For example, the recurrent neural networks (RNNs) were deigned to try remember important information about recent inputs so that they can be used to generate accurate forecasts. The LSTM (long short-term memory) network is a particular useful type of RNN in time series analysis. It basically has some forget gates and feed forward mechanisms that allow the network to retain information, forget non-important or not relevant inputs, and update the forecasting procedure to model and forecast more complex time series problems.
+
+7.  ***What is the difference between exponential smoothing and ARIMA?***
+
+    While exponential smoothing methods generates forecasts based on historical components of the data, ARIMA models take advantages of autocorrelation to produce forecasts. (Autocorrelation is when a time series displays correlation between time series and a lagged version of the time series, which simply means that current values also depend on previous values.)
 
 #### time series clustering --\> Dynamic Time Warping, hierarchical clustering
 
