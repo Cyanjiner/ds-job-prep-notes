@@ -28,7 +28,7 @@ KEY Concepts to review:
 
 references: [Extract Transform Load (ETL)](https://www.databricks.com/glossary/extract-transform-load) \| [Dashboards in R Shiny](https://www.r-bloggers.com/2022/03/dashboards-in-r-shiny/)
 
--   **`ETL Pipeline:`** the set of processes used to move data from a source or multiple sources into database such as a data warehouse. ETL stands for **`"Extract, Transform, Load"`** the three independent processes of data integration used to pull data from one database and move it to another. Once loaded, data can be used for reporting, analysis, and deriving actionable business insights.
+-   **`ETL Pipeline:`** ETL stands for **`"Extract, Transform, Load"`** so it mainly includes these three independent processes of data integration to pull data from one database and move it to another. Once loaded, data can be used for reporting, analysis, and deriving actionable business insights.
 
 -   **`R Shiny Dashboard:`** let you access complete web application framework within R environment. Easily turn your work in R including analyses, visualizations, machine learning models, and more into web applications that deliver value to business.
 
@@ -264,7 +264,7 @@ reference: [ARIMA by Adam Hayes](https://www.investopedia.com/terms/a/autoregres
 
 2.  ***What is ARIMA?***
 
-    ARIMA is called the autoregressive integrated moving average, It is a method for forecasting or predicting future outcomes based on historical time series. It is based on the statistical concept of serial correlation, where past data points influence future data points. The ARIMA model can also be understood as a form of regression analysis that gauges the strength of one dependent variable relative to other changing variables. Its goal is to predict future values by examining the differences between values in the series instead of through actual values.
+    ARIMA is called the autoregressive integrated moving average, It is a method for forecasting or predicting future outcomes based on historical time series. It is based on the statistical concept of serial correlation, where past data points influence future data points. *(The ARIMA model can also be understood as a form of regression analysis that gauges the strength of one dependent variable relative to other changing variables. Its goal is to predict future values by examining the differences between values in the series instead of through actual values.)*
 
     An ARIMA model can also be understood by each of the three components. The first one is autoregression, the AR part of the model that shows a changing variable that regresses on its own lagged or prior values. 2) The Integrated (I) part of the model represents the differencing of raw observations to allow for time series to become stationary (i.e. in this process, data values are replaced by the difference between data values and previous values). 3) The last part, moving average, the MA part of the model incorporates the dependency between an observation and a residual error from a moving average model applied to lagged observations.
 

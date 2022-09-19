@@ -23,7 +23,7 @@
 <meta name="author" content="Jiner Zheng" />
 
 
-<meta name="date" content="2022-09-17" />
+<meta name="date" content="2022-09-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -290,7 +290,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4><span class="header-section-number">7.1.2.2</span> ETL pipeline and R ShinyApp dashboard<a href="my-ds-summer-intern-preparation-guide.html#etl-pipeline-and-r-shinyapp-dashboard" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>references: <a href="https://www.databricks.com/glossary/extract-transform-load">Extract Transform Load (ETL)</a> | <a href="https://www.r-bloggers.com/2022/03/dashboards-in-r-shiny/">Dashboards in R Shiny</a></p>
 <ul>
-<li><p><strong><code>ETL Pipeline:</code></strong> the set of processes used to move data from a source or multiple sources into database such as a data warehouse. ETL stands for <strong><code>"Extract, Transform, Load"</code></strong> the three independent processes of data integration used to pull data from one database and move it to another. Once loaded, data can be used for reporting, analysis, and deriving actionable business insights.</p></li>
+<li><p><strong><code>ETL Pipeline:</code></strong> ETL stands for <strong><code>"Extract, Transform, Load"</code></strong> so it mainly includes these three independent processes of data integration to pull data from one database and move it to another. Once loaded, data can be used for reporting, analysis, and deriving actionable business insights.</p></li>
 <li><p><strong><code>R Shiny Dashboard:</code></strong> let you access complete web application framework within R environment. Easily turn your work in R including analyses, visualizations, machine learning models, and more into web applications that deliver value to business.</p>
 <ul>
 <li><p>It also enables <strong>easy <code>customization of dashboard</code></strong> using custom HTML, CSS, Javascript and so on to create a unique, branded dashboard that’s not possible with other BI software suite, where we can add colors, logos, fonts and more to better represent our business.</p></li>
@@ -454,8 +454,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><strong><code>Standardization:</code></strong> (also known as z-score normalization) is the process of scaling values while accounting for standard deviation. To arrive at a distribution with a 0 mean and 1 variance, all data points are subtracted by their mean and the result divided by the distribution’s variance. If the standard deviation of features differs, the range of those features will likewise differ.</p>
 <span class="math display">\[\begin{equation}
 \frac{X - \mu}{\sigma}
-\end{equation}
-# sigma is standard deviation while mu is mean\]</span>
+\end{equation}\]</span>
 <div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="my-ds-summer-intern-preparation-guide.html#cb35-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&#39;standardized&#39;</span>] <span class="op">=</span> (data[<span class="st">&#39;value&#39;</span>] <span class="op">-</span> data[<span class="st">&#39;value&#39;</span>].mean()) <span class="op">/</span> data[<span class="st">&#39;value&#39;</span>].std()</span></code></pre></div></li>
 </ol></li>
 </ul></li>
@@ -470,8 +469,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="capstone-research" class="section level3 hasAnchor" number="7.1.4">
 <h3><span class="header-section-number">7.1.4</span> Capstone research<a href="my-ds-summer-intern-preparation-guide.html#capstone-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>reference: <a href="https://www.investopedia.com/terms/a/autoregressive-integrated-moving-average-arima.asp">ARIMA by Adam Hayes</a> | <a href="https://www.infoworld.com/article/3622246/an-introduction-to-time-series-forecasting.html">An Introduction to Time Series Forecast</a> | <a href="https://lost-stats.github.io/Time_Series/GARCH_Model.html">GARCH</a></p>
 <div id="time-series-forecasting-exponential-smooth-arima-garch--differences-pros-and-cons" class="section level4 hasAnchor" number="7.1.4.1">
 <h4><span class="header-section-number">7.1.4.1</span> time series forecasting (exponential smooth / ARIMA / GARCH)- differences, pros and cons<a href="my-ds-summer-intern-preparation-guide.html#time-series-forecasting-exponential-smooth-arima-garch--differences-pros-and-cons" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><p><strong><em>What is time series forecasting?</em></strong></p>
+<p>To forecast or predict the future value or event over a period of time. It predicts future events by analyzing the trends of the past based on historical records. Time series forecasting is also an important area of machine learning and can be cast as a supervised learning problem.</p></li>
+<li><p><strong><em>What is ARIMA?</em></strong></p>
+<p>ARIMA is called the autoregressive integrated moving average, It is a method for forecasting or predicting future outcomes based on historical time series. It is based on the statistical concept of serial correlation, where past data points influence future data points. <em>(The ARIMA model can also be understood as a form of regression analysis that gauges the strength of one dependent variable relative to other changing variables. Its goal is to predict future values by examining the differences between values in the series instead of through actual values.)</em></p>
+<p>An ARIMA model can also be understood by each of the three components. The first one is autoregression, the AR part of the model that shows a changing variable that regresses on its own lagged or prior values. 2) The Integrated (I) part of the model represents the differencing of raw observations to allow for time series to become stationary (i.e. in this process, data values are replaced by the difference between data values and previous values). 3) The last part, moving average, the MA part of the model incorporates the dependency between an observation and a residual error from a moving average model applied to lagged observations.</p></li>
+<li><p><strong><em>What is SARIMA?</em></strong></p>
+<p>For this research, I adjusted the algorithm to either select an ARIMA or a SARIMA model based on if there exists any seasonal considerations we need to account for. The SARIMA, which is a seasonal ARIMA model, extends ARIMA by adding a linear combination of seasonal past values and/or forecast errors.</p></li>
+<li><p><strong><em>What are the differences between Autoregressive and Moving Average models?</em></strong></p>
+<p>So an autoregressive model with a lag order of 1, for example, is a process where current value is based on its immediately preceding value like yesterday, while in an AR model with a lag order of 2, the current value is based on the previous two values like both yesterday and the day before yesterday.</p>
+<p>A moving average, though, is a calculation used to analyze data points by creating a series of averages of different subsets from the full data set in order to smooth out the influence of outliers.</p>
+<p>ARIMA combines autoregressive features with those of moving averages so that it can take into account trends, cycles, seasonality, and other non-static types of data when making forecasts.</p></li>
+<li><p><strong><em>What is GARCH?</em></strong></p>
+<p>GARCH stands for generalized autoregressive conditional heteroskedasticity, and it is a statistical model used to analyze some particular time series data when the variance error is believed to be serially autocorrelated. GARCH models assume that the variance of the error term also follows an autoregressive moving average process. In order words, we usually implement GARCH on the fitted ARIMA model. GARCH can be very useful to help predict the volatility of returns on financial assets. Volatility can be understood as how much and how quickly the value moves over a given span of time, for example, we can use price volatility to describe price fluctuations of a commodity.</p></li>
+<li><p><strong><em>What are other time series forecasting techniques?</em></strong></p>
+<p>There are many other useful statistical and machine learning models for time series analysis. For example, regression models, exponential smoothing methods (which produce forecasts based on weighted averages of past observations, in other words, exponential smoothing produces forecasts where the forecast most closely resembles recent observations). Some useful popular exponential smoothing methods include the DES (double exponential smoothing) whose forecasts are weighted averages of both the trend and time series itself, as well as the Holt-Winter method which accounts for both trend and seasonality.</p>
+<p>Machine learning techniques like neural networks are also quite popular in time series analysis because they aim to solve problems that would be impossible or difficult to solve with these statistical or classical methods. For example, the recurrent neural networks (RNNs) were deigned to try remember important information about recent inputs so that they can be used to generate accurate forecasts. The LSTM (long short-term memory) network is a particular useful type of RNN in time series analysis. It basically has some forget gates and feed forward mechanisms that allow the network to retain information, forget non-important or not relevant inputs, and update the forecasting procedure to model and forecast more complex time series problems.</p></li>
+<li><p><strong><em>What is the difference between exponential smoothing and ARIMA?</em></strong></p>
+<p>While exponential smoothing methods generates forecasts based on historical components of the data, ARIMA models take advantages of autocorrelation to produce forecasts. (Autocorrelation is when a time series displays correlation between time series and a lagged version of the time series, which simply means that current values also depend on previous values.)</p></li>
+</ol>
 </div>
 <div id="time-series-clustering-dynamic-time-warping-hierarchical-clustering" class="section level4 hasAnchor" number="7.1.4.2">
 <h4><span class="header-section-number">7.1.4.2</span> time series clustering –&gt; Dynamic Time Warping, hierarchical clustering<a href="my-ds-summer-intern-preparation-guide.html#time-series-clustering-dynamic-time-warping-hierarchical-clustering" class="anchor-section" aria-label="Anchor link to header"></a></h4>
