@@ -315,6 +315,38 @@ WHERE m.hometeam_id = 8634;
 
 ### TEXT operations
 
+-   ***Select names starting with vowels***
+
+```{sql}
+SELECT column
+FROM table
+-- start with vowels
+WHERE column LIKE '[aeiou]%'; 
+-- end with vowels
+WHERE column LIKE '%[aeiou]'
+-- both start and end w/ vowels
+WHERE column LIKE '[aeiou]%[aeiou]'
+ -- contains vowels in any positions
+WHERE column LIKE '%[aeiou]%';
+
+-- if NOT containing such characters then simiply do
+NOT LIKE ...
+
+```
+
+| LIKE Operator                  | Description                                                                          |
+|--------------------|----------------------------------------------------|
+| WHERE column LIKE `'a%'`       | Finds any values that **start with** "a"                                             |
+| WHERE column LIKE `'%a'`       | Finds any values that **end with** "a"                                               |
+| WHERE column LIKE `'%or%'`     | Finds any values that **have "or" in any position**                                  |
+| WHERE column LIKE `'_r%'`      | Finds any values that have "r" **in the second position**                            |
+| WHERE column LIKE `'a_%'`      | Finds any values that **start with** "a" and are **at least 2 characters in length** |
+| WHERE column LIKE `'a__%'`     | Finds any values that **start with** "a" and are **at least 3 characters in length** |
+| WHERE column LIKE `'a%o'`      | Finds any values that **start with** "a" and **ends with** "o"                       |
+| WHERE column LIKE `'[aeiou]%'` | Finds any values that **start with** any characters in "a", "e", "i", "o", or "u"    |
+
+: LIKE operators with '%' and '\_'
+
 ```{sql }
 SELECT 
   colunm,
@@ -594,3 +626,28 @@ FROM SaleGoal
     FROM QuotaCount
     WHERE QuataList IN (SELECT MAX(QuotaList) FROM QuotaCount) -- select value in maximum count
     ```
+
+## COMMON ASKED PRACTICES
+
+### Select rows with even or odd values
+
+-   In **PostgreSQL, My SQL, Oracle, we can use `MOD()`** to check remainder.
+
+    ```{sql }
+    /* find column w/ even values */
+    SELECT *
+    FROM table_name
+    WHERE mod(column_name, 2) = 0;
+    -- if finding column w/ odd values then
+    WHERE mod(column_name, 2) <> 0;
+    ```
+
+-   In **MS SQL Server, there is no MOD so we use `%`** instead.
+
+    ```{sql}
+    -- replace conditions in WHERE clause as above with following:
+    WHERE column_name % 2 = 0; -- for even number
+    WHERE column_name % 2 <> 0; -- for odd number
+    ```
+
+### Query the name of any student in STUDENTS who score higher than 75 marks + order output by LAST 3 chars of each name. If 2 or more students both
