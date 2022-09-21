@@ -12,6 +12,18 @@ KEY Concepts to review:
 
 ### Intern1 - Statistical Consultant (R, Tableau)
 
+#### Short description of the project
+
+I was mainly responsive for conducting a statistical analysis research project on analyzing client behavior in The Connection. And The Connection is a statewide community-based human services agency that helps clients in their programs to solve problems of homeless, mental illness, substance use, and community justice rehabilitation. The main goal of my project was to analyze social and psychological factors associated with the likelihood of behavior incidents during clients' participation in the Connection programming and also investigate what kinds of characteristics do they share in common and where do these clients locate after the programs.
+
+#### What techniques did you use for this project?
+
+First, I performed data wrangling and data blending on about 10 data sets related to client behaviors or criminal incidents and designed 9 key metrics to evaluate clients' social and psychological status, such as suicidal or homicidal risks, trauma history, or involvement and disruption from alcohol and drug use.
+
+We also used multiple regression analyses to asses the relationship between clients' incident score (which is a composite measure of their incident frequency and severity) and their social, psychological risk factors, while controlling for demographic factors.
+
+The latent class analysis was also conducted for client profiling and identify three groups with different level of risks, where each client was assigned to a class based on the similarity of their pattern of response on the classification variables to other clients ---\>
+
 -   data manipulation & visualization methods / packages
 
 -   multiple regression model

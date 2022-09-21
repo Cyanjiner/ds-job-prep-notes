@@ -23,7 +23,7 @@
 <meta name="author" content="Jiner Zheng" />
 
 
-<meta name="date" content="2022-09-19" />
+<meta name="date" content="2022-09-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -218,13 +218,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.6" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#substituting-null-values-using-coalesce-in-t-sql"><i class="fa fa-check"></i><b>4.2.6</b> Substituting NULL values using COALESCE in T-SQL</a></li>
 <li class="chapter" data-level="4.2.7" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#date"><i class="fa fa-check"></i><b>4.2.7</b> DATE</a></li>
 <li class="chapter" data-level="4.2.8" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#round-and-truncate"><i class="fa fa-check"></i><b>4.2.8</b> ROUND and TRUNCATE</a></li>
-<li class="chapter" data-level="4.2.9" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#while-loops-declare"><i class="fa fa-check"></i><b>4.2.9</b> WHILE Loops &amp; DECLARE</a></li>
-<li class="chapter" data-level="4.2.10" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#derived-tables"><i class="fa fa-check"></i><b>4.2.10</b> Derived Tables</a></li>
-<li class="chapter" data-level="4.2.11" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#cte-common-table-expressions"><i class="fa fa-check"></i><b>4.2.11</b> CTE (Common Table Expressions)</a></li>
-<li class="chapter" data-level="4.2.12" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#window-functions-in-t-sql"><i class="fa fa-check"></i><b>4.2.12</b> Window functions in T-SQL</a></li>
-<li class="chapter" data-level="4.2.13" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#other-common-used-window-functions"><i class="fa fa-check"></i><b>4.2.13</b> <strong>OTHER Common used window functions</strong></a></li>
-<li class="chapter" data-level="4.2.14" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#adding-row-numbers"><i class="fa fa-check"></i><b>4.2.14</b> <strong>Adding row numbers</strong></a></li>
-<li class="chapter" data-level="4.2.15" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#using-windows-for-statistical-functions"><i class="fa fa-check"></i><b>4.2.15</b> Using windows for Statistical Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#advanced-sql---loopsctewindows"><i class="fa fa-check"></i><b>4.3</b> Advanced SQL - loops/CTE/Windows</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#while-loops-declare"><i class="fa fa-check"></i><b>4.3.1</b> WHILE Loops &amp; DECLARE</a></li>
+<li class="chapter" data-level="4.3.2" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#derived-tables"><i class="fa fa-check"></i><b>4.3.2</b> Derived Tables</a></li>
+<li class="chapter" data-level="4.3.3" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#cte-common-table-expressions"><i class="fa fa-check"></i><b>4.3.3</b> CTE (Common Table Expressions)</a></li>
+<li class="chapter" data-level="4.3.4" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#window-functions-in-sql"><i class="fa fa-check"></i><b>4.3.4</b> Window Functions in SQL</a></li>
+<li class="chapter" data-level="4.3.5" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#windows-functions-cheatsheet"><i class="fa fa-check"></i><b>4.3.5</b> Windows functions Cheatsheet</a></li>
+<li class="chapter" data-level="4.3.6" data-path="database-management-and-data-systems-sql.html"><a href="database-management-and-data-systems-sql.html#defining-a-window-alias"><i class="fa fa-check"></i><b>4.3.6</b> Defining a window alias</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="machine-learning-models.html"><a href="machine-learning-models.html"><i class="fa fa-check"></i><b>5</b> Machine Learning Models</a></li>
@@ -535,35 +537,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="text-operations" class="section level3 hasAnchor" number="4.2.5">
 <h3><span class="header-section-number">4.2.5</span> TEXT operations<a href="database-management-and-data-systems-sql.html#text-operations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb14-1"><a href="database-management-and-data-systems-sql.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
-<span id="cb14-2"><a href="database-management-and-data-systems-sql.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  colunm,</span>
-<span id="cb14-3"><a href="database-management-and-data-systems-sql.html#cb14-3" aria-hidden="true" tabindex="-1"></a>  LEN(<span class="kw">column</span>) <span class="kw">AS</span> column_length <span class="co">-- returns # of chars</span></span>
-<span id="cb14-4"><a href="database-management-and-data-systems-sql.html#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">LEFT</span>(<span class="kw">column</span>, <span class="dv">20</span>) <span class="kw">AS</span> first_20_left_column <span class="co">-- returns first 20 chars from the LEFT</span></span>
-<span id="cb14-5"><a href="database-management-and-data-systems-sql.html#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">RIGHT</span>(<span class="kw">column</span>, <span class="dv">20</span>) <span class="kw">AS</span> last_20_column <span class="co">-- returns last 20 chars from the RIGHT</span></span>
-<span id="cb14-6"><a href="database-management-and-data-systems-sql.html#cb14-6" aria-hidden="true" tabindex="-1"></a>  CHARINDEX(<span class="st">&#39;_&#39;</span>, <span class="kw">column</span>) <span class="kw">AS</span> char_location <span class="co">-- returns the index of a char/string in column</span></span>
-<span id="cb14-7"><a href="database-management-and-data-systems-sql.html#cb14-7" aria-hidden="true" tabindex="-1"></a>  SUBSTRING(<span class="kw">column</span>, <span class="kw">start</span>, <span class="fu">length</span>) <span class="kw">AS</span> target_section </span>
-<span id="cb14-8"><a href="database-management-and-data-systems-sql.html#cb14-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">-- returns substring starting at location 12 and has length of 12</span></span>
-<span id="cb14-9"><a href="database-management-and-data-systems-sql.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span>;</span>
-<span id="cb14-10"><a href="database-management-and-data-systems-sql.html#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="database-management-and-data-systems-sql.html#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* REPLACE */</span></span>
-<span id="cb14-12"><a href="database-management-and-data-systems-sql.html#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
-<span id="cb14-13"><a href="database-management-and-data-systems-sql.html#cb14-13" aria-hidden="true" tabindex="-1"></a>  TOP(<span class="dv">5</span>) <span class="kw">REPLACE</span>(<span class="kw">column</span>, <span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>) <span class="kw">AS</span> replaced_column_with_b</span>
-<span id="cb14-14"><a href="database-management-and-data-systems-sql.html#cb14-14" aria-hidden="true" tabindex="-1"></a>        <span class="co">-- replaces char &#39;a&#39; in column with char &#39;b&#39; for all first 5 rows</span></span>
-<span id="cb14-15"><a href="database-management-and-data-systems-sql.html#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span>;</span></code></pre></div>
+<ul>
+<li><strong><em>Select names starting with vowels</em></strong></li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb14-1"><a href="database-management-and-data-systems-sql.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">column</span></span>
+<span id="cb14-2"><a href="database-management-and-data-systems-sql.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span></span>
+<span id="cb14-3"><a href="database-management-and-data-systems-sql.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- start with vowels</span></span>
+<span id="cb14-4"><a href="database-management-and-data-systems-sql.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">column</span> <span class="kw">LIKE</span> <span class="st">&#39;[aeiou]%&#39;</span>; </span>
+<span id="cb14-5"><a href="database-management-and-data-systems-sql.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- end with vowels</span></span>
+<span id="cb14-6"><a href="database-management-and-data-systems-sql.html#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">column</span> <span class="kw">LIKE</span> <span class="st">&#39;%[aeiou]&#39;</span></span>
+<span id="cb14-7"><a href="database-management-and-data-systems-sql.html#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">-- both start and end w/ vowels</span></span>
+<span id="cb14-8"><a href="database-management-and-data-systems-sql.html#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">column</span> <span class="kw">LIKE</span> <span class="st">&#39;[aeiou]%[aeiou]&#39;</span></span>
+<span id="cb14-9"><a href="database-management-and-data-systems-sql.html#cb14-9" aria-hidden="true" tabindex="-1"></a> <span class="co">-- contains vowels in any positions</span></span>
+<span id="cb14-10"><a href="database-management-and-data-systems-sql.html#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">column</span> <span class="kw">LIKE</span> <span class="st">&#39;%[aeiou]%&#39;</span>;</span>
+<span id="cb14-11"><a href="database-management-and-data-systems-sql.html#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="database-management-and-data-systems-sql.html#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">-- if NOT containing such characters then simiply do</span></span>
+<span id="cb14-13"><a href="database-management-and-data-systems-sql.html#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="kw">NOT</span> <span class="kw">LIKE</span> <span class="op">..</span>.</span></code></pre></div>
+<table>
+<caption>LIKE operators with ‘%’ and ‘_’</caption>
+<colgroup>
+<col width="29%" />
+<col width="70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>LIKE Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>WHERE column LIKE <code>'a%'</code></td>
+<td>Finds any values that <strong>start with</strong> “a”</td>
+</tr>
+<tr class="even">
+<td>WHERE column LIKE <code>'%a'</code></td>
+<td>Finds any values that <strong>end with</strong> “a”</td>
+</tr>
+<tr class="odd">
+<td>WHERE column LIKE <code>'%or%'</code></td>
+<td>Finds any values that <strong>have “or” in any position</strong></td>
+</tr>
+<tr class="even">
+<td>WHERE column LIKE <code>'_r%'</code></td>
+<td>Finds any values that have “r” <strong>in the second position</strong></td>
+</tr>
+<tr class="odd">
+<td>WHERE column LIKE <code>'a_%'</code></td>
+<td>Finds any values that <strong>start with</strong> “a” and are <strong>at least 2 characters in length</strong></td>
+</tr>
+<tr class="even">
+<td>WHERE column LIKE <code>'a__%'</code></td>
+<td>Finds any values that <strong>start with</strong> “a” and are <strong>at least 3 characters in length</strong></td>
+</tr>
+<tr class="odd">
+<td>WHERE column LIKE <code>'a%o'</code></td>
+<td>Finds any values that <strong>start with</strong> “a” and <strong>ends with</strong> “o”</td>
+</tr>
+<tr class="even">
+<td>WHERE column LIKE <code>'[aeiou]%'</code></td>
+<td>Finds any values that <strong>start with</strong> any characters in “a”, “e”, “i”, “o”, or “u”</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb15"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb15-1"><a href="database-management-and-data-systems-sql.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
+<span id="cb15-2"><a href="database-management-and-data-systems-sql.html#cb15-2" aria-hidden="true" tabindex="-1"></a>  colunm,</span>
+<span id="cb15-3"><a href="database-management-and-data-systems-sql.html#cb15-3" aria-hidden="true" tabindex="-1"></a>  LEN(<span class="kw">column</span>) <span class="kw">AS</span> column_length <span class="co">-- returns # of chars</span></span>
+<span id="cb15-4"><a href="database-management-and-data-systems-sql.html#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">LEFT</span>(<span class="kw">column</span>, <span class="dv">20</span>) <span class="kw">AS</span> first_20_left_column <span class="co">-- returns first 20 chars from the LEFT</span></span>
+<span id="cb15-5"><a href="database-management-and-data-systems-sql.html#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">RIGHT</span>(<span class="kw">column</span>, <span class="dv">20</span>) <span class="kw">AS</span> last_20_column <span class="co">-- returns last 20 chars from the RIGHT</span></span>
+<span id="cb15-6"><a href="database-management-and-data-systems-sql.html#cb15-6" aria-hidden="true" tabindex="-1"></a>  CHARINDEX(<span class="st">&#39;_&#39;</span>, <span class="kw">column</span>) <span class="kw">AS</span> char_location <span class="co">-- returns the index of a char/string in column</span></span>
+<span id="cb15-7"><a href="database-management-and-data-systems-sql.html#cb15-7" aria-hidden="true" tabindex="-1"></a>  SUBSTRING(<span class="kw">column</span>, <span class="kw">start</span>, <span class="fu">length</span>) <span class="kw">AS</span> target_section </span>
+<span id="cb15-8"><a href="database-management-and-data-systems-sql.html#cb15-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">-- returns substring starting at location 12 and has length of 12</span></span>
+<span id="cb15-9"><a href="database-management-and-data-systems-sql.html#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span>;</span>
+<span id="cb15-10"><a href="database-management-and-data-systems-sql.html#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="database-management-and-data-systems-sql.html#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* REPLACE */</span></span>
+<span id="cb15-12"><a href="database-management-and-data-systems-sql.html#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb15-13"><a href="database-management-and-data-systems-sql.html#cb15-13" aria-hidden="true" tabindex="-1"></a>  TOP(<span class="dv">5</span>) <span class="kw">REPLACE</span>(<span class="kw">column</span>, <span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>) <span class="kw">AS</span> replaced_column_with_b</span>
+<span id="cb15-14"><a href="database-management-and-data-systems-sql.html#cb15-14" aria-hidden="true" tabindex="-1"></a>        <span class="co">-- replaces char &#39;a&#39; in column with char &#39;b&#39; for all first 5 rows</span></span>
+<span id="cb15-15"><a href="database-management-and-data-systems-sql.html#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span>;</span></code></pre></div>
 </div>
 <div id="substituting-null-values-using-coalesce-in-t-sql" class="section level3 hasAnchor" number="4.2.6">
 <h3><span class="header-section-number">4.2.6</span> Substituting NULL values using COALESCE in T-SQL<a href="database-management-and-data-systems-sql.html#substituting-null-values-using-coalesce-in-t-sql" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb15"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb15-1"><a href="database-management-and-data-systems-sql.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">COALESCE</span>(value_1, value_2, value_3, <span class="op">..</span>., value_n)</span>
-<span id="cb15-2"><a href="database-management-and-data-systems-sql.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- if value_n is NULL and value_2 is not NULL, return value_2</span></span>
-<span id="cb15-3"><a href="database-management-and-data-systems-sql.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- ... value_n can also be some column</span></span>
-<span id="cb15-4"><a href="database-management-and-data-systems-sql.html#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="database-management-and-data-systems-sql.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column1, column2</span>
-<span id="cb15-6"><a href="database-management-and-data-systems-sql.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">COALESCE</span>(column1, column2, <span class="st">&#39;N/A&#39;</span>) <span class="kw">AS</span> new_column</span>
-<span id="cb15-7"><a href="database-management-and-data-systems-sql.html#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
-<span id="cb15-8"><a href="database-management-and-data-systems-sql.html#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="database-management-and-data-systems-sql.html#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co">-- using ISNULL() function to replace all mising values in one column with values in another column or some other specified value</span></span>
-<span id="cb15-10"><a href="database-management-and-data-systems-sql.html#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column1, ISNULL(column1, column2) <span class="kw">AS</span> new_column1</span>
-<span id="cb15-11"><a href="database-management-and-data-systems-sql.html#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb16-1"><a href="database-management-and-data-systems-sql.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">COALESCE</span>(value_1, value_2, value_3, <span class="op">..</span>., value_n)</span>
+<span id="cb16-2"><a href="database-management-and-data-systems-sql.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- if value_n is NULL and value_2 is not NULL, return value_2</span></span>
+<span id="cb16-3"><a href="database-management-and-data-systems-sql.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- ... value_n can also be some column</span></span>
+<span id="cb16-4"><a href="database-management-and-data-systems-sql.html#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="database-management-and-data-systems-sql.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column1, column2</span>
+<span id="cb16-6"><a href="database-management-and-data-systems-sql.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">COALESCE</span>(column1, column2, <span class="st">&#39;N/A&#39;</span>) <span class="kw">AS</span> new_column</span>
+<span id="cb16-7"><a href="database-management-and-data-systems-sql.html#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
+<span id="cb16-8"><a href="database-management-and-data-systems-sql.html#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="database-management-and-data-systems-sql.html#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co">-- using ISNULL() function to replace all mising values in one column with values in another column or some other specified value</span></span>
+<span id="cb16-10"><a href="database-management-and-data-systems-sql.html#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column1, ISNULL(column1, column2) <span class="kw">AS</span> new_column1</span>
+<span id="cb16-11"><a href="database-management-and-data-systems-sql.html#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span></code></pre></div>
 </div>
 <div id="date" class="section level3 hasAnchor" number="4.2.7">
 <h3><span class="header-section-number">4.2.7</span> DATE<a href="database-management-and-data-systems-sql.html#date" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -574,208 +639,281 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><code>number:</code> an integer value to add</p></li>
 <li><p><code>date:</code> a datetime value</p></li>
 </ul></li>
-<li><p>DATEDIFF (datepart, startdate, enddate): Obtain the difference between two datetime values —&gt; always returns a number</p>
+<li><p><code>DATEDIFF (datepart, startdate, enddate):</code> Obtain the difference between two datetime values —&gt; always returns a number</p>
 <ul>
-<li><p>datepart: unit of measurement (DD, MM, etc,)</p></li>
-<li><p>startdate: the starting date value</p></li>
-<li><p>enddate: the ending datetime value</p></li>
+<li><p><code>datepart:</code> unit of measurement (DD, MM, etc,)</p></li>
+<li><p><code>startdate:</code> the starting date value</p></li>
+<li><p><code>enddate:</code> the ending datetime value</p></li>
 </ul>
-<div class="sourceCode" id="cb16"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb16-1"><a href="database-management-and-data-systems-sql.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* date math w/ DATEDIFF */</span></span>
-<span id="cb16-2"><a href="database-management-and-data-systems-sql.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
-<span id="cb16-3"><a href="database-management-and-data-systems-sql.html#cb16-3" aria-hidden="true" tabindex="-1"></a>  date1, </span>
-<span id="cb16-4"><a href="database-management-and-data-systems-sql.html#cb16-4" aria-hidden="true" tabindex="-1"></a>  date2, </span>
-<span id="cb16-5"><a href="database-management-and-data-systems-sql.html#cb16-5" aria-hidden="true" tabindex="-1"></a>  DATEDIFF(DD, date1, date2) <span class="kw">AS</span> diff_day,</span>
-<span id="cb16-6"><a href="database-management-and-data-systems-sql.html#cb16-6" aria-hidden="true" tabindex="-1"></a>  DATEDIFF(MM, date1, date2) <span class="kw">AS</span> diff_month,</span>
-<span id="cb16-7"><a href="database-management-and-data-systems-sql.html#cb16-7" aria-hidden="true" tabindex="-1"></a>  DATEDIFF(YYYY, date1, date2) <span class="kw">AS</span> diff_year</span>
-<span id="cb16-8"><a href="database-management-and-data-systems-sql.html#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
-<span id="cb16-9"><a href="database-management-and-data-systems-sql.html#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-10"><a href="database-management-and-data-systems-sql.html#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">/* date math w/ DATEADD */</span></span>
-<span id="cb16-11"><a href="database-management-and-data-systems-sql.html#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
-<span id="cb16-12"><a href="database-management-and-data-systems-sql.html#cb16-12" aria-hidden="true" tabindex="-1"></a>  date1,</span>
-<span id="cb16-13"><a href="database-management-and-data-systems-sql.html#cb16-13" aria-hidden="true" tabindex="-1"></a>  DATEADD(DD, <span class="dv">7</span>, date1) <span class="kw">AS</span> date_after_a_week</span>
-<span id="cb16-14"><a href="database-management-and-data-systems-sql.html#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span></code></pre></div></li>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb17-1"><a href="database-management-and-data-systems-sql.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* date math w/ DATEDIFF */</span></span>
+<span id="cb17-2"><a href="database-management-and-data-systems-sql.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
+<span id="cb17-3"><a href="database-management-and-data-systems-sql.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  date1, </span>
+<span id="cb17-4"><a href="database-management-and-data-systems-sql.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  date2, </span>
+<span id="cb17-5"><a href="database-management-and-data-systems-sql.html#cb17-5" aria-hidden="true" tabindex="-1"></a>  DATEDIFF(DD, date1, date2) <span class="kw">AS</span> diff_day,</span>
+<span id="cb17-6"><a href="database-management-and-data-systems-sql.html#cb17-6" aria-hidden="true" tabindex="-1"></a>  DATEDIFF(MM, date1, date2) <span class="kw">AS</span> diff_month,</span>
+<span id="cb17-7"><a href="database-management-and-data-systems-sql.html#cb17-7" aria-hidden="true" tabindex="-1"></a>  DATEDIFF(YYYY, date1, date2) <span class="kw">AS</span> diff_year</span>
+<span id="cb17-8"><a href="database-management-and-data-systems-sql.html#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span>
+<span id="cb17-9"><a href="database-management-and-data-systems-sql.html#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="database-management-and-data-systems-sql.html#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co">/* date math w/ DATEADD */</span></span>
+<span id="cb17-11"><a href="database-management-and-data-systems-sql.html#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb17-12"><a href="database-management-and-data-systems-sql.html#cb17-12" aria-hidden="true" tabindex="-1"></a>  date1,</span>
+<span id="cb17-13"><a href="database-management-and-data-systems-sql.html#cb17-13" aria-hidden="true" tabindex="-1"></a>  DATEADD(DD, <span class="dv">7</span>, date1) <span class="kw">AS</span> date_after_a_week</span>
+<span id="cb17-14"><a href="database-management-and-data-systems-sql.html#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span></code></pre></div></li>
 </ul>
 </div>
 <div id="round-and-truncate" class="section level3 hasAnchor" number="4.2.8">
 <h3><span class="header-section-number">4.2.8</span> ROUND and TRUNCATE<a href="database-management-and-data-systems-sql.html#round-and-truncate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb17"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb17-1"><a href="database-management-and-data-systems-sql.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- round(17.8, 0) --&gt; 18 while truncate rounds 17.8 to 17</span></span>
-<span id="cb17-2"><a href="database-management-and-data-systems-sql.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column1,</span>
-<span id="cb17-3"><a href="database-management-and-data-systems-sql.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ROUND</span>(column2, <span class="dv">0</span>) <span class="kw">AS</span> RoundingtoWhole,</span>
-<span id="cb17-4"><a href="database-management-and-data-systems-sql.html#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ROUND</span>(column2, <span class="dv">0</span>, <span class="dv">1</span>) <span class="kw">AS</span> Truncating <span class="co">-- adding a third parameter 1 to round for truncating</span></span>
-<span id="cb17-5"><a href="database-management-and-data-systems-sql.html#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb18-1"><a href="database-management-and-data-systems-sql.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* IN T-SQL */</span></span>
+<span id="cb18-2"><a href="database-management-and-data-systems-sql.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- round(17.8, 0) --&gt; 18 while truncate rounds 17.8 to 17</span></span>
+<span id="cb18-3"><a href="database-management-and-data-systems-sql.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column1,</span>
+<span id="cb18-4"><a href="database-management-and-data-systems-sql.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ROUND</span>(column2, <span class="dv">0</span>) <span class="kw">AS</span> RoundingtoWhole,</span>
+<span id="cb18-5"><a href="database-management-and-data-systems-sql.html#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ROUND</span>(column2, <span class="dv">0</span>, <span class="dv">1</span>) <span class="kw">AS</span> Truncating <span class="co">-- adding a third parameter 1 to round for truncating</span></span>
+<span id="cb18-6"><a href="database-management-and-data-systems-sql.html#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table1</span></code></pre></div>
 <p>OTHER MATH functions</p>
 <p><code>ABS():</code> absolute value</p>
 <p><code>SQRT():</code> square root | <code>SQUARE():</code> square</p>
 <p><code>LOG(column, digit):</code> returns the LOG with base # of digit</p>
 </div>
-<div id="while-loops-declare" class="section level3 hasAnchor" number="4.2.9">
-<h3><span class="header-section-number">4.2.9</span> WHILE Loops &amp; DECLARE<a href="database-management-and-data-systems-sql.html#while-loops-declare" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Assigning values to variables and write loops</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb18-1"><a href="database-management-and-data-systems-sql.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Declare the variable</span></span>
-<span id="cb18-2"><a href="database-management-and-data-systems-sql.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="kw">DECLARE</span> @my_var <span class="dt">INT</span></span>
-<span id="cb18-3"><a href="database-management-and-data-systems-sql.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- Use SET a value to the variable</span></span>
-<span id="cb18-4"><a href="database-management-and-data-systems-sql.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> @my_var <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb18-5"><a href="database-management-and-data-systems-sql.html#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Show the value</span></span>
-<span id="cb18-6"><a href="database-management-and-data-systems-sql.html#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> @my_var</span>
-<span id="cb18-7"><a href="database-management-and-data-systems-sql.html#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-8"><a href="database-management-and-data-systems-sql.html#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co">-- Specify the condition of the WHILE loop</span></span>
-<span id="cb18-9"><a href="database-management-and-data-systems-sql.html#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="cf">WHILE</span> @my_var <span class="op">&lt;</span> <span class="dv">10</span></span>
-<span id="cb18-10"><a href="database-management-and-data-systems-sql.html#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- Begin the code to execude insde the WHILE loop</span></span>
-<span id="cb18-11"><a href="database-management-and-data-systems-sql.html#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">BEGIN</span></span>
-<span id="cb18-12"><a href="database-management-and-data-systems-sql.html#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- Keep incrementing the value of @my_var</span></span>
-<span id="cb18-13"><a href="database-management-and-data-systems-sql.html#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SET</span> @my_var <span class="op">=</span> @my_var <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb18-14"><a href="database-management-and-data-systems-sql.html#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- Check if @my_var is equal to 4</span></span>
-<span id="cb18-15"><a href="database-management-and-data-systems-sql.html#cb18-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">IF</span> @my_var <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb18-16"><a href="database-management-and-data-systems-sql.html#cb18-16" aria-hidden="true" tabindex="-1"></a>      <span class="co">-- When my_var is 4 then break the loop</span></span>
-<span id="cb18-17"><a href="database-management-and-data-systems-sql.html#cb18-17" aria-hidden="true" tabindex="-1"></a>      <span class="kw">BREAK</span></span>
-<span id="cb18-18"><a href="database-management-and-data-systems-sql.html#cb18-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- End WHILE lopp</span></span>
-<span id="cb18-19"><a href="database-management-and-data-systems-sql.html#cb18-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">END</span></span>
-<span id="cb18-20"><a href="database-management-and-data-systems-sql.html#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="co">-- View the value after the loop</span></span>
-<span id="cb18-21"><a href="database-management-and-data-systems-sql.html#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> @my_var</span></code></pre></div>
 </div>
-<div id="derived-tables" class="section level3 hasAnchor" number="4.2.10">
-<h3><span class="header-section-number">4.2.10</span> Derived Tables<a href="database-management-and-data-systems-sql.html#derived-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="advanced-sql---loopsctewindows" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Advanced SQL - loops/CTE/Windows<a href="database-management-and-data-systems-sql.html#advanced-sql---loopsctewindows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="while-loops-declare" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> WHILE Loops &amp; DECLARE<a href="database-management-and-data-systems-sql.html#while-loops-declare" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Assigning values to variables and write loops</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb19-1"><a href="database-management-and-data-systems-sql.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Declare the variable</span></span>
+<span id="cb19-2"><a href="database-management-and-data-systems-sql.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="kw">DECLARE</span> @my_var <span class="dt">INT</span></span>
+<span id="cb19-3"><a href="database-management-and-data-systems-sql.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- Use SET a value to the variable</span></span>
+<span id="cb19-4"><a href="database-management-and-data-systems-sql.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> @my_var <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb19-5"><a href="database-management-and-data-systems-sql.html#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Show the value</span></span>
+<span id="cb19-6"><a href="database-management-and-data-systems-sql.html#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> @my_var</span>
+<span id="cb19-7"><a href="database-management-and-data-systems-sql.html#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="database-management-and-data-systems-sql.html#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co">-- Specify the condition of the WHILE loop</span></span>
+<span id="cb19-9"><a href="database-management-and-data-systems-sql.html#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="cf">WHILE</span> @my_var <span class="op">&lt;</span> <span class="dv">10</span></span>
+<span id="cb19-10"><a href="database-management-and-data-systems-sql.html#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- Begin the code to execude insde the WHILE loop</span></span>
+<span id="cb19-11"><a href="database-management-and-data-systems-sql.html#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">BEGIN</span></span>
+<span id="cb19-12"><a href="database-management-and-data-systems-sql.html#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- Keep incrementing the value of @my_var</span></span>
+<span id="cb19-13"><a href="database-management-and-data-systems-sql.html#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SET</span> @my_var <span class="op">=</span> @my_var <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb19-14"><a href="database-management-and-data-systems-sql.html#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- Check if @my_var is equal to 4</span></span>
+<span id="cb19-15"><a href="database-management-and-data-systems-sql.html#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">IF</span> @my_var <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb19-16"><a href="database-management-and-data-systems-sql.html#cb19-16" aria-hidden="true" tabindex="-1"></a>      <span class="co">-- When my_var is 4 then break the loop</span></span>
+<span id="cb19-17"><a href="database-management-and-data-systems-sql.html#cb19-17" aria-hidden="true" tabindex="-1"></a>      <span class="kw">BREAK</span></span>
+<span id="cb19-18"><a href="database-management-and-data-systems-sql.html#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- End WHILE lopp</span></span>
+<span id="cb19-19"><a href="database-management-and-data-systems-sql.html#cb19-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">END</span></span>
+<span id="cb19-20"><a href="database-management-and-data-systems-sql.html#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="co">-- View the value after the loop</span></span>
+<span id="cb19-21"><a href="database-management-and-data-systems-sql.html#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> @my_var</span></code></pre></div>
+</div>
+<div id="derived-tables" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Derived Tables<a href="database-management-and-data-systems-sql.html#derived-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>another name for a query acting as a table and are commonly used to <strong>do aggregations</strong> in T-SQL</p></li>
 <li><p>use derived tables when we want to <strong>break down a complex query into smaller steps</strong></p></li>
 <li><p>great solution if we want to <strong>create intermediate calculations</strong> needed to be used in a larger query</p></li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb19-1"><a href="database-management-and-data-systems-sql.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> a.<span class="op">*</span> <span class="kw">FROM</span> Kidney a</span>
-<span id="cb19-2"><a href="database-management-and-data-systems-sql.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- This derived table computes the Average age are joined to the actual table</span></span>
-<span id="cb19-3"><a href="database-management-and-data-systems-sql.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> (<span class="kw">SELECT</span> <span class="fu">AVG</span>(age) <span class="kw">AS</span> AverageAge <span class="kw">FROM</span> kidney) b</span>
-<span id="cb19-4"><a href="database-management-and-data-systems-sql.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ON</span> a.Age <span class="op">=</span> b.AverageAge</span>
-<span id="cb19-5"><a href="database-management-and-data-systems-sql.html#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- a &amp; b are aliases for table Kidney and our derived table</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb20-1"><a href="database-management-and-data-systems-sql.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> a.<span class="op">*</span> <span class="kw">FROM</span> Kidney a</span>
+<span id="cb20-2"><a href="database-management-and-data-systems-sql.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- This derived table computes the Average age are joined to the actual table</span></span>
+<span id="cb20-3"><a href="database-management-and-data-systems-sql.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> (<span class="kw">SELECT</span> <span class="fu">AVG</span>(age) <span class="kw">AS</span> AverageAge <span class="kw">FROM</span> kidney) b</span>
+<span id="cb20-4"><a href="database-management-and-data-systems-sql.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ON</span> a.Age <span class="op">=</span> b.AverageAge</span>
+<span id="cb20-5"><a href="database-management-and-data-systems-sql.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- a &amp; b are aliases for table Kidney and our derived table</span></span></code></pre></div>
 </div>
-<div id="cte-common-table-expressions" class="section level3 hasAnchor" number="4.2.11">
-<h3><span class="header-section-number">4.2.11</span> CTE (Common Table Expressions)<a href="database-management-and-data-systems-sql.html#cte-common-table-expressions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="cte-common-table-expressions" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> CTE (Common Table Expressions)<a href="database-management-and-data-systems-sql.html#cte-common-table-expressions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>another type of derived table</p></li>
 <li><p>can be used multiple times in a query and are defined like a table</p></li>
 </ul>
-<div class="sourceCode" id="cb20"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb20-1"><a href="database-management-and-data-systems-sql.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- CTE definitions start with the keyword WITH</span></span>
-<span id="cb20-2"><a href="database-management-and-data-systems-sql.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Followed by the CTE names and the columns it contains</span></span>
-<span id="cb20-3"><a href="database-management-and-data-systems-sql.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> CTEName (Co1, Col2)</span>
-<span id="cb20-4"><a href="database-management-and-data-systems-sql.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="kw">AS</span></span>
-<span id="cb20-5"><a href="database-management-and-data-systems-sql.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Define the CTE query</span></span>
-<span id="cb20-6"><a href="database-management-and-data-systems-sql.html#cb20-6" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb20-7"><a href="database-management-and-data-systems-sql.html#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co">-- the two columns from the definition above</span></span>
-<span id="cb20-8"><a href="database-management-and-data-systems-sql.html#cb20-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> Col1, Col2</span>
-<span id="cb20-9"><a href="database-management-and-data-systems-sql.html#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> TableName</span>
-<span id="cb20-10"><a href="database-management-and-data-systems-sql.html#cb20-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb20-11"><a href="database-management-and-data-systems-sql.html#cb20-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-12"><a href="database-management-and-data-systems-sql.html#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="co">/* CTEs in T-SQL example */</span></span>
-<span id="cb20-13"><a href="database-management-and-data-systems-sql.html#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a CTE to get the Maximum BloodPressure by Type</span></span>
-<span id="cb20-14"><a href="database-management-and-data-systems-sql.html#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> BloodPressureAge(Age, MaxBloodPressure)</span>
-<span id="cb20-15"><a href="database-management-and-data-systems-sql.html#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="kw">AS</span></span>
-<span id="cb20-16"><a href="database-management-and-data-systems-sql.html#cb20-16" aria-hidden="true" tabindex="-1"></a>(<span class="kw">SELECT</span> Age, <span class="fu">MAX</span>(BloodPressure) <span class="kw">AS</span> MaxBloodPressure</span>
-<span id="cb20-17"><a href="database-management-and-data-systems-sql.html#cb20-17" aria-hidden="true" tabindex="-1"></a> <span class="kw">FROM</span> Kidney</span>
-<span id="cb20-18"><a href="database-management-and-data-systems-sql.html#cb20-18" aria-hidden="true" tabindex="-1"></a> <span class="kw">GROUP</span> <span class="kw">BY</span> Age)</span>
-<span id="cb20-19"><a href="database-management-and-data-systems-sql.html#cb20-19" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb20-20"><a href="database-management-and-data-systems-sql.html#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a query to use the CTE as a table</span></span>
-<span id="cb20-21"><a href="database-management-and-data-systems-sql.html#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> a.Age, <span class="fu">MIN</span>(a.BloodPressure), b.MaxBloodPressure</span>
-<span id="cb20-22"><a href="database-management-and-data-systems-sql.html#cb20-22" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Kidney a</span>
-<span id="cb20-23"><a href="database-management-and-data-systems-sql.html#cb20-23" aria-hidden="true" tabindex="-1"></a><span class="co">-- join the CTE with the table</span></span>
-<span id="cb20-24"><a href="database-management-and-data-systems-sql.html#cb20-24" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> BloodPressureAge b</span>
-<span id="cb20-25"><a href="database-management-and-data-systems-sql.html#cb20-25" aria-hidden="true" tabindex="-1"></a>     <span class="kw">ON</span> a.Age <span class="op">=</span> b.Age</span>
-<span id="cb20-26"><a href="database-management-and-data-systems-sql.html#cb20-26" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> a.Age, b.MaxBloodPressure</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb21-1"><a href="database-management-and-data-systems-sql.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- CTE definitions start with the keyword WITH</span></span>
+<span id="cb21-2"><a href="database-management-and-data-systems-sql.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Followed by the CTE names and the columns it contains</span></span>
+<span id="cb21-3"><a href="database-management-and-data-systems-sql.html#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> CTEName (Co1, Col2)</span>
+<span id="cb21-4"><a href="database-management-and-data-systems-sql.html#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="kw">AS</span></span>
+<span id="cb21-5"><a href="database-management-and-data-systems-sql.html#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Define the CTE query</span></span>
+<span id="cb21-6"><a href="database-management-and-data-systems-sql.html#cb21-6" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb21-7"><a href="database-management-and-data-systems-sql.html#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co">-- the two columns from the definition above</span></span>
+<span id="cb21-8"><a href="database-management-and-data-systems-sql.html#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> Col1, Col2</span>
+<span id="cb21-9"><a href="database-management-and-data-systems-sql.html#cb21-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> TableName</span>
+<span id="cb21-10"><a href="database-management-and-data-systems-sql.html#cb21-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb21-11"><a href="database-management-and-data-systems-sql.html#cb21-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-12"><a href="database-management-and-data-systems-sql.html#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="co">/* CTEs in T-SQL example */</span></span>
+<span id="cb21-13"><a href="database-management-and-data-systems-sql.html#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a CTE to get the Maximum BloodPressure by Type</span></span>
+<span id="cb21-14"><a href="database-management-and-data-systems-sql.html#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> BloodPressureAge(Age, MaxBloodPressure)</span>
+<span id="cb21-15"><a href="database-management-and-data-systems-sql.html#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="kw">AS</span></span>
+<span id="cb21-16"><a href="database-management-and-data-systems-sql.html#cb21-16" aria-hidden="true" tabindex="-1"></a>(<span class="kw">SELECT</span> Age, <span class="fu">MAX</span>(BloodPressure) <span class="kw">AS</span> MaxBloodPressure</span>
+<span id="cb21-17"><a href="database-management-and-data-systems-sql.html#cb21-17" aria-hidden="true" tabindex="-1"></a> <span class="kw">FROM</span> Kidney</span>
+<span id="cb21-18"><a href="database-management-and-data-systems-sql.html#cb21-18" aria-hidden="true" tabindex="-1"></a> <span class="kw">GROUP</span> <span class="kw">BY</span> Age)</span>
+<span id="cb21-19"><a href="database-management-and-data-systems-sql.html#cb21-19" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb21-20"><a href="database-management-and-data-systems-sql.html#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a query to use the CTE as a table</span></span>
+<span id="cb21-21"><a href="database-management-and-data-systems-sql.html#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> a.Age, <span class="fu">MIN</span>(a.BloodPressure), b.MaxBloodPressure</span>
+<span id="cb21-22"><a href="database-management-and-data-systems-sql.html#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Kidney a</span>
+<span id="cb21-23"><a href="database-management-and-data-systems-sql.html#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="co">-- join the CTE with the table</span></span>
+<span id="cb21-24"><a href="database-management-and-data-systems-sql.html#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> BloodPressureAge b</span>
+<span id="cb21-25"><a href="database-management-and-data-systems-sql.html#cb21-25" aria-hidden="true" tabindex="-1"></a>     <span class="kw">ON</span> a.Age <span class="op">=</span> b.Age</span>
+<span id="cb21-26"><a href="database-management-and-data-systems-sql.html#cb21-26" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> a.Age, b.MaxBloodPressure</span></code></pre></div>
 </div>
-<div id="window-functions-in-t-sql" class="section level3 hasAnchor" number="4.2.12">
-<h3><span class="header-section-number">4.2.12</span> Window functions in T-SQL<a href="database-management-and-data-systems-sql.html#window-functions-in-t-sql" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="window-functions-in-sql" class="section level3 hasAnchor" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> <a href="https://mode.com/sql-tutorial/sql-window-functions/#basic-windowing-syntax">Window Functions in SQL</a><a href="database-management-and-data-systems-sql.html#window-functions-in-sql" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>Create the window with <code>OVER</code> clause</p></li>
 <li><p><code>PARTITION BY</code> creates the frame</p></li>
 <li><p>If you do not include <code>PARTITION BY</code> the frame is <strong>the entire table</strong></p></li>
 <li><p>Allows aggregations to be created at the same time as the window</p></li>
 </ul>
-<div class="sourceCode" id="cb21"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb21-1"><a href="database-management-and-data-systems-sql.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a Window data grouping</span></span>
-<span id="cb21-2"><a href="database-management-and-data-systems-sql.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
-<span id="cb21-3"><a href="database-management-and-data-systems-sql.html#cb21-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">SUM</span>(CurrentQuota)</span>
-<span id="cb21-4"><a href="database-management-and-data-systems-sql.html#cb21-4" aria-hidden="true" tabindex="-1"></a>       <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> SalesYear <span class="kw">ORDER</span> <span class="kw">BY</span> SalesYear) <span class="kw">AS</span> YearlyTotal,</span>
-<span id="cb21-5"><a href="database-management-and-data-systems-sql.html#cb21-5" aria-hidden="true" tabindex="-1"></a>       ModifiedDate <span class="kw">AS</span> ModDate</span>
-<span id="cb21-6"><a href="database-management-and-data-systems-sql.html#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span>
-<span id="cb21-7"><a href="database-management-and-data-systems-sql.html#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-8"><a href="database-management-and-data-systems-sql.html#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="co">/* the above example partitions the table by SalesYear and uses the windowing function SUM to add up every row of the CurrentQuota column in the window to provide a total for the entire window in the YearTotal column.</span></span>
-<span id="cb21-9"><a href="database-management-and-data-systems-sql.html#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-10"><a href="database-management-and-data-systems-sql.html#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co">When the year changes, the value in the YearTotal column changes showing the total for the next year becuz the window is partitioned by sales year.</span></span>
-<span id="cb21-11"><a href="database-management-and-data-systems-sql.html#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span>
-<span id="cb21-12"><a href="database-management-and-data-systems-sql.html#cb21-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-13"><a href="database-management-and-data-systems-sql.html#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="co">/* use other aggregations in windowing function */</span></span>
-<span id="cb21-14"><a href="database-management-and-data-systems-sql.html#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">....</span>.</span>
-<span id="cb21-15"><a href="database-management-and-data-systems-sql.html#cb21-15" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COUNT</span>(<span class="op">..</span>.)</span>
-<span id="cb21-16"><a href="database-management-and-data-systems-sql.html#cb21-16" aria-hidden="true" tabindex="-1"></a>       <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> <span class="op">..</span>.) <span class="kw">AS</span> <span class="op">..</span>.</span>
-<span id="cb21-17"><a href="database-management-and-data-systems-sql.html#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="op">..</span>.</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb22-1"><a href="database-management-and-data-systems-sql.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a Window data grouping</span></span>
+<span id="cb22-2"><a href="database-management-and-data-systems-sql.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
+<span id="cb22-3"><a href="database-management-and-data-systems-sql.html#cb22-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">SUM</span>(CurrentQuota)</span>
+<span id="cb22-4"><a href="database-management-and-data-systems-sql.html#cb22-4" aria-hidden="true" tabindex="-1"></a>       <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> SalesYear <span class="kw">ORDER</span> <span class="kw">BY</span> SalesYear) <span class="kw">AS</span> YearlyTotal,</span>
+<span id="cb22-5"><a href="database-management-and-data-systems-sql.html#cb22-5" aria-hidden="true" tabindex="-1"></a>       ModifiedDate <span class="kw">AS</span> ModDate</span>
+<span id="cb22-6"><a href="database-management-and-data-systems-sql.html#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span>
+<span id="cb22-7"><a href="database-management-and-data-systems-sql.html#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="database-management-and-data-systems-sql.html#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co">/* the above example partitions the table by SalesYear and uses the windowing function SUM to add up every row of the CurrentQuota column in the window to provide a total for the entire window in the YearTotal column.</span></span>
+<span id="cb22-9"><a href="database-management-and-data-systems-sql.html#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="database-management-and-data-systems-sql.html#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co">When the year changes, the value in the YearTotal column changes showing the total for the next year becuz the window is partitioned by sales year.</span></span>
+<span id="cb22-11"><a href="database-management-and-data-systems-sql.html#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span></code></pre></div>
 </div>
-<div id="other-common-used-window-functions" class="section level3 hasAnchor" number="4.2.13">
-<h3><span class="header-section-number">4.2.13</span> <strong>OTHER Common used window functions</strong><a href="database-management-and-data-systems-sql.html#other-common-used-window-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="windows-functions-cheatsheet" class="section level3 hasAnchor" number="4.3.5">
+<h3><span class="header-section-number">4.3.5</span> Windows functions Cheatsheet<a href="database-management-and-data-systems-sql.html#windows-functions-cheatsheet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Col1</th>
+<th>Col2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ROW_NUMBER()</code></td>
+<td>Displays the unique number/index of a given row <em>(no duplicates as compared to rank/dense_rank)</em>; starts are 1 and numbers the rows according to the <code>ORDER BY</code> part of window statements.</td>
+</tr>
+<tr class="even">
+<td><code>RANK()</code></td>
+<td>Gives the identical rows a rank of 2, then skip ranks 3 and 4, so next rank would be 5.</td>
+</tr>
+<tr class="odd">
+<td><code>DENSE_RANK()</code></td>
+<td>Also gives identical rows a rank of 2, but the following rank would be 3 <em>– no ranks would be skipped.</em></td>
+</tr>
+<tr class="even">
+<td><code>NTILE(*# of buckets*)</code></td>
+<td>Identify what percentile (or quantile, or any other subdivison) a given row falls into.</td>
+</tr>
+<tr class="odd">
+<td><code>LAG(column, *# of rows*)</code></td>
+<td>Creates columns that pull <strong>previous</strong> values from other rows (second parameter specifies how many rows we need to pull)</td>
+</tr>
+<tr class="even">
+<td><code>LEAD(column, *# of rows*)</code></td>
+<td>Creates columns that pull <strong>following/next</strong> values from other rows (second parameter specifies how many rows we need to pull)</td>
+</tr>
+<tr class="odd">
+<td><code>SUM() | COUNT() | AVG() | STDEV()</code></td>
+<td>Creates columns that calculate corresponding values based on mathematical operations</td>
+</tr>
+</tbody>
+</table>
+<div id="getting-firstlast-and-nextprevious-values" class="section level4 hasAnchor" number="4.3.5.1">
+<h4><span class="header-section-number">4.3.5.1</span> <strong>Getting first/last and next/previous values</strong><a href="database-management-and-data-systems-sql.html#getting-firstlast-and-nextprevious-values" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><p><code>FIRST_VALUE()</code> returns the first values in the window</p></li>
 <li><p><code>LAST_VALUE()</code> returns the last values in the window</p></li>
 </ul>
 <p><em>--&gt; becuz we are trying to find a specific record in a window, the position of the records must be specified using the <code>ORDER BY</code> command.</em></p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb22-1"><a href="database-management-and-data-systems-sql.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select the columns</span></span>
-<span id="cb22-2"><a href="database-management-and-data-systems-sql.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
-<span id="cb22-3"><a href="database-management-and-data-systems-sql.html#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- First value from every window</span></span>
-<span id="cb22-4"><a href="database-management-and-data-systems-sql.html#cb22-4" aria-hidden="true" tabindex="-1"></a>     <span class="fu">FIRST_VALUE</span>(CurrentQuota)</span>
-<span id="cb22-5"><a href="database-management-and-data-systems-sql.html#cb22-5" aria-hidden="true" tabindex="-1"></a>     <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> SalesYear <span class="kw">ORDER</span> <span class="kw">BY</span> ModifiedDate) <span class="kw">AS</span> StartQuota,</span>
-<span id="cb22-6"><a href="database-management-and-data-systems-sql.html#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- Last value from every window</span></span>
-<span id="cb22-7"><a href="database-management-and-data-systems-sql.html#cb22-7" aria-hidden="true" tabindex="-1"></a>     <span class="fu">LAST_VALUE</span>(CurrentQuota)</span>
-<span id="cb22-8"><a href="database-management-and-data-systems-sql.html#cb22-8" aria-hidden="true" tabindex="-1"></a>     <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> SalesYear <span class="kw">ORDER</span> <span class="kw">BY</span> ModifiedDate) <span class="kw">AS</span> EndQuota,</span>
-<span id="cb22-9"><a href="database-management-and-data-systems-sql.html#cb22-9" aria-hidden="true" tabindex="-1"></a>     ModifiedDate <span class="kw">as</span> ModDate</span>
-<span id="cb22-10"><a href="database-management-and-data-systems-sql.html#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb23-1"><a href="database-management-and-data-systems-sql.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select the columns</span></span>
+<span id="cb23-2"><a href="database-management-and-data-systems-sql.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
+<span id="cb23-3"><a href="database-management-and-data-systems-sql.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- First value from every window</span></span>
+<span id="cb23-4"><a href="database-management-and-data-systems-sql.html#cb23-4" aria-hidden="true" tabindex="-1"></a>     <span class="fu">FIRST_VALUE</span>(CurrentQuota)</span>
+<span id="cb23-5"><a href="database-management-and-data-systems-sql.html#cb23-5" aria-hidden="true" tabindex="-1"></a>     <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> SalesYear <span class="kw">ORDER</span> <span class="kw">BY</span> ModifiedDate) <span class="kw">AS</span> StartQuota,</span>
+<span id="cb23-6"><a href="database-management-and-data-systems-sql.html#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- Last value from every window</span></span>
+<span id="cb23-7"><a href="database-management-and-data-systems-sql.html#cb23-7" aria-hidden="true" tabindex="-1"></a>     <span class="fu">LAST_VALUE</span>(CurrentQuota)</span>
+<span id="cb23-8"><a href="database-management-and-data-systems-sql.html#cb23-8" aria-hidden="true" tabindex="-1"></a>     <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> SalesYear <span class="kw">ORDER</span> <span class="kw">BY</span> ModifiedDate) <span class="kw">AS</span> EndQuota,</span>
+<span id="cb23-9"><a href="database-management-and-data-systems-sql.html#cb23-9" aria-hidden="true" tabindex="-1"></a>     ModifiedDate <span class="kw">as</span> ModDate</span>
+<span id="cb23-10"><a href="database-management-and-data-systems-sql.html#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span></code></pre></div>
 <ul>
 <li><p>Getting the next value with <code>LEAD()</code> and previous value with <code>LAG()</code></p>
 <ul>
-<li><p>provides the ability to query the value from NEXT or PREVIOUSrow</p></li>
+<li><p>provides the ability to query the value from NEXT or PREVIOUS row</p></li>
 <li><p>also requires the use of <code>ORDER BY</code> to order the rows</p></li>
 </ul>
-<div class="sourceCode" id="cb23"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb23-1"><a href="database-management-and-data-systems-sql.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* getting next value */</span></span>
-<span id="cb23-2"><a href="database-management-and-data-systems-sql.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
-<span id="cb23-3"><a href="database-management-and-data-systems-sql.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a window function to get values from next row</span></span>
-<span id="cb23-4"><a href="database-management-and-data-systems-sql.html#cb23-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">LEAD</span>(CurrentQuota) <span class="co">-- use LAG(...) if need previous value</span></span>
-<span id="cb23-5"><a href="database-management-and-data-systems-sql.html#cb23-5" aria-hidden="true" tabindex="-1"></a>       <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> SalesYear <span class="kw">ORDER</span> <span class="kw">BY</span> ModifiedDate) <span class="kw">AS</span> NextQuota,</span>
-<span id="cb23-6"><a href="database-management-and-data-systems-sql.html#cb23-6" aria-hidden="true" tabindex="-1"></a>       ModifiedDate <span class="kw">as</span> ModDate</span>
-<span id="cb23-7"><a href="database-management-and-data-systems-sql.html#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span></code></pre></div></li>
+<div class="sourceCode" id="cb24"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb24-1"><a href="database-management-and-data-systems-sql.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* getting next value */</span></span>
+<span id="cb24-2"><a href="database-management-and-data-systems-sql.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
+<span id="cb24-3"><a href="database-management-and-data-systems-sql.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a window function to get values from next row</span></span>
+<span id="cb24-4"><a href="database-management-and-data-systems-sql.html#cb24-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">LEAD</span>(CurrentQuota) <span class="co">-- use LAG(...) if need previous value</span></span>
+<span id="cb24-5"><a href="database-management-and-data-systems-sql.html#cb24-5" aria-hidden="true" tabindex="-1"></a>       <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> SalesYear <span class="kw">ORDER</span> <span class="kw">BY</span> ModifiedDate) <span class="kw">AS</span> NextQuota,</span>
+<span id="cb24-6"><a href="database-management-and-data-systems-sql.html#cb24-6" aria-hidden="true" tabindex="-1"></a>       ModifiedDate <span class="kw">as</span> ModDate</span>
+<span id="cb24-7"><a href="database-management-and-data-systems-sql.html#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span></code></pre></div></li>
 </ul>
 </div>
-<div id="adding-row-numbers" class="section level3 hasAnchor" number="4.2.14">
-<h3><span class="header-section-number">4.2.14</span> <strong>Adding row numbers</strong><a href="database-management-and-data-systems-sql.html#adding-row-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="adding-row-numbers" class="section level4 hasAnchor" number="4.3.5.2">
+<h4><span class="header-section-number">4.3.5.2</span> <strong>Adding row numbers</strong><a href="database-management-and-data-systems-sql.html#adding-row-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><p><code>ROW_NUMBER():</code> sequentially numbers the rows in the window</p></li>
 <li><p><code>ORDER BY</code> is required when using <code>ROW_NUMBER()</code></p></li>
 </ul>
-<div class="sourceCode" id="cb24"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb24-1"><a href="database-management-and-data-systems-sql.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* example of using ROW_NUMBER() to assign a new row number for each row in the window */</span></span>
-<span id="cb24-2"><a href="database-management-and-data-systems-sql.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
-<span id="cb24-3"><a href="database-management-and-data-systems-sql.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ROW_NUMBER</span>()</span>
-<span id="cb24-4"><a href="database-management-and-data-systems-sql.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> SalesPerson <span class="kw">ORDER</span> <span class="kw">BY</span> SalesYear) <span class="kw">AS</span> QuotabySalesPerson</span>
-<span id="cb24-5"><a href="database-management-and-data-systems-sql.html#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb25-1"><a href="database-management-and-data-systems-sql.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* example of using ROW_NUMBER() to assign a new row number for each row in the window */</span></span>
+<span id="cb25-2"><a href="database-management-and-data-systems-sql.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
+<span id="cb25-3"><a href="database-management-and-data-systems-sql.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ROW_NUMBER</span>()</span>
+<span id="cb25-4"><a href="database-management-and-data-systems-sql.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> SalesPerson <span class="kw">ORDER</span> <span class="kw">BY</span> SalesYear) <span class="kw">AS</span> QuotabySalesPerson</span>
+<span id="cb25-5"><a href="database-management-and-data-systems-sql.html#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span></code></pre></div>
 </div>
-<div id="using-windows-for-statistical-functions" class="section level3 hasAnchor" number="4.2.15">
-<h3><span class="header-section-number">4.2.15</span> Using windows for Statistical Functions<a href="database-management-and-data-systems-sql.html#using-windows-for-statistical-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="using-windows-for-statistical-functions" class="section level4 hasAnchor" number="4.3.5.3">
+<h4><span class="header-section-number">4.3.5.3</span> Using windows for Statistical Functions<a href="database-management-and-data-systems-sql.html#using-windows-for-statistical-functions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><p>STDEV(): calculates the standard deviation</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb25-1"><a href="database-management-and-data-systems-sql.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
-<span id="cb25-2"><a href="database-management-and-data-systems-sql.html#cb25-2" aria-hidden="true" tabindex="-1"></a>       STDEV(CurrentQuota)</span>
-<span id="cb25-3"><a href="database-management-and-data-systems-sql.html#cb25-3" aria-hidden="true" tabindex="-1"></a>       <span class="kw">OVER</span> () <span class="kw">AS</span> StandardDev, <span class="co">-- do not include partition by if we are calculating for the entire table</span></span>
-<span id="cb25-4"><a href="database-management-and-data-systems-sql.html#cb25-4" aria-hidden="true" tabindex="-1"></a>       ModifiedDate <span class="kw">AS</span> ModDate</span>
-<span id="cb25-5"><a href="database-management-and-data-systems-sql.html#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span></code></pre></div></li>
+<div class="sourceCode" id="cb26"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb26-1"><a href="database-management-and-data-systems-sql.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
+<span id="cb26-2"><a href="database-management-and-data-systems-sql.html#cb26-2" aria-hidden="true" tabindex="-1"></a>       STDEV(CurrentQuota)</span>
+<span id="cb26-3"><a href="database-management-and-data-systems-sql.html#cb26-3" aria-hidden="true" tabindex="-1"></a>       <span class="kw">OVER</span> () <span class="kw">AS</span> StandardDev, <span class="co">-- do not include partition by if we are calculating for the entire table</span></span>
+<span id="cb26-4"><a href="database-management-and-data-systems-sql.html#cb26-4" aria-hidden="true" tabindex="-1"></a>       ModifiedDate <span class="kw">AS</span> ModDate</span>
+<span id="cb26-5"><a href="database-management-and-data-systems-sql.html#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span></code></pre></div></li>
 <li><p>Calculating the mode: 1) create a CTE containing an ordered count of values using ROW_NUMBER(); 2) write a query using the CTE to pick the value with the highest row number</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb26-1"><a href="database-management-and-data-systems-sql.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a CTE called QuotaCount </span></span>
-<span id="cb26-2"><a href="database-management-and-data-systems-sql.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> QuotaCount <span class="kw">AS</span> </span>
-<span id="cb26-3"><a href="database-management-and-data-systems-sql.html#cb26-3" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb26-4"><a href="database-management-and-data-systems-sql.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
-<span id="cb26-5"><a href="database-management-and-data-systems-sql.html#cb26-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">ROW_NUMBER</span>() <span class="co">-- creating ordered count of values</span></span>
-<span id="cb26-6"><a href="database-management-and-data-systems-sql.html#cb26-6" aria-hidden="true" tabindex="-1"></a>       <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> CurrentQuota <span class="kw">ORDER</span> <span class="kw">BY</span> CurrentQuota) <span class="kw">AS</span> QuotaList</span>
-<span id="cb26-7"><a href="database-management-and-data-systems-sql.html#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span>
-<span id="cb26-8"><a href="database-management-and-data-systems-sql.html#cb26-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb26-9"><a href="database-management-and-data-systems-sql.html#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-10"><a href="database-management-and-data-systems-sql.html#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co">-- select everything from CTE</span></span>
-<span id="cb26-11"><a href="database-management-and-data-systems-sql.html#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> QuotaCount</span>
-<span id="cb26-12"><a href="database-management-and-data-systems-sql.html#cb26-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-13"><a href="database-management-and-data-systems-sql.html#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="co">-- write a query using CTE to pick the value with highest count (i.e. row number)</span></span>
-<span id="cb26-14"><a href="database-management-and-data-systems-sql.html#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> CurrentQuota, QuotaList <span class="kw">AS</span> <span class="kw">Mode</span></span>
-<span id="cb26-15"><a href="database-management-and-data-systems-sql.html#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> QuotaCount</span>
-<span id="cb26-16"><a href="database-management-and-data-systems-sql.html#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> QuataList <span class="kw">IN</span> (<span class="kw">SELECT</span> <span class="fu">MAX</span>(QuotaList) <span class="kw">FROM</span> QuotaCount) <span class="co">-- select value in maximum count</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb27"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb27-1"><a href="database-management-and-data-systems-sql.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a CTE called QuotaCount </span></span>
+<span id="cb27-2"><a href="database-management-and-data-systems-sql.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> QuotaCount <span class="kw">AS</span> </span>
+<span id="cb27-3"><a href="database-management-and-data-systems-sql.html#cb27-3" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb27-4"><a href="database-management-and-data-systems-sql.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SalesPerson, SalesYear, CurrentQuota,</span>
+<span id="cb27-5"><a href="database-management-and-data-systems-sql.html#cb27-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">ROW_NUMBER</span>() <span class="co">-- creating ordered count of values</span></span>
+<span id="cb27-6"><a href="database-management-and-data-systems-sql.html#cb27-6" aria-hidden="true" tabindex="-1"></a>       <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> CurrentQuota <span class="kw">ORDER</span> <span class="kw">BY</span> CurrentQuota) <span class="kw">AS</span> QuotaList</span>
+<span id="cb27-7"><a href="database-management-and-data-systems-sql.html#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SaleGoal</span>
+<span id="cb27-8"><a href="database-management-and-data-systems-sql.html#cb27-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb27-9"><a href="database-management-and-data-systems-sql.html#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="database-management-and-data-systems-sql.html#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="co">-- select everything from CTE</span></span>
+<span id="cb27-11"><a href="database-management-and-data-systems-sql.html#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> QuotaCount</span>
+<span id="cb27-12"><a href="database-management-and-data-systems-sql.html#cb27-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-13"><a href="database-management-and-data-systems-sql.html#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="co">-- write a query using CTE to pick the value with highest count (i.e. row number)</span></span>
+<span id="cb27-14"><a href="database-management-and-data-systems-sql.html#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> CurrentQuota, QuotaList <span class="kw">AS</span> <span class="kw">Mode</span></span>
+<span id="cb27-15"><a href="database-management-and-data-systems-sql.html#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> QuotaCount</span>
+<span id="cb27-16"><a href="database-management-and-data-systems-sql.html#cb27-16" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> QuataList <span class="kw">IN</span> (<span class="kw">SELECT</span> <span class="fu">MAX</span>(QuotaList) <span class="kw">FROM</span> QuotaCount) <span class="co">-- select value in maximum count</span></span></code></pre></div></li>
 </ul>
+</div>
+</div>
+<div id="defining-a-window-alias" class="section level3 hasAnchor" number="4.3.6">
+<h3><span class="header-section-number">4.3.6</span> Defining a window alias<a href="database-management-and-data-systems-sql.html#defining-a-window-alias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Example:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb28-1"><a href="database-management-and-data-systems-sql.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column1,</span>
+<span id="cb28-2"><a href="database-management-and-data-systems-sql.html#cb28-2" aria-hidden="true" tabindex="-1"></a>       column2,</span>
+<span id="cb28-3"><a href="database-management-and-data-systems-sql.html#cb28-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">NTILE</span>(<span class="dv">4</span>) <span class="kw">OVER</span></span>
+<span id="cb28-4"><a href="database-management-and-data-systems-sql.html#cb28-4" aria-hidden="true" tabindex="-1"></a>        (<span class="kw">PARTITION</span> <span class="kw">BY</span> column1 <span class="kw">ORDER</span> <span class="kw">BY</span> column2)</span>
+<span id="cb28-5"><a href="database-management-and-data-systems-sql.html#cb28-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">AS</span> quartile,</span>
+<span id="cb28-6"><a href="database-management-and-data-systems-sql.html#cb28-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">NTILE</span>(<span class="dv">5</span>) <span class="kw">OVER</span></span>
+<span id="cb28-7"><a href="database-management-and-data-systems-sql.html#cb28-7" aria-hidden="true" tabindex="-1"></a>        (<span class="kw">PARTITION</span> <span class="kw">BY</span> column1 <span class="kw">ORDER</span> <span class="kw">BY</span> column2)</span>
+<span id="cb28-8"><a href="database-management-and-data-systems-sql.html#cb28-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">AS</span> quintile,</span>
+<span id="cb28-9"><a href="database-management-and-data-systems-sql.html#cb28-9" aria-hidden="true" tabindex="-1"></a>       <span class="fu">NTILE</span>(<span class="dv">100</span>) <span class="kw">OVER</span></span>
+<span id="cb28-10"><a href="database-management-and-data-systems-sql.html#cb28-10" aria-hidden="true" tabindex="-1"></a>        (<span class="kw">PARTITION</span> <span class="kw">BY</span> column1 <span class="kw">ORDER</span> <span class="kw">BY</span> column2)</span>
+<span id="cb28-11"><a href="database-management-and-data-systems-sql.html#cb28-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">AS</span> percentile</span>
+<span id="cb28-12"><a href="database-management-and-data-systems-sql.html#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table_name</span>
+<span id="cb28-13"><a href="database-management-and-data-systems-sql.html#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition(s)</span>
+<span id="cb28-14"><a href="database-management-and-data-systems-sql.html#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> column1, column2</span></code></pre></div>
+<p>Re-written example using <strong>window alias</strong></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb29-1"><a href="database-management-and-data-systems-sql.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column1,</span>
+<span id="cb29-2"><a href="database-management-and-data-systems-sql.html#cb29-2" aria-hidden="true" tabindex="-1"></a>       column2</span>
+<span id="cb29-3"><a href="database-management-and-data-systems-sql.html#cb29-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">NTILE</span>(<span class="dv">4</span>) <span class="kw">OVER</span> ntile_window <span class="kw">AS</span> quartile,</span>
+<span id="cb29-4"><a href="database-management-and-data-systems-sql.html#cb29-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">NTILE</span>(<span class="dv">5</span>) <span class="kw">OVER</span> ntile_window <span class="kw">AS</span> quintile,</span>
+<span id="cb29-5"><a href="database-management-and-data-systems-sql.html#cb29-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">NTILE</span>(<span class="dv">100</span>) <span class="kw">OVER</span> ntile_window <span class="kw">AS</span> percentile</span>
+<span id="cb29-6"><a href="database-management-and-data-systems-sql.html#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table_name</span>
+<span id="cb29-7"><a href="database-management-and-data-systems-sql.html#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition(s)</span>
+<span id="cb29-8"><a href="database-management-and-data-systems-sql.html#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="co">/* </span><span class="al">NOTE</span><span class="co"> if include the WINDOW clause, should always come AFTER the WHERE clause */</span></span>
+<span id="cb29-9"><a href="database-management-and-data-systems-sql.html#cb29-9" aria-hidden="true" tabindex="-1"></a>WINDOW ntile_window <span class="kw">AS</span></span>
+<span id="cb29-10"><a href="database-management-and-data-systems-sql.html#cb29-10" aria-hidden="true" tabindex="-1"></a>        (<span class="kw">PARTITION</span> <span class="kw">BY</span> column1 <span class="kw">ORDER</span> <span class="kw">BY</span> column2)</span>
+<span id="cb29-11"><a href="database-management-and-data-systems-sql.html#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> column1, column2</span></code></pre></div>
 
 </div>
 </div>

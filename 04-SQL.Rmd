@@ -6,7 +6,7 @@ library(DBI)
 library(knitr)
 db <- dbConnect(RSQLite::SQLite(), ":memory:")
 knitr::opts_chunk$set(eval=FALSE, echo=TRUE)
-knitr::opts_chunk$set(connection = "db")
+knitr::opts_chunk$set(connection = "MySQL")
 ```
 
 `Database schemas` show `data types` for each field (column) in all tables (data frame), and they also show `relationships` between tables.
@@ -335,7 +335,7 @@ NOT LIKE ...
 ```
 
 | LIKE Operator                  | Description                                                                          |
-|--------------------|----------------------------------------------------|
+|---------------------|---------------------------------------------------|
 | WHERE column LIKE `'a%'`       | Finds any values that **start with** "a"                                             |
 | WHERE column LIKE `'%a'`       | Finds any values that **end with** "a"                                               |
 | WHERE column LIKE `'%or%'`     | Finds any values that **have "or" in any position**                                  |
@@ -391,13 +391,13 @@ FROM table1
 
     -   `date:` a datetime value
 
--   DATEDIFF (datepart, startdate, enddate): Obtain the difference between two datetime values ---\> always returns a number
+-   `DATEDIFF (datepart, startdate, enddate):` Obtain the difference between two datetime values ---\> always returns a number
 
-    -   datepart: unit of measurement (DD, MM, etc,)
+    -   `datepart:` unit of measurement (DD, MM, etc,)
 
-    -   startdate: the starting date value
+    -   `startdate:` the starting date value
 
-    -   enddate: the ending datetime value
+    -   `enddate:` the ending datetime value
 
     ```{sql }
     /* date math w/ DATEDIFF */
@@ -419,6 +419,7 @@ FROM table1
 ### ROUND and TRUNCATE
 
 ```{sql}
+/* IN T-SQL */
 -- round(17.8, 0) --> 18 while truncate rounds 17.8 to 17
 SELECT column1,
 ROUND(column2, 0) AS RoundingtoWhole,
@@ -433,6 +434,8 @@ OTHER MATH functions
 `SQRT():` square root \| `SQUARE():` square
 
 `LOG(column, digit):` returns the LOG with base \# of digit
+
+## Advanced SQL - loops/CTE/Windows
 
 ### WHILE Loops & DECLARE
 
@@ -513,7 +516,7 @@ JOIN BloodPressureAge b
 GROUP BY a.Age, b.MaxBloodPressure
 ```
 
-### Window functions in T-SQL
+### [Window Functions in SQL](https://mode.com/sql-tutorial/sql-window-functions/#basic-windowing-syntax)
 
 -   Create the window with `OVER` clause
 
@@ -535,15 +538,21 @@ FROM SaleGoal
 
 When the year changes, the value in the YearTotal column changes showing the total for the next year becuz the window is partitioned by sales year.
 */
-
-/* use other aggregations in windowing function */
-SELECT .....
-       COUNT(...)
-       OVER (PARTITION BY ...) AS ...
-FROM ...
 ```
 
-### **OTHER Common used window functions**
+### Windows functions Cheatsheet
+
+| Col1                                | Col2                                                                                                                                                                                       |
+|-------------------|-----------------------------------------------------|
+| `ROW_NUMBER()`                      | Displays the unique number/index of a given row *(no duplicates as compared to rank/dense_rank)*; starts are 1 and numbers the rows according to the `ORDER BY` part of window statements. |
+| `RANK()`                            | Gives the identical rows a rank of 2, then skip ranks 3 and 4, so next rank would be 5.                                                                                                    |
+| `DENSE_RANK()`                      | Also gives identical rows a rank of 2, but the following rank would be 3 *-- no ranks would be skipped.*                                                                                   |
+| `NTILE(*# of buckets*)`             | Identify what percentile (or quantile, or any other subdivison) a given row falls into.                                                                                                    |
+| `LAG(column, *# of rows*)`          | Creates columns that pull **previous** values from other rows (second parameter specifies how many rows we need to pull)                                                                   |
+| `LEAD(column, *# of rows*)`         | Creates columns that pull **following/next** values from other rows (second parameter specifies how many rows we need to pull)                                                             |
+| `SUM() | COUNT() | AVG() | STDEV()` | Creates columns that calculate corresponding values based on mathematical operations                                                                                                       |
+
+#### **Getting first/last and next/previous values**
 
 -   `FIRST_VALUE()` returns the first values in the window
 
@@ -566,7 +575,7 @@ FROM SaleGoal
 
 -   Getting the next value with `LEAD()` and previous value with `LAG()`
 
-    -   provides the ability to query the value from NEXT or PREVIOUSrow
+    -   provides the ability to query the value from NEXT or PREVIOUS row
 
     -   also requires the use of `ORDER BY` to order the rows
 
@@ -580,7 +589,7 @@ FROM SaleGoal
     FROM SaleGoal
     ```
 
-### **Adding row numbers**
+#### **Adding row numbers**
 
 -   `ROW_NUMBER():` sequentially numbers the rows in the window
 
@@ -594,7 +603,7 @@ SELECT SalesPerson, SalesYear, CurrentQuota,
 FROM SaleGoal
 ```
 
-### Using windows for Statistical Functions
+#### Using windows for Statistical Functions
 
 -   STDEV(): calculates the standard deviation
 
@@ -627,27 +636,39 @@ FROM SaleGoal
     WHERE QuataList IN (SELECT MAX(QuotaList) FROM QuotaCount) -- select value in maximum count
     ```
 
-## COMMON ASKED PRACTICES
+### Defining a window alias
 
-### Select rows with even or odd values
+Example:
 
--   In **PostgreSQL, My SQL, Oracle, we can use `MOD()`** to check remainder.
+```{sql}
+SELECT column1,
+       column2,
+       NTILE(4) OVER
+        (PARTITION BY column1 ORDER BY column2)
+        AS quartile,
+       NTILE(5) OVER
+        (PARTITION BY column1 ORDER BY column2)
+        AS quintile,
+       NTILE(100) OVER
+        (PARTITION BY column1 ORDER BY column2)
+        AS percentile
+FROM table_name
+WHERE condition(s)
+ORDER BY column1, column2
+```
 
-    ```{sql }
-    /* find column w/ even values */
-    SELECT *
-    FROM table_name
-    WHERE mod(column_name, 2) = 0;
-    -- if finding column w/ odd values then
-    WHERE mod(column_name, 2) <> 0;
-    ```
+Re-written example using **window alias**
 
--   In **MS SQL Server, there is no MOD so we use `%`** instead.
-
-    ```{sql}
-    -- replace conditions in WHERE clause as above with following:
-    WHERE column_name % 2 = 0; -- for even number
-    WHERE column_name % 2 <> 0; -- for odd number
-    ```
-
-### Query the name of any student in STUDENTS who score higher than 75 marks + order output by LAST 3 chars of each name. If 2 or more students both
+```{sql}
+SELECT column1,
+       column2
+       NTILE(4) OVER ntile_window AS quartile,
+       NTILE(5) OVER ntile_window AS quintile,
+       NTILE(100) OVER ntile_window AS percentile
+FROM table_name
+WHERE condition(s)
+/* NOTE if include the WINDOW clause, should always come AFTER the WHERE clause */
+WINDOW ntile_window AS
+        (PARTITION BY column1 ORDER BY column2)
+ORDER BY column1, column2
+```
