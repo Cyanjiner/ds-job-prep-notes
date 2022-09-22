@@ -1,1 +1,125 @@
 # Machine Learning Models
+
+## Introduction
+
+### What is Machine Learning
+
+**`General Definition:`**
+
+    > [Machine Learning is the] field of study that gives computers the ability to learn without being explicitly programmed.
+    > `r tufte::quote_footer('--- Arthur Samuel, 1959')`
+
+**`Engineering-oriented Definition:`**
+
+    > A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.
+    > `r tufte::quote_footer('--- Tom Mitchell, 1997')`
+
+### Why do we use Machine Learning?
+
+Machine learning techniques are great for:
+
+-   Problems whose existing solutions require a lot of fine-tuning and long list of rules: one ML algorithm can often simplify code and perform better than traditional approach.
+
+-   Complex problems for which using a traditional approach yields no good solution
+
+-   Fluctuating environments: A ML system can adapt to new data
+
+-   Getting insights about complex problems and large amount of data (data mining).
+
+### Examples of ML applications in industries
+
++--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ML technique       | Problems                                                                                                                                             |
++====================+======================================================================================================================================================+
+| Classification     | *Analyzing images of products on a production line to automatically classify them (with CNNs)*                                                       |
+|                    |                                                                                                                                                      |
+|                    | *Classifying new articles (NLP + RNNs/CNNs/Transformers)*                                                                                            |
+|                    |                                                                                                                                                      |
+|                    | *Automatically flagging offensive comments on discussion forums (text classification w/ NLP tools)*                                                  |
++--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Regression         | *Forecasting company revenue based on performance metrics (with Linear/Polynomial Regression / a regression SVM / a regression Random Forest / RNN)* |
++--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Clustering         | *Client segmentation based on purchases to derive marketing strategy for each segment*                                                               |
++--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Anomaly Detection  | *Detecting credit card fraud*                                                                                                                        |
++--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Recommender System | *Recommending a product that clients may be interested in based on past purchases*                                                                   |
++--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+### Types of Machine Learning Systems
+
+**Criteria:**
+
+-   trained with human supervision? ---\> `supervised, unsupervised, semisupervised, Reinforcement Learning`
+
+-   can learn incrementally on the fly? ---\> `online vs. batch learning`
+
+-   work by simply comparing new data points to know data points OR by detecting patterns in training data and building a predictive model? ---\> `instance-based vs. model-based learning`
+
+#### Supervised/Unsupervised Learning
+
+Most important **`Supervised Learning`** algorithms:
+
+-   k-Nearest Neighbors
+
+-   Linear Regression
+
+-   Logistic Regression
+
+-   Support Vector Machines (SVM)
+
+-   Decision Trees and Random Forests
+
+-   Neural Networks
+
+Most important **`Unsupervised Learning`** algorithms:
+
+-   Clustering ---\> e.g. run a clustering to detect groups of similar observations where we do not need to tell the algorithm which group an observation belongs to: it finds those connections without human supervision.
+
+    -   K-Means
+
+    -   DBSCAN
+
+    -   Hierarchical Cluster Analysis
+
+-   Anomaly detection and novelty detection
+
+    -   One-class SVM
+
+    -   Isolation Forest
+
+-   Visualization and Dimensionality reduction ---\> feed visualization algorithms complex and unlabeled data, and they output a 2D or 3D representation of our data that can be easily plotted ---\> helps us understand how data is organized and perhaps identify unsuspected patterns. \| Dimensionality reduction aims at simplifying data without losing too much information by merging correlated features into one for example (also the process of feature extraction).
+
+    -   Principal Component Analysis (PCA)
+
+    -   Kernel PCA
+
+    -   Locally Linear Embedding (LLE)
+
+    -   t-Distributed Stochastic Neighbor Embedding (t-SNE)
+
+-   Association rule learning ---\> dig into large amounts of data and discover interesting relations between attributes
+
+    -   Apriori
+
+    -   Eclat
+
+#### Semisupervised Learning
+
+Since labeling data is usually time-consuming and costly, we will often have plenty of unlabeled instances, and few labeled instances. Some algorithms can deal with data that's partially labeled.
+
+Most semisupervised learning algorithms are combinations of unsupervised and supervised algorithms. For example, *deep belief networks* (DBNs) are based on unsupervised components called *restricted Boltzmann machines* (RBMs) stacked on top of one another. RBMs are trained sequentially in an unsupervised manner, and then the whole system is fine-tuned using supervised learning techniques.
+
+#### Reinforcement Learning
+
+In RL, the learning system, called an *agent* in this context, can observe the environment, select and perform actions, and get *rewards* in turn (or *penalties* in the form of negative rewards). It must then learn by itself what is the best strategy, called a *policy*, to get the most reward over time. A policy defines what action the agent should choose when it is in a given situation.
+
+#### Batch and Online Learning
+
+**`Batch Learning`**
+
+In batch learning, the system is incapable of learning incrementally: it must be trained using all the available data.
+
+**`On;line learning`**
+
+In online learning, you train the system incrementally by feeding it data instances sequentially, either individually or in small groups called mini-batches. Each learning step is fast and cheap, so the system can learn about new data on the fly, as it arrives.
