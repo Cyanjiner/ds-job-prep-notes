@@ -1,5 +1,7 @@
 # Machine Learning Models
 
+references: [cs 229 Stanford](https://syllabus.stanford.edu/syllabus/#/viewProtectedSyllabus)
+
 ## Introduction
 
 ### What is Machine Learning
@@ -120,6 +122,32 @@ In RL, the learning system, called an *agent* in this context, can observe the e
 
 In batch learning, the system is incapable of learning incrementally: it must be trained using all the available data.
 
-**`On;line learning`**
+**`Online learning`**
 
 In online learning, you train the system incrementally by feeding it data instances sequentially, either individually or in small groups called mini-batches. Each learning step is fast and cheap, so the system can learn about new data on the fly, as it arrives.
+
+### Supervised Learning
+
+Most important **`Supervised Learning`** algorithms:
+
+-   `Regression`
+
+    -   Linear Regression
+
+    -   Logistic Regression
+
+-   `Classification`
+
+    -   k-Nearest Neighbors
+
+    -   Support Vector Machines (SVM)
+
+    -   Decision Trees and Random Forests
+
+    -   Neural Networks
+
+Terminology
+
+$$
+x^{(i)} \text{ denotes input variable (feature), } y^{(i)} \text{denotes output / target variable; } (x^{(i)},y^{(i)}) \text{ denotes a training example.} 
+$$
