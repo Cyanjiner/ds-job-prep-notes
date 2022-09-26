@@ -67,6 +67,16 @@ adding-row-numbers
 using-windows-for-statistical-functions
 defining-a-window-alias
 machine-learning-models
+introduction
+what-is-machine-learning
+why-do-we-use-machine-learning
+examples-of-ml-applications-in-industries
+types-of-machine-learning-systems
+supervisedunsupervised-learning
+semisupervised-learning
+reinforcement-learning
+batch-and-online-learning
+supervised-learning
 product-sense
 my-ds-summer-intern-preparation-guide
 resume-related-technical-content-jiner-only

@@ -38,6 +38,8 @@ Machine learning techniques are great for:
 |                    | *Classifying new articles (NLP + RNNs/CNNs/Transformers)*                                                                                            |
 |                    |                                                                                                                                                      |
 |                    | *Automatically flagging offensive comments on discussion forums (text classification w/ NLP tools)*                                                  |
+|                    |                                                                                                                                                      |
+|                    | *Market segmentation / social network analysis*                                                                                                      |
 +--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Regression         | *Forecasting company revenue based on performance metrics (with Linear/Polynomial Regression / a regression SVM / a regression Random Forest / RNN)* |
 +--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -58,75 +60,7 @@ Machine learning techniques are great for:
 
 -   work by simply comparing new data points to know data points OR by detecting patterns in training data and building a predictive model? ---\> `instance-based vs. model-based learning`
 
-#### Supervised/Unsupervised Learning
-
-Most important **`Supervised Learning`** algorithms:
-
--   k-Nearest Neighbors
-
--   Linear Regression
-
--   Logistic Regression
-
--   Support Vector Machines (SVM)
-
--   Decision Trees and Random Forests
-
--   Neural Networks
-
-Most important **`Unsupervised Learning`** algorithms:
-
--   Clustering ---\> e.g. run a clustering to detect groups of similar observations where we do not need to tell the algorithm which group an observation belongs to: it finds those connections without human supervision.
-
-    -   K-Means
-
-    -   DBSCAN
-
-    -   Hierarchical Cluster Analysis
-
--   Anomaly detection and novelty detection
-
-    -   One-class SVM
-
-    -   Isolation Forest
-
--   Visualization and Dimensionality reduction ---\> feed visualization algorithms complex and unlabeled data, and they output a 2D or 3D representation of our data that can be easily plotted ---\> helps us understand how data is organized and perhaps identify unsuspected patterns. \| Dimensionality reduction aims at simplifying data without losing too much information by merging correlated features into one for example (also the process of feature extraction).
-
-    -   Principal Component Analysis (PCA)
-
-    -   Kernel PCA
-
-    -   Locally Linear Embedding (LLE)
-
-    -   t-Distributed Stochastic Neighbor Embedding (t-SNE)
-
--   Association rule learning ---\> dig into large amounts of data and discover interesting relations between attributes
-
-    -   Apriori
-
-    -   Eclat
-
-#### Semisupervised Learning
-
-Since labeling data is usually time-consuming and costly, we will often have plenty of unlabeled instances, and few labeled instances. Some algorithms can deal with data that's partially labeled.
-
-Most semisupervised learning algorithms are combinations of unsupervised and supervised algorithms. For example, *deep belief networks* (DBNs) are based on unsupervised components called *restricted Boltzmann machines* (RBMs) stacked on top of one another. RBMs are trained sequentially in an unsupervised manner, and then the whole system is fine-tuned using supervised learning techniques.
-
-#### Reinforcement Learning
-
-In RL, the learning system, called an *agent* in this context, can observe the environment, select and perform actions, and get *rewards* in turn (or *penalties* in the form of negative rewards). It must then learn by itself what is the best strategy, called a *policy*, to get the most reward over time. A policy defines what action the agent should choose when it is in a given situation.
-
-#### Batch and Online Learning
-
-**`Batch Learning`**
-
-In batch learning, the system is incapable of learning incrementally: it must be trained using all the available data.
-
-**`Online learning`**
-
-In online learning, you train the system incrementally by feeding it data instances sequentially, either individually or in small groups called mini-batches. Each learning step is fast and cheap, so the system can learn about new data on the fly, as it arrives.
-
-### Supervised Learning
+#### Supervised Learning
 
 Most important **`Supervised Learning`** algorithms:
 
@@ -149,5 +83,67 @@ Most important **`Supervised Learning`** algorithms:
 Terminology
 
 $$
-x^{(i)} \text{ denotes input variable (feature), } y^{(i)} \text{denotes output / target variable; } (x^{(i)},y^{(i)}) \text{ denotes a training example.} 
+x^{(i)} \text{ denotes input variable (feature), } y^{(i)} \text{denotes output / target variable.} 
 $$
+
+$$
+ (x^{(i)},y^{(i)}) \text{ denotes a training example.}
+$$
+
+#### Unsupervised Learning
+
+*\--\> unlabeled data (only x but no y)*
+
+Most important **`Unsupervised Learning`** algorithms:
+
+-   **`Clustering`** ---\> e.g. run a clustering to detect groups of similar observations where we do not need to tell the algorithm which group an observation belongs to: it finds those connections without human supervision.
+
+    -   K-Means
+
+    -   DBSCAN
+
+    -   Hierarchical Cluster Analysis
+
+-   `Anomaly detection and novelty detection`
+
+    -   One-class SVM
+
+    -   Isolation Forest
+
+-   `Visualization and Dimensionality reduction` ---\> feed visualization algorithms complex and unlabeled data, and they output a 2D or 3D representation of our data that can be easily plotted ---\> helps us understand how data is organized and perhaps identify unsuspected patterns. \| Dimensionality reduction aims at simplifying data without losing too much information by merging correlated features into one for example (also the process of feature extraction).
+
+    -   Principal Component Analysis (PCA)
+
+    -   Kernel PCA
+
+    -   Locally Linear Embedding (LLE)
+
+    -   t-Distributed Stochastic Neighbor Embedding (t-SNE)
+
+-   `Association rule learning` ---\> dig into large amounts of data and discover interesting relations between attributes
+
+    -   Apriori
+
+    -   Eclat
+
+#### Semisupervised Learning
+
+Since labeling data is usually time-consuming and costly, we will often have plenty of unlabeled instances, and few labeled instances. Some algorithms can deal with data that's partially labeled.
+
+Most semisupervised learning algorithms are combinations of unsupervised and supervised algorithms. For example, *deep belief networks* (DBNs) are based on unsupervised components called *restricted Boltzmann machines* (RBMs) stacked on top of one another. RBMs are trained sequentially in an unsupervised manner, and then the whole system is fine-tuned using supervised learning techniques.
+
+#### Reinforcement Learning
+
+In RL, the learning system, called an *agent* in this context, can observe the environment, select and perform actions, and get *`rewards`* in turn (or *`penalties`* in the form of negative rewards). It must then learn by itself what is the best strategy, called a *`policy`*, to get the most reward over time. A policy defines what action the agent should choose when it is in a given situation.
+
+#### Batch and Online Learning
+
+**`Batch Learning`**
+
+In batch learning, the system is incapable of learning incrementally: it must be trained using all the available data.
+
+**`Online learning`**
+
+In online learning, you train the system incrementally by feeding it data instances sequentially, either individually or in small groups called mini-batches. Each learning step is fast and cheap, so the system can learn about new data on the fly, as it arrives.
+
+### Practical ML advice
