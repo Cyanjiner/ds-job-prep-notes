@@ -335,7 +335,7 @@ NOT LIKE ...
 ```
 
 | LIKE Operator                  | Description                                                                          |
-|---------------------|---------------------------------------------------|
+|----------------------|--------------------------------------------------|
 | WHERE column LIKE `'a%'`       | Finds any values that **start with** "a"                                             |
 | WHERE column LIKE `'%a'`       | Finds any values that **end with** "a"                                               |
 | WHERE column LIKE `'%or%'`     | Finds any values that **have "or" in any position**                                  |
@@ -543,7 +543,7 @@ When the year changes, the value in the YearTotal column changes showing the tot
 ### Windows functions Cheatsheet
 
 | Col1                                | Col2                                                                                                                                                                                       |
-|-------------------|-----------------------------------------------------|
+|--------------------|----------------------------------------------------|
 | `ROW_NUMBER()`                      | Displays the unique number/index of a given row *(no duplicates as compared to rank/dense_rank)*; starts are 1 and numbers the rows according to the `ORDER BY` part of window statements. |
 | `RANK()`                            | Gives the identical rows a rank of 2, then skip ranks 3 and 4, so next rank would be 5.                                                                                                    |
 | `DENSE_RANK()`                      | Also gives identical rows a rank of 2, but the following rank would be 3 *-- no ranks would be skipped.*                                                                                   |
@@ -672,3 +672,76 @@ WINDOW ntile_window AS
         (PARTITION BY column1 ORDER BY column2)
 ORDER BY column1, column2
 ```
+
+# CS145 --- DBs & Data Systems
+
+## Introduction
+
+-   Applications of DBs and Data Systems
+
+-   Properties of `general DBs`, `special-purpose DBs`, `data lakes`
+
+-   Unpack a DB: Example of a mobile game using a DB
+
+    -   For Whom and Why?
+
+    -   Sample data architectures
+
+-   Goal of `standard databases`
+
+    -   Platform to store, manage data (read/learn/modify) ---\> supporting scale/speed/stability/evolution...
+
+-   Goals of `special databases`
+
+    -   DBs are often optimized for key use cases
+
+        -   store current data (e.g. lot of leads)
+
+        -   optimize historical data (e.g. logs)
+
+        -   run batch workloads (training)
+
+-   Data System "v1" on cloud
+
+    1.  log user actions
+
+    2.  store in DB, after ETL
+
+    3.  run queries in a peta scale analytcis system *(BigQuery)*
+
+    4.  visualize query results
+
+## Project goals
+
+-   Run queries on public datasets
+
+-   Explore/Visualize public datasets
+
+-   Predict using Machine Learning
+
+-   Full Query-Visualize-Learn data cycle on cloud stack
+
+## IO Blocks for Efficiency
+
+-   `KEY CONCEPTS`
+
+    -   Data is stored in *Blocks* (aka *"partition"*)
+
+    -   Sequential IO is 10x-100x+ faster than "many" random IO
+
+        -   e.g. 1 MB (located sequentially) versus 1 Million bytes in random locations
+
+    -   HDDs/SSDs copy sequential "big" blocks of bytes to/from RAM
+
+## Basic System Numbers
+
+-   **`Access Latency (secs)`** = Time to access Block's start location
+
+-   **`Scan Throughput (GB/sec)`** = Speed to Scan + Copy data to RAM
+
+|                             | Access Latency (sec) | Scan Throughput (GB/sec) | What you get for \~100 |
+|-----------------------------|----------------------|--------------------------|------------------------|
+| RAM                         | \~100 nanosec        | \~100 GB/sec             |                        |
+| High-end SSD                |                      |                          |                        |
+| HDD Seek (hard disk)        |                      |                          |                        |
+| Machines M1 TO M2 (network) |                      |                          |                        |

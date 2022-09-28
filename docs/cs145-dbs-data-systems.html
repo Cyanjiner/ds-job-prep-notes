@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Machine Learning Models | DS Intern/NG Job Application Prep Notes</title>
-  <meta name="description" content="Chapter 6 Machine Learning Models | DS Intern/NG Job Application Prep Notes" />
+  <title>Chapter 5 CS145 — DBs &amp; Data Systems | DS Intern/NG Job Application Prep Notes</title>
+  <meta name="description" content="Chapter 5 CS145 — DBs &amp; Data Systems | DS Intern/NG Job Application Prep Notes" />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Machine Learning Models | DS Intern/NG Job Application Prep Notes" />
+  <meta property="og:title" content="Chapter 5 CS145 — DBs &amp; Data Systems | DS Intern/NG Job Application Prep Notes" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Machine Learning Models | DS Intern/NG Job Application Prep Notes" />
+  <meta name="twitter:title" content="Chapter 5 CS145 — DBs &amp; Data Systems | DS Intern/NG Job Application Prep Notes" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="cs145-dbs-data-systems.html"/>
-<link rel="next" href="product-sense.html"/>
+<link rel="prev" href="database-management-and-data-systems-sql.html"/>
+<link rel="next" href="machine-learning-models.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -283,154 +283,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="machine-learning-models" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Machine Learning Models<a href="machine-learning-models.html#machine-learning-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>references: <a href="https://syllabus.stanford.edu/syllabus/#/viewProtectedSyllabus">cs 229 Stanford</a></p>
-<div id="introduction-1" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Introduction<a href="machine-learning-models.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="what-is-machine-learning" class="section level3 hasAnchor" number="6.1.1">
-<h3><span class="header-section-number">6.1.1</span> What is Machine Learning<a href="machine-learning-models.html#what-is-machine-learning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong><code>General Definition:</code></strong></p>
-<pre><code>&gt; [Machine Learning is the] field of study that gives computers the ability to learn without being explicitly programmed.
-&gt; &lt;footer&gt;--- Arthur Samuel, 1959&lt;/footer&gt;</code></pre>
-<p><strong><code>Engineering-oriented Definition:</code></strong></p>
-<pre><code>&gt; A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.
-&gt; &lt;footer&gt;--- Tom Mitchell, 1997&lt;/footer&gt;</code></pre>
-</div>
-<div id="why-do-we-use-machine-learning" class="section level3 hasAnchor" number="6.1.2">
-<h3><span class="header-section-number">6.1.2</span> Why do we use Machine Learning?<a href="machine-learning-models.html#why-do-we-use-machine-learning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Machine learning techniques are great for:</p>
+<div id="cs145-dbs-data-systems" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> CS145 — DBs &amp; Data Systems<a href="cs145-dbs-data-systems.html#cs145-dbs-data-systems" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Introduction<a href="cs145-dbs-data-systems.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><p>Problems whose existing solutions require a lot of fine-tuning and long list of rules: one ML algorithm can often simplify code and perform better than traditional approach.</p></li>
-<li><p>Complex problems for which using a traditional approach yields no good solution</p></li>
-<li><p>Fluctuating environments: A ML system can adapt to new data</p></li>
-<li><p>Getting insights about complex problems and large amount of data (data mining).</p></li>
+<li><p>Applications of DBs and Data Systems</p></li>
+<li><p>Properties of <code>general DBs</code>, <code>special-purpose DBs</code>, <code>data lakes</code></p></li>
+<li><p>Unpack a DB: Example of a mobile game using a DB</p>
+<ul>
+<li><p>For Whom and Why?</p></li>
+<li><p>Sample data architectures</p></li>
+</ul></li>
+<li><p>Goal of <code>standard databases</code></p>
+<ul>
+<li>Platform to store, manage data (read/learn/modify) —&gt; supporting scale/speed/stability/evolution…</li>
+</ul></li>
+<li><p>Goals of <code>special databases</code></p>
+<ul>
+<li><p>DBs are often optimized for key use cases</p>
+<ul>
+<li><p>store current data (e.g. lot of leads)</p></li>
+<li><p>optimize historical data (e.g. logs)</p></li>
+<li><p>run batch workloads (training)</p></li>
+</ul></li>
+</ul></li>
+<li><p>Data System “v1” on cloud</p>
+<ol style="list-style-type: decimal">
+<li><p>log user actions</p></li>
+<li><p>store in DB, after ETL</p></li>
+<li><p>run queries in a peta scale analytcis system <em>(BigQuery)</em></p></li>
+<li><p>visualize query results</p></li>
+</ol></li>
 </ul>
-</div>
-<div id="examples-of-ml-applications-in-industries" class="section level3 hasAnchor" number="6.1.3">
-<h3><span class="header-section-number">6.1.3</span> Examples of ML applications in industries<a href="machine-learning-models.html#examples-of-ml-applications-in-industries" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<table>
-<colgroup>
-<col width="12%" />
-<col width="87%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>ML technique</th>
-<th>Problems</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Classification</td>
-<td><p><em>Analyzing images of products on a production line to automatically classify them (with CNNs)</em></p>
-<p><em>Classifying new articles (NLP + RNNs/CNNs/Transformers)</em></p>
-<p><em>Automatically flagging offensive comments on discussion forums (text classification w/ NLP tools)</em></p>
-<p><em>Market segmentation / social network analysis</em></p></td>
-</tr>
-<tr class="even">
-<td>Regression</td>
-<td><em>Forecasting company revenue based on performance metrics (with Linear/Polynomial Regression / a regression SVM / a regression Random Forest / RNN)</em></td>
-</tr>
-<tr class="odd">
-<td>Clustering</td>
-<td><em>Client segmentation based on purchases to derive marketing strategy for each segment</em></td>
-</tr>
-<tr class="even">
-<td>Anomaly Detection</td>
-<td><em>Detecting credit card fraud</em></td>
-</tr>
-<tr class="odd">
-<td>Recommender System</td>
-<td><em>Recommending a product that clients may be interested in based on past purchases</em></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="types-of-machine-learning-systems" class="section level3 hasAnchor" number="6.1.4">
-<h3><span class="header-section-number">6.1.4</span> Types of Machine Learning Systems<a href="machine-learning-models.html#types-of-machine-learning-systems" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Criteria:</strong></p>
-<ul>
-<li><p>trained with human supervision? —&gt; <code>supervised, unsupervised, semisupervised, Reinforcement Learning</code></p></li>
-<li><p>can learn incrementally on the fly? —&gt; <code>online vs. batch learning</code></p></li>
-<li><p>work by simply comparing new data points to know data points OR by detecting patterns in training data and building a predictive model? —&gt; <code>instance-based vs. model-based learning</code></p></li>
-</ul>
-<div id="supervised-learning" class="section level4 hasAnchor" number="6.1.4.1">
-<h4><span class="header-section-number">6.1.4.1</span> Supervised Learning<a href="machine-learning-models.html#supervised-learning" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Most important <strong><code>Supervised Learning</code></strong> algorithms:</p>
-<ul>
-<li><p><code>Regression</code></p>
-<ul>
-<li><p>Linear Regression</p></li>
-<li><p>Logistic Regression</p></li>
-</ul></li>
-<li><p><code>Classification</code></p>
-<ul>
-<li><p>k-Nearest Neighbors</p></li>
-<li><p>Support Vector Machines (SVM)</p></li>
-<li><p>Decision Trees and Random Forests</p></li>
-<li><p>Neural Networks</p></li>
-</ul></li>
-</ul>
-<p>Terminology</p>
-<p><span class="math display">\[
-x^{(i)} \text{ denotes input variable (feature), } y^{(i)} \text{denotes output / target variable.}
-\]</span></p>
-<p><span class="math display">\[
-(x^{(i)},y^{(i)}) \text{ denotes a training example.}
-\]</span></p>
-</div>
-<div id="unsupervised-learning" class="section level4 hasAnchor" number="6.1.4.2">
-<h4><span class="header-section-number">6.1.4.2</span> Unsupervised Learning<a href="machine-learning-models.html#unsupervised-learning" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>--&gt; unlabeled data (only x but no y)</em></p>
-<p>Most important <strong><code>Unsupervised Learning</code></strong> algorithms:</p>
-<ul>
-<li><p><strong><code>Clustering</code></strong> —&gt; e.g. run a clustering to detect groups of similar observations where we do not need to tell the algorithm which group an observation belongs to: it finds those connections without human supervision.</p>
-<ul>
-<li><p>K-Means</p></li>
-<li><p>DBSCAN</p></li>
-<li><p>Hierarchical Cluster Analysis</p></li>
-</ul></li>
-<li><p><code>Anomaly detection and novelty detection</code></p>
-<ul>
-<li><p>One-class SVM</p></li>
-<li><p>Isolation Forest</p></li>
-</ul></li>
-<li><p><code>Visualization and Dimensionality reduction</code> —&gt; feed visualization algorithms complex and unlabeled data, and they output a 2D or 3D representation of our data that can be easily plotted —&gt; helps us understand how data is organized and perhaps identify unsuspected patterns. | Dimensionality reduction aims at simplifying data without losing too much information by merging correlated features into one for example (also the process of feature extraction).</p>
-<ul>
-<li><p>Principal Component Analysis (PCA)</p></li>
-<li><p>Kernel PCA</p></li>
-<li><p>Locally Linear Embedding (LLE)</p></li>
-<li><p>t-Distributed Stochastic Neighbor Embedding (t-SNE)</p></li>
-</ul></li>
-<li><p><code>Association rule learning</code> —&gt; dig into large amounts of data and discover interesting relations between attributes</p>
-<ul>
-<li><p>Apriori</p></li>
-<li><p>Eclat</p></li>
-</ul></li>
-</ul>
-</div>
-<div id="semisupervised-learning" class="section level4 hasAnchor" number="6.1.4.3">
-<h4><span class="header-section-number">6.1.4.3</span> Semisupervised Learning<a href="machine-learning-models.html#semisupervised-learning" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Since labeling data is usually time-consuming and costly, we will often have plenty of unlabeled instances, and few labeled instances. Some algorithms can deal with data that’s partially labeled.</p>
-<p>Most semisupervised learning algorithms are combinations of unsupervised and supervised algorithms. For example, <em>deep belief networks</em> (DBNs) are based on unsupervised components called <em>restricted Boltzmann machines</em> (RBMs) stacked on top of one another. RBMs are trained sequentially in an unsupervised manner, and then the whole system is fine-tuned using supervised learning techniques.</p>
-</div>
-<div id="reinforcement-learning" class="section level4 hasAnchor" number="6.1.4.4">
-<h4><span class="header-section-number">6.1.4.4</span> Reinforcement Learning<a href="machine-learning-models.html#reinforcement-learning" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>In RL, the learning system, called an <em>agent</em> in this context, can observe the environment, select and perform actions, and get <em><code>rewards</code></em> in turn (or <em><code>penalties</code></em> in the form of negative rewards). It must then learn by itself what is the best strategy, called a <em><code>policy</code></em>, to get the most reward over time. A policy defines what action the agent should choose when it is in a given situation.</p>
-</div>
-<div id="batch-and-online-learning" class="section level4 hasAnchor" number="6.1.4.5">
-<h4><span class="header-section-number">6.1.4.5</span> Batch and Online Learning<a href="machine-learning-models.html#batch-and-online-learning" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><strong><code>Batch Learning</code></strong></p>
-<p>In batch learning, the system is incapable of learning incrementally: it must be trained using all the available data.</p>
-<p><strong><code>Online learning</code></strong></p>
-<p>In online learning, you train the system incrementally by feeding it data instances sequentially, either individually or in small groups called mini-batches. Each learning step is fast and cheap, so the system can learn about new data on the fly, as it arrives.</p>
-</div>
-</div>
-<div id="practical-ml-advice" class="section level3 hasAnchor" number="6.1.5">
-<h3><span class="header-section-number">6.1.5</span> Practical ML advice<a href="machine-learning-models.html#practical-ml-advice" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 
-</div>
 </div>
 </div>
             </section>
@@ -438,8 +324,8 @@ x^{(i)} \text{ denotes input variable (feature), } y^{(i)} \text{denotes output 
           </div>
         </div>
       </div>
-<a href="cs145-dbs-data-systems.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="product-sense.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="database-management-and-data-systems-sql.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="machine-learning-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -470,7 +356,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cyanjiner/ds-job-prep-notes/edit/master/05-ML.Rmd",
+"link": "https://github.com/cyanjiner/ds-job-prep-notes/edit/master/04-SQL.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -478,7 +364,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/cyanjiner/ds-job-prep-notes/blob/master/05-ML.Rmd",
+"link": "https://github.com/cyanjiner/ds-job-prep-notes/blob/master/04-SQL.Rmd",
 "text": null
 },
 "download": null,
