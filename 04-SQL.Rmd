@@ -739,9 +739,27 @@ ORDER BY column1, column2
 
 -   **`Scan Throughput (GB/sec)`** = Speed to Scan + Copy data to RAM
 
+\*Note: WHY are they different?
+
+-   Digital (e.g. SSDs and RAM) vs Analog (e.g. HDD seeks)
+
+-   Distance from CPU
+
 |                             | Access Latency (sec) | Scan Throughput (GB/sec) | What you get for \~100 |
 |-----------------------------|----------------------|--------------------------|------------------------|
 | RAM                         | \~100 nanosec        | \~100 GB/sec             |                        |
 | High-end SSD                |                      |                          |                        |
 | HDD Seek (hard disk)        |                      |                          |                        |
 | Machines M1 TO M2 (network) |                      |                          |                        |
+
+## IO Cost Model
+
+`Total time to ReadData = Access Latency * M + DataSize / ScanThroughput`
+
+-   DataSize = data size
+
+-   M = \# of non-contiguous Blocks
+
+-   AccessLatency = Time to access Block
+
+-   ScanThroughput = Speed to copy/scan to RAM

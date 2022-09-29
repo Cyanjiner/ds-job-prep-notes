@@ -80,16 +80,6 @@ Most important **`Supervised Learning`** algorithms:
 
     -   Neural Networks
 
-Terminology
-
-$$
-x^{(i)} \text{ denotes input variable (feature), } y^{(i)} \text{denotes output / target variable.} 
-$$
-
-$$
- (x^{(i)},y^{(i)}) \text{ denotes a training example.}
-$$
-
 #### Unsupervised Learning
 
 *\--\> unlabeled data (only x but no y)*
@@ -134,7 +124,7 @@ Most semisupervised learning algorithms are combinations of unsupervised and sup
 
 #### Reinforcement Learning
 
-In RL, the learning system, called an *agent* in this context, can observe the environment, select and perform actions, and get *`rewards`* in turn (or *`penalties`* in the form of negative rewards). It must then learn by itself what is the best strategy, called a *`policy`*, to get the most reward over time. A policy defines what action the agent should choose when it is in a given situation.
+In RL, the learning system, called an *agent* in this context, can observe the environment, select and perform actions, and get *`rewards`* in turn (or *`penalties`* in the form of negative rewards). It must then learn by itself what is the best strategy, called a *policy*, to get the most reward over time. A policy defines what action the agent should choose when it is in a given situation.
 
 #### Batch and Online Learning
 
@@ -147,3 +137,23 @@ In batch learning, the system is incapable of learning incrementally: it must be
 In online learning, you train the system incrementally by feeding it data instances sequentially, either individually or in small groups called mini-batches. Each learning step is fast and cheap, so the system can learn about new data on the fly, as it arrives.
 
 ### Practical ML advice
+
+## Supervised Learning
+
+`Terminology:`
+
+-   **`Features:`** $x^{(i)}$ denotes the "input" variable
+
+-   **`Target:`** $y^{(i)}$ denotes the "output" (i.e. outcome to predict)
+
+-   **`Training Example:`** A pair $(x^{(i)}, y^{(i)})$
+
+-   **`Training set:`** a list of $n$ training examples: $\{(x^{(i)},y^{(i)}); i = 1, …, n\}$
+
+-   Space: $\mathcal{X}$ denotes the space of input values; $\mathcal{Y}$ denotes the space of output values. Usually, $\mathcal{X}=\mathcal{Y}=\mathcal{R}.$
+
+#### Formal description of supervised learning problem:
+
+-   Given a training set, to learn a function $h: \mathcal{X} \mapsto \mathcal{Y}$ so that $h(x)$ is a "good" predictor for the corresponding value of \$y\$. For historical reasons, this function $h$ is called a **hypothesis.**
+
+-   Continuous target ---\> **regression**; discrete target ---\> **classification**
