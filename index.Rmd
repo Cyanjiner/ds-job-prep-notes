@@ -1,5 +1,5 @@
 ---
-title: "DS Intern/NG Job Application Prep Notes"
+title: "Data Science Prep Notes"
 author: "Jiner Zheng"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

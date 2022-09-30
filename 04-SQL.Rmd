@@ -9,9 +9,17 @@ knitr::opts_chunk$set(eval=FALSE, echo=TRUE)
 knitr::opts_chunk$set(connection = "MySQL")
 ```
 
+`SQL (Structured Query Language)` is used to answer questions / extract information both within and across relational database tables ---\> **`high-level / parallel`** programming language
+
 `Database schemas` show `data types` for each field (column) in all tables (data frame), and they also show `relationships` between tables.
 
-`SQL (Structured Query Language)` is used to answer questions / extract information both within and across relational database tables
+-   `cardinality` of relation ---\> \# of tuples (rows / records)
+
+-   `arity` of the relation ---\> \# of columns (attributes)
+
+-   `relation` = table
+
+A **`key`** is a **minimal subset of columns** that acts as a unique identifier for tuples in a relation.
 
 [SQL Style Guide by Simon Holywell](https://www.sqlstyle.guide/) *Keywords* are reserved words for **operations**.
 
@@ -24,7 +32,8 @@ knitr::opts_chunk$set(connection = "MySQL")
 CREATE TABLE test_table( -- unique table name
   test_date date,
   test_name varchar(20),
-  test_int int
+  test_int int,
+  PRIMARY KEY (test_date, test_name)
 )
 
 /* data types: */
@@ -117,17 +126,22 @@ DROP TABLE #my_temp_table
 
 ### READ \| VIEW
 
-Example: `SELECT` statements
+Example: `SFW` query ---\> `SELECT FROM WHERE` statements
 
--   `SELECT` indicates which *fields* should be selected.
+-   **Selection** is the operation of filtering a relation's tuples on some condition.
 
--   `FROM` indicates where these *fields* are located.
+-   **Projection** is the operation of producing an output table with tuples that have a subset of their prior attributes.
 
--   `SELECT DISTINCT` allows you to select field content.
+    -   `SELECT` indicates which *fields* should be selected.
+
+    -   `FROM` indicates where these *fields* are located.
+
+    -   `SELECT DISTINCT` allows you to select field content.
 
 ```{sql}
 SELECT DISTINCT var_name1 AS new_var_name1, var_name2
-FROM table_name;
+FROM table_name
+WHERE condition(s);
 ```
 
 `DROP DATABASE` drops an existing SQL database
@@ -334,8 +348,10 @@ NOT LIKE ...
 
 ```
 
+-   **`LIKE:`** Simple string pattern matching
+
 | LIKE Operator                  | Description                                                                          |
-|----------------------|--------------------------------------------------|
+|-----------------------|-------------------------------------------------|
 | WHERE column LIKE `'a%'`       | Finds any values that **start with** "a"                                             |
 | WHERE column LIKE `'%a'`       | Finds any values that **end with** "a"                                               |
 | WHERE column LIKE `'%or%'`     | Finds any values that **have "or" in any position**                                  |
@@ -543,7 +559,7 @@ When the year changes, the value in the YearTotal column changes showing the tot
 ### Windows functions Cheatsheet
 
 | Col1                                | Col2                                                                                                                                                                                       |
-|--------------------|----------------------------------------------------|
+|---------------------|---------------------------------------------------|
 | `ROW_NUMBER()`                      | Displays the unique number/index of a given row *(no duplicates as compared to rank/dense_rank)*; starts are 1 and numbers the rows according to the `ORDER BY` part of window statements. |
 | `RANK()`                            | Gives the identical rows a rank of 2, then skip ranks 3 and 4, so next rank would be 5.                                                                                                    |
 | `DENSE_RANK()`                      | Also gives identical rows a rank of 2, but the following rank would be 3 *-- no ranks would be skipped.*                                                                                   |
@@ -675,7 +691,7 @@ ORDER BY column1, column2
 
 # CS145 --- DBs & Data Systems
 
-## Introduction
+## Introduction --- DB overview
 
 -   Applications of DBs and Data Systems
 
@@ -711,7 +727,7 @@ ORDER BY column1, column2
 
     4.  visualize query results
 
-## Project goals
+### Project goals
 
 -   Run queries on public datasets
 
@@ -721,7 +737,7 @@ ORDER BY column1, column2
 
 -   Full Query-Visualize-Learn data cycle on cloud stack
 
-## IO Blocks for Efficiency
+### IO Blocks for Efficiency
 
 -   `KEY CONCEPTS`
 
@@ -733,7 +749,7 @@ ORDER BY column1, column2
 
     -   HDDs/SSDs copy sequential "big" blocks of bytes to/from RAM
 
-## Basic System Numbers
+### Basic System Numbers
 
 -   **`Access Latency (secs)`** = Time to access Block's start location
 
@@ -746,13 +762,13 @@ ORDER BY column1, column2
 -   Distance from CPU
 
 |                             | Access Latency (sec) | Scan Throughput (GB/sec) | What you get for \~100 |
-|-----------------------------|----------------------|--------------------------|------------------------|
+|--------------------|-----------------|------------------|-----------------|
 | RAM                         | \~100 nanosec        | \~100 GB/sec             |                        |
 | High-end SSD                |                      |                          |                        |
 | HDD Seek (hard disk)        |                      |                          |                        |
 | Machines M1 TO M2 (network) |                      |                          |                        |
 
-## IO Cost Model
+### IO Cost Model
 
 `Total time to ReadData = Access Latency * M + DataSize / ScanThroughput`
 
@@ -763,3 +779,45 @@ ORDER BY column1, column2
 -   AccessLatency = Time to access Block
 
 -   ScanThroughput = Speed to copy/scan to RAM
+
+## System Primer
+
+Clouds of Machine
+
+## 
+
+### Data Independence
+
+-   `Logical data independence` ---\> we can add a new column or attribute w/o rewriting the application.
+
+-   `Physical data independence` ---\> you should NOT care which disks/machines the data are stored on.
+
+### Data Model
+
+1.  **`Relational model (aka Tables)`**
+
+    -   simple and most popular
+
+    -   elegant algebra (E.F. Codd et al)
+
+    -   Structured data (e.g. a typed Schema)
+
+2.  **`Hierarchical model (aka JSON-like Tree)`**
+
+    -   semi-structured data
+
+3.  **`Example on Tradeoffs`**
+
+    -   Key "CS" ideas:
+
+        -   structured, or semi-structured w/ lots of optional fields?
+
+        -   how deep is the tree structure?
+
+        -   what kinds of queries and updates do you want to run? (e.g. customer-oriented queries? Purchase-oriented queries?)
+
+        -   Rough rule of thumb
+
+            -   Relational: Google Ads
+
+            -   Hierarchical: document search. Lots of optional fields? many levels deep. Mostly search oriented around the top level of doc.

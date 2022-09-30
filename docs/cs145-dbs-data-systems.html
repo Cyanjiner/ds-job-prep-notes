@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 CS145 — DBs &amp; Data Systems | DS Intern/NG Job Application Prep Notes</title>
-  <meta name="description" content="Chapter 5 CS145 — DBs &amp; Data Systems | DS Intern/NG Job Application Prep Notes" />
+  <title>Chapter 5 CS145 — DBs &amp; Data Systems | Data Science Prep Notes</title>
+  <meta name="description" content="Chapter 5 CS145 — DBs &amp; Data Systems | Data Science Prep Notes" />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 CS145 — DBs &amp; Data Systems | DS Intern/NG Job Application Prep Notes" />
+  <meta property="og:title" content="Chapter 5 CS145 — DBs &amp; Data Systems | Data Science Prep Notes" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 CS145 — DBs &amp; Data Systems | DS Intern/NG Job Application Prep Notes" />
+  <meta name="twitter:title" content="Chapter 5 CS145 — DBs &amp; Data Systems | Data Science Prep Notes" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Jiner Zheng" />
 
 
-<meta name="date" content="2022-09-27" />
+<meta name="date" content="2022-09-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -231,11 +231,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html"><i class="fa fa-check"></i><b>5</b> CS145 — DBs &amp; Data Systems</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.1" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#introduction-db-overview"><i class="fa fa-check"></i><b>5.1</b> Introduction — DB overview</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#project-goals"><i class="fa fa-check"></i><b>5.1.1</b> Project goals</a></li>
+<li class="chapter" data-level="5.1.2" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#io-blocks-for-efficiency"><i class="fa fa-check"></i><b>5.1.2</b> IO Blocks for Efficiency</a></li>
+<li class="chapter" data-level="5.1.3" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#basic-system-numbers"><i class="fa fa-check"></i><b>5.1.3</b> Basic System Numbers</a></li>
+<li class="chapter" data-level="5.1.4" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#io-cost-model"><i class="fa fa-check"></i><b>5.1.4</b> IO Cost Model</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#system-primer"><i class="fa fa-check"></i><b>5.2</b> System Primer</a></li>
+<li class="chapter" data-level="5.3" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#section"><i class="fa fa-check"></i><b>5.3</b> </a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#data-independence"><i class="fa fa-check"></i><b>5.3.1</b> Data Independence</a></li>
+<li class="chapter" data-level="5.3.2" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#data-model"><i class="fa fa-check"></i><b>5.3.2</b> Data Model</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="machine-learning-models.html"><a href="machine-learning-models.html"><i class="fa fa-check"></i><b>6</b> Machine Learning Models</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="machine-learning-models.html"><a href="machine-learning-models.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+<li class="chapter" data-level="6.1" data-path="machine-learning-models.html"><a href="machine-learning-models.html#introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="machine-learning-models.html"><a href="machine-learning-models.html#what-is-machine-learning"><i class="fa fa-check"></i><b>6.1.1</b> What is Machine Learning</a></li>
 <li class="chapter" data-level="6.1.2" data-path="machine-learning-models.html"><a href="machine-learning-models.html#why-do-we-use-machine-learning"><i class="fa fa-check"></i><b>6.1.2</b> Why do we use Machine Learning?</a></li>
@@ -243,27 +255,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1.4" data-path="machine-learning-models.html"><a href="machine-learning-models.html#types-of-machine-learning-systems"><i class="fa fa-check"></i><b>6.1.4</b> Types of Machine Learning Systems</a></li>
 <li class="chapter" data-level="6.1.5" data-path="machine-learning-models.html"><a href="machine-learning-models.html#practical-ml-advice"><i class="fa fa-check"></i><b>6.1.5</b> Practical ML advice</a></li>
 </ul></li>
+<li class="chapter" data-level="6.2" data-path="machine-learning-models.html"><a href="machine-learning-models.html#supervised-learning-1"><i class="fa fa-check"></i><b>6.2</b> Supervised Learning</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="product-sense.html"><a href="product-sense.html"><i class="fa fa-check"></i><b>7</b> Product Sense</a></li>
-<li class="chapter" data-level="8" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html"><i class="fa fa-check"></i><b>8</b> My DS Summer Intern Preparation Guide</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#resume-related-technical-content-jiner-only"><i class="fa fa-check"></i><b>8.1</b> Resume related technical content –&gt; JINER only</a>
-<ul>
-<li class="chapter" data-level="8.1.1" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#intern1---statistical-consultant-r-tableau"><i class="fa fa-check"></i><b>8.1.1</b> Intern1 - Statistical Consultant (R, Tableau)</a></li>
-<li class="chapter" data-level="8.1.2" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#intern2---data-science-intern-r-python"><i class="fa fa-check"></i><b>8.1.2</b> Intern2 - Data Science Intern (R, Python)</a></li>
-<li class="chapter" data-level="8.1.3" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#intern3---data-science-intern"><i class="fa fa-check"></i><b>8.1.3</b> Intern3 - Data Science Intern</a></li>
-<li class="chapter" data-level="8.1.4" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#capstone-research"><i class="fa fa-check"></i><b>8.1.4</b> Capstone research</a></li>
-</ul></li>
-<li class="chapter" data-level="8.2" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#sql-python-r-tableau"><i class="fa fa-check"></i><b>8.2</b> SQL | Python | R | Tableau</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#basic-statistics"><i class="fa fa-check"></i><b>8.2.1</b> Basic Statistics:</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#probability-usually-test-easy-medium-prob-questions"><i class="fa fa-check"></i><b>8.3</b> Probability: (usually test easy-medium prob questions)</a></li>
-<li class="chapter" data-level="8.4" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#ml-theory-for-ds-modeling-job"><i class="fa fa-check"></i><b>8.4</b> ML Theory (for DS-Modeling job)</a></li>
-<li class="chapter" data-level="8.5" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#ab-testing-and-product-sense"><i class="fa fa-check"></i><b>8.5</b> A/B Testing and Product Sense</a></li>
-<li class="chapter" data-level="8.6" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#statistical-testing"><i class="fa fa-check"></i><b>8.6</b> Statistical Testing</a></li>
-<li class="chapter" data-level="8.7" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#behavioral-questions"><i class="fa fa-check"></i><b>8.7</b> Behavioral Questions</a></li>
-</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -275,7 +269,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">DS Intern/NG Job Application Prep Notes</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Prep Notes</a>
           </h1>
         </div>
 
@@ -285,8 +279,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="cs145-dbs-data-systems" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> CS145 — DBs &amp; Data Systems<a href="cs145-dbs-data-systems.html#cs145-dbs-data-systems" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="introduction" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Introduction<a href="cs145-dbs-data-systems.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction-db-overview" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Introduction — DB overview<a href="cs145-dbs-data-systems.html#introduction-db-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p>Applications of DBs and Data Systems</p></li>
 <li><p>Properties of <code>general DBs</code>, <code>special-purpose DBs</code>, <code>data lakes</code></p></li>
@@ -316,7 +310,137 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>visualize query results</p></li>
 </ol></li>
 </ul>
+<div id="project-goals" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Project goals<a href="cs145-dbs-data-systems.html#project-goals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Run queries on public datasets</p></li>
+<li><p>Explore/Visualize public datasets</p></li>
+<li><p>Predict using Machine Learning</p></li>
+<li><p>Full Query-Visualize-Learn data cycle on cloud stack</p></li>
+</ul>
+</div>
+<div id="io-blocks-for-efficiency" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> IO Blocks for Efficiency<a href="cs145-dbs-data-systems.html#io-blocks-for-efficiency" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><code>KEY CONCEPTS</code></p>
+<ul>
+<li><p>Data is stored in <em>Blocks</em> (aka <em>“partition”</em>)</p></li>
+<li><p>Sequential IO is 10x-100x+ faster than “many” random IO</p>
+<ul>
+<li>e.g. 1 MB (located sequentially) versus 1 Million bytes in random locations</li>
+</ul></li>
+<li><p>HDDs/SSDs copy sequential “big” blocks of bytes to/from RAM</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="basic-system-numbers" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Basic System Numbers<a href="cs145-dbs-data-systems.html#basic-system-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong><code>Access Latency (secs)</code></strong> = Time to access Block’s start location</p></li>
+<li><p><strong><code>Scan Throughput (GB/sec)</code></strong> = Speed to Scan + Copy data to RAM</p></li>
+</ul>
+<p>*Note: WHY are they different?</p>
+<ul>
+<li><p>Digital (e.g. SSDs and RAM) vs Analog (e.g. HDD seeks)</p></li>
+<li><p>Distance from CPU</p></li>
+</ul>
+<table>
+<colgroup>
+<col width="27%" />
+<col width="23%" />
+<col width="25%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Access Latency (sec)</th>
+<th>Scan Throughput (GB/sec)</th>
+<th>What you get for ~100</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RAM</td>
+<td>~100 nanosec</td>
+<td>~100 GB/sec</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>High-end SSD</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>HDD Seek (hard disk)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Machines M1 TO M2 (network)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="io-cost-model" class="section level3 hasAnchor" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> IO Cost Model<a href="cs145-dbs-data-systems.html#io-cost-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>Total time to ReadData = Access Latency * M + DataSize / ScanThroughput</code></p>
+<ul>
+<li><p>DataSize = data size</p></li>
+<li><p>M = # of non-contiguous Blocks</p></li>
+<li><p>AccessLatency = Time to access Block</p></li>
+<li><p>ScanThroughput = Speed to copy/scan to RAM</p></li>
+</ul>
+</div>
+</div>
+<div id="system-primer" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> System Primer<a href="cs145-dbs-data-systems.html#system-primer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Clouds of Machine</p>
+</div>
+<div id="section" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> </h2>
+<div id="data-independence" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Data Independence<a href="cs145-dbs-data-systems.html#data-independence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><code>Logical data independence</code> —&gt; we can add a new column or attribute w/o rewriting the application.</p></li>
+<li><p><code>Physical data independence</code> —&gt; you should NOT care which disks/machines the data are stored on.</p></li>
+</ul>
+</div>
+<div id="data-model" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Data Model<a href="cs145-dbs-data-systems.html#data-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p><strong><code>Relational model (aka Tables)</code></strong></p>
+<ul>
+<li><p>simple and most popular</p></li>
+<li><p>elegant algebra (E.F. Codd et al)</p></li>
+<li><p>Structured data (e.g. a typed Schema)</p></li>
+</ul></li>
+<li><p><strong><code>Hierarchical model (aka JSON-like Tree)</code></strong></p>
+<ul>
+<li>semi-structured data</li>
+</ul></li>
+<li><p><strong><code>Example on Tradeoffs</code></strong></p>
+<ul>
+<li><p>Key “CS” ideas:</p>
+<ul>
+<li><p>structured, or semi-structured w/ lots of optional fields?</p></li>
+<li><p>how deep is the tree structure?</p></li>
+<li><p>what kinds of queries and updates do you want to run? (e.g. customer-oriented queries? Purchase-oriented queries?)</p></li>
+<li><p>Rough rule of thumb</p>
+<ul>
+<li><p>Relational: Google Ads</p></li>
+<li><p>Hierarchical: document search. Lots of optional fields? many levels deep. Mostly search oriented around the top level of doc.</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ol>
 
+</div>
 </div>
 </div>
             </section>

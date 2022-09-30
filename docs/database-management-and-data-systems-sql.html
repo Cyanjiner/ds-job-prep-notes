@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Database Management and Data Systems (SQL) | DS Intern/NG Job Application Prep Notes</title>
-  <meta name="description" content="Chapter 4 Database Management and Data Systems (SQL) | DS Intern/NG Job Application Prep Notes" />
+  <title>Chapter 4 Database Management and Data Systems (SQL) | Data Science Prep Notes</title>
+  <meta name="description" content="Chapter 4 Database Management and Data Systems (SQL) | Data Science Prep Notes" />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Database Management and Data Systems (SQL) | DS Intern/NG Job Application Prep Notes" />
+  <meta property="og:title" content="Chapter 4 Database Management and Data Systems (SQL) | Data Science Prep Notes" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Database Management and Data Systems (SQL) | DS Intern/NG Job Application Prep Notes" />
+  <meta name="twitter:title" content="Chapter 4 Database Management and Data Systems (SQL) | Data Science Prep Notes" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Jiner Zheng" />
 
 
-<meta name="date" content="2022-09-27" />
+<meta name="date" content="2022-09-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -231,11 +231,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html"><i class="fa fa-check"></i><b>5</b> CS145 — DBs &amp; Data Systems</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.1" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#introduction-db-overview"><i class="fa fa-check"></i><b>5.1</b> Introduction — DB overview</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#project-goals"><i class="fa fa-check"></i><b>5.1.1</b> Project goals</a></li>
+<li class="chapter" data-level="5.1.2" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#io-blocks-for-efficiency"><i class="fa fa-check"></i><b>5.1.2</b> IO Blocks for Efficiency</a></li>
+<li class="chapter" data-level="5.1.3" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#basic-system-numbers"><i class="fa fa-check"></i><b>5.1.3</b> Basic System Numbers</a></li>
+<li class="chapter" data-level="5.1.4" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#io-cost-model"><i class="fa fa-check"></i><b>5.1.4</b> IO Cost Model</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#system-primer"><i class="fa fa-check"></i><b>5.2</b> System Primer</a></li>
+<li class="chapter" data-level="5.3" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#section"><i class="fa fa-check"></i><b>5.3</b> </a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#data-independence"><i class="fa fa-check"></i><b>5.3.1</b> Data Independence</a></li>
+<li class="chapter" data-level="5.3.2" data-path="cs145-dbs-data-systems.html"><a href="cs145-dbs-data-systems.html#data-model"><i class="fa fa-check"></i><b>5.3.2</b> Data Model</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="machine-learning-models.html"><a href="machine-learning-models.html"><i class="fa fa-check"></i><b>6</b> Machine Learning Models</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="machine-learning-models.html"><a href="machine-learning-models.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+<li class="chapter" data-level="6.1" data-path="machine-learning-models.html"><a href="machine-learning-models.html#introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="machine-learning-models.html"><a href="machine-learning-models.html#what-is-machine-learning"><i class="fa fa-check"></i><b>6.1.1</b> What is Machine Learning</a></li>
 <li class="chapter" data-level="6.1.2" data-path="machine-learning-models.html"><a href="machine-learning-models.html#why-do-we-use-machine-learning"><i class="fa fa-check"></i><b>6.1.2</b> Why do we use Machine Learning?</a></li>
@@ -243,27 +255,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1.4" data-path="machine-learning-models.html"><a href="machine-learning-models.html#types-of-machine-learning-systems"><i class="fa fa-check"></i><b>6.1.4</b> Types of Machine Learning Systems</a></li>
 <li class="chapter" data-level="6.1.5" data-path="machine-learning-models.html"><a href="machine-learning-models.html#practical-ml-advice"><i class="fa fa-check"></i><b>6.1.5</b> Practical ML advice</a></li>
 </ul></li>
+<li class="chapter" data-level="6.2" data-path="machine-learning-models.html"><a href="machine-learning-models.html#supervised-learning-1"><i class="fa fa-check"></i><b>6.2</b> Supervised Learning</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="product-sense.html"><a href="product-sense.html"><i class="fa fa-check"></i><b>7</b> Product Sense</a></li>
-<li class="chapter" data-level="8" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html"><i class="fa fa-check"></i><b>8</b> My DS Summer Intern Preparation Guide</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#resume-related-technical-content-jiner-only"><i class="fa fa-check"></i><b>8.1</b> Resume related technical content –&gt; JINER only</a>
-<ul>
-<li class="chapter" data-level="8.1.1" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#intern1---statistical-consultant-r-tableau"><i class="fa fa-check"></i><b>8.1.1</b> Intern1 - Statistical Consultant (R, Tableau)</a></li>
-<li class="chapter" data-level="8.1.2" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#intern2---data-science-intern-r-python"><i class="fa fa-check"></i><b>8.1.2</b> Intern2 - Data Science Intern (R, Python)</a></li>
-<li class="chapter" data-level="8.1.3" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#intern3---data-science-intern"><i class="fa fa-check"></i><b>8.1.3</b> Intern3 - Data Science Intern</a></li>
-<li class="chapter" data-level="8.1.4" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#capstone-research"><i class="fa fa-check"></i><b>8.1.4</b> Capstone research</a></li>
-</ul></li>
-<li class="chapter" data-level="8.2" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#sql-python-r-tableau"><i class="fa fa-check"></i><b>8.2</b> SQL | Python | R | Tableau</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#basic-statistics"><i class="fa fa-check"></i><b>8.2.1</b> Basic Statistics:</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#probability-usually-test-easy-medium-prob-questions"><i class="fa fa-check"></i><b>8.3</b> Probability: (usually test easy-medium prob questions)</a></li>
-<li class="chapter" data-level="8.4" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#ml-theory-for-ds-modeling-job"><i class="fa fa-check"></i><b>8.4</b> ML Theory (for DS-Modeling job)</a></li>
-<li class="chapter" data-level="8.5" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#ab-testing-and-product-sense"><i class="fa fa-check"></i><b>8.5</b> A/B Testing and Product Sense</a></li>
-<li class="chapter" data-level="8.6" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#statistical-testing"><i class="fa fa-check"></i><b>8.6</b> Statistical Testing</a></li>
-<li class="chapter" data-level="8.7" data-path="my-ds-summer-intern-preparation-guide.html"><a href="my-ds-summer-intern-preparation-guide.html#behavioral-questions"><i class="fa fa-check"></i><b>8.7</b> Behavioral Questions</a></li>
-</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -275,7 +269,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">DS Intern/NG Job Application Prep Notes</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Prep Notes</a>
           </h1>
         </div>
 
@@ -285,8 +279,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="database-management-and-data-systems-sql" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Database Management and Data Systems (SQL)<a href="database-management-and-data-systems-sql.html#database-management-and-data-systems-sql" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><code>SQL (Structured Query Language)</code> is used to answer questions / extract information both within and across relational database tables —&gt; <strong><code>high-level / parallel</code></strong> programming language</p>
 <p><code>Database schemas</code> show <code>data types</code> for each field (column) in all tables (data frame), and they also show <code>relationships</code> between tables.</p>
-<p><code>SQL (Structured Query Language)</code> is used to answer questions / extract information both within and across relational database tables</p>
+<ul>
+<li><p><code>cardinality</code> of relation —&gt; # of tuples (rows / records)</p></li>
+<li><p><code>arity</code> of the relation —&gt; # of columns (attributes)</p></li>
+<li><p><code>relation</code> = table</p></li>
+</ul>
+<p>A <strong><code>key</code></strong> is a <strong>minimal subset of columns</strong> that acts as a unique identifier for tuples in a relation.</p>
 <p><a href="https://www.sqlstyle.guide/">SQL Style Guide by Simon Holywell</a> <em>Keywords</em> are reserved words for <strong>operations</strong>.</p>
 <div id="crud-create-read-update-delete-operations" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> CRUD (create, read, update, delete) Operations<a href="database-management-and-data-systems-sql.html#crud-create-read-update-delete-operations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -296,19 +296,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-2"><a href="database-management-and-data-systems-sql.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> test_table( <span class="co">-- unique table name</span></span>
 <span id="cb1-3"><a href="database-management-and-data-systems-sql.html#cb1-3" aria-hidden="true" tabindex="-1"></a>  test_date <span class="dt">date</span>,</span>
 <span id="cb1-4"><a href="database-management-and-data-systems-sql.html#cb1-4" aria-hidden="true" tabindex="-1"></a>  test_name <span class="dt">varchar</span>(<span class="dv">20</span>),</span>
-<span id="cb1-5"><a href="database-management-and-data-systems-sql.html#cb1-5" aria-hidden="true" tabindex="-1"></a>  test_int <span class="dt">int</span></span>
-<span id="cb1-6"><a href="database-management-and-data-systems-sql.html#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-7"><a href="database-management-and-data-systems-sql.html#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="database-management-and-data-systems-sql.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">/* data types: */</span></span>
-<span id="cb1-9"><a href="database-management-and-data-systems-sql.html#cb1-9" aria-hidden="true" tabindex="-1"></a>Dates: <span class="dt">date</span> (YYYY<span class="op">-</span>MM<span class="op">-</span>DD) | datetime (YYYY<span class="op">-</span>MM<span class="op">-</span>DD hh<span class="ch">:mm:ss</span>) | <span class="dt">time</span></span>
-<span id="cb1-10"><a href="database-management-and-data-systems-sql.html#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">Numeric</span>: <span class="dt">int</span> | <span class="dt">decimal</span> | <span class="dt">float</span> | bit (<span class="dv">1</span><span class="op">=</span><span class="kw">TRUE</span>, <span class="dv">0</span><span class="op">=</span><span class="kw">FALSE</span>. Also accepts <span class="kw">NULL</span>)</span>
-<span id="cb1-11"><a href="database-management-and-data-systems-sql.html#cb1-11" aria-hidden="true" tabindex="-1"></a>Strings: <span class="dt">char</span> | <span class="dt">varchar</span> | <span class="dt">nvarchar</span></span>
-<span id="cb1-12"><a href="database-management-and-data-systems-sql.html#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="database-management-and-data-systems-sql.html#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">/* create a copy of an existing table */</span></span>
-<span id="cb1-14"><a href="database-management-and-data-systems-sql.html#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> new_table_name <span class="kw">AS</span></span>
-<span id="cb1-15"><a href="database-management-and-data-systems-sql.html#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> column1, column2, <span class="op">..</span>.</span>
-<span id="cb1-16"><a href="database-management-and-data-systems-sql.html#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> existing_table_name,</span>
-<span id="cb1-17"><a href="database-management-and-data-systems-sql.html#cb1-17" aria-hidden="true" tabindex="-1"></a>    WEHRE conditions;</span></code></pre></div>
+<span id="cb1-5"><a href="database-management-and-data-systems-sql.html#cb1-5" aria-hidden="true" tabindex="-1"></a>  test_int <span class="dt">int</span>,</span>
+<span id="cb1-6"><a href="database-management-and-data-systems-sql.html#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (test_date, test_name)</span>
+<span id="cb1-7"><a href="database-management-and-data-systems-sql.html#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-8"><a href="database-management-and-data-systems-sql.html#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="database-management-and-data-systems-sql.html#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">/* data types: */</span></span>
+<span id="cb1-10"><a href="database-management-and-data-systems-sql.html#cb1-10" aria-hidden="true" tabindex="-1"></a>Dates: <span class="dt">date</span> (YYYY<span class="op">-</span>MM<span class="op">-</span>DD) | datetime (YYYY<span class="op">-</span>MM<span class="op">-</span>DD hh<span class="ch">:mm:ss</span>) | <span class="dt">time</span></span>
+<span id="cb1-11"><a href="database-management-and-data-systems-sql.html#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">Numeric</span>: <span class="dt">int</span> | <span class="dt">decimal</span> | <span class="dt">float</span> | bit (<span class="dv">1</span><span class="op">=</span><span class="kw">TRUE</span>, <span class="dv">0</span><span class="op">=</span><span class="kw">FALSE</span>. Also accepts <span class="kw">NULL</span>)</span>
+<span id="cb1-12"><a href="database-management-and-data-systems-sql.html#cb1-12" aria-hidden="true" tabindex="-1"></a>Strings: <span class="dt">char</span> | <span class="dt">varchar</span> | <span class="dt">nvarchar</span></span>
+<span id="cb1-13"><a href="database-management-and-data-systems-sql.html#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="database-management-and-data-systems-sql.html#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">/* create a copy of an existing table */</span></span>
+<span id="cb1-15"><a href="database-management-and-data-systems-sql.html#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> new_table_name <span class="kw">AS</span></span>
+<span id="cb1-16"><a href="database-management-and-data-systems-sql.html#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> column1, column2, <span class="op">..</span>.</span>
+<span id="cb1-17"><a href="database-management-and-data-systems-sql.html#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> existing_table_name,</span>
+<span id="cb1-18"><a href="database-management-and-data-systems-sql.html#cb1-18" aria-hidden="true" tabindex="-1"></a>    WEHRE conditions;</span></code></pre></div>
 </div>
 <div id="insert-insert-new-records-into-existing-database-tables" class="section level3 hasAnchor" number="4.1.2">
 <h3><span class="header-section-number">4.1.2</span> INSERT, — insert new records into existing database tables<a href="database-management-and-data-systems-sql.html#insert-insert-new-records-into-existing-database-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -378,14 +379,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="read-view" class="section level3 hasAnchor" number="4.1.7">
 <h3><span class="header-section-number">4.1.7</span> READ | VIEW<a href="database-management-and-data-systems-sql.html#read-view" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Example: <code>SELECT</code> statements</p>
+<p>Example: <code>SFW</code> query —&gt; <code>SELECT FROM WHERE</code> statements</p>
+<ul>
+<li><p><strong>Selection</strong> is the operation of filtering a relation’s tuples on some condition.</p></li>
+<li><p><strong>Projection</strong> is the operation of producing an output table with tuples that have a subset of their prior attributes.</p>
 <ul>
 <li><p><code>SELECT</code> indicates which <em>fields</em> should be selected.</p></li>
 <li><p><code>FROM</code> indicates where these <em>fields</em> are located.</p></li>
 <li><p><code>SELECT DISTINCT</code> allows you to select field content.</p></li>
+</ul></li>
 </ul>
 <div class="sourceCode" id="cb7"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="database-management-and-data-systems-sql.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> var_name1 <span class="kw">AS</span> new_var_name1, var_name2</span>
-<span id="cb7-2"><a href="database-management-and-data-systems-sql.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table_name;</span></code></pre></div>
+<span id="cb7-2"><a href="database-management-and-data-systems-sql.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table_name</span>
+<span id="cb7-3"><a href="database-management-and-data-systems-sql.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition(s);</span></code></pre></div>
 <p><code>DROP DATABASE</code> drops an existing SQL database</p>
 <p><code>ALTER DATABASE</code> modifies a database</p>
 <p><code>ALTER TABLE</code> modifies a table <code>DROP TABLE table_name</code> deletes a table <code>CREATE INDEX</code> creates an index (search key) <code>DROP INDEX</code> deletes an index <code>BACKUP DATABASE</code> is used in SQL Server to create a full back up of an existing SQL database <code>TO DIST = 'filepath';</code> Use <em>aliasing</em> to rename columns:</p>
@@ -567,11 +573,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb14-11"><a href="database-management-and-data-systems-sql.html#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-12"><a href="database-management-and-data-systems-sql.html#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">-- if NOT containing such characters then simiply do</span></span>
 <span id="cb14-13"><a href="database-management-and-data-systems-sql.html#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="kw">NOT</span> <span class="kw">LIKE</span> <span class="op">..</span>.</span></code></pre></div>
+<ul>
+<li><strong><code>LIKE:</code></strong> Simple string pattern matching</li>
+</ul>
 <table>
 <caption>LIKE operators with ‘%’ and ‘_’</caption>
 <colgroup>
-<col width="30%" />
-<col width="69%" />
+<col width="31%" />
+<col width="68%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -786,8 +795,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">4.3.5</span> Windows functions Cheatsheet<a href="database-management-and-data-systems-sql.html#windows-functions-cheatsheet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <table>
 <colgroup>
-<col width="27%" />
-<col width="72%" />
+<col width="29%" />
+<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">
